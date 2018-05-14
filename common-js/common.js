@@ -317,7 +317,7 @@ if (typeof jQuery === 'undefined') {
       var DataKey = 'lte.controlsidebar'
     
       var Default = {
-        slide: true
+        slide: false
       }
     
       var Selector = {

@@ -1,9 +1,9 @@
 {
   "name": "物联网智慧平台",
-  "title": "adminLTE",
+  "title": "物联网智慧平台",
   "version": "0.0.1",
   "description": "A website system for visual management system",
-  "author": "yuanminghe",
+  "author": "tanghuan",
   "scripts": {
     "dev": "gulp dev --gulpfile ./gulpfile.js",
     "build": "gulp --gulpfile ./gulpfile.js"
@@ -16,7 +16,7 @@
     "url": ""
   },
   "keywords": [
-    "adminLTE"
+    "web-ui"
   ],
   "devDependencies": {
     "gulp": "^3.9.0",
