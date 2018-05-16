@@ -2,14 +2,19 @@
  * Component: Box
  * --------------
  */
+ .box-wrapper {
+   border-radius: 5px;
+   box-shadow: @box-boxshadow;
+   background-color:#fff;
+ }
 .box {
   position: relative;
-  .border-radius(@box-border-radius);
-  background: #ffffff;
-  border-top: 3px solid @box-default-border-top-color;
-  margin-bottom: 20px;
+  // .border-radius(@box-border-radius);
+  // background: #ffffff;
+  // border-top: 3px solid @box-default-border-top-color;
+  // margin-bottom: 20px;
   width: 100%;
-  box-shadow: @box-boxshadow;
+  // box-shadow: @box-boxshadow;
 
   // Box color variations
   &.box-primary {
@@ -174,10 +179,11 @@
 
 //Box header
 .box-header {
-  color: #444;
+  color: #333;
   display: block;
   padding: @box-padding;
   position: relative;
+  font-size:18px;
 
   //Add bottom border
   &.with-border {
@@ -196,6 +202,8 @@
     font-size: 18px;
     margin: 0;
     line-height: 1;
+    padding-left:8px;
+    border-left:2px solid #3d65d0;
   }
   > .fa,
   > .glyphicon,
