@@ -10,8 +10,10 @@
 .skin-blue {
   //Navbar
   .main-header {
+    background:url('../../imgs/header/header-bg.png') right center no-repeat;
     .navbar {
-      .navbar-variant(@light-blue; #fff);
+      
+      .navbar-variant(transparent; #fff);
       .sidebar-toggle {
         color: #fff;
         &:hover {
@@ -34,9 +36,9 @@
         }
       }
     }
-    //Logo
+    //Logo  设置背景色
     .logo {
-      .logo-variant(darken(@light-blue, 5%));
+      // .logo-variant(darken(@light-blue, 5%));
     }
 
     li.user-header {

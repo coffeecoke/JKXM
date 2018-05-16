@@ -13,23 +13,26 @@ var banner = '/*! <%= pkg.title %> v<%= pkg.version %> by YDCSS (c) ' +
 gulp.task('bootstrap', function () {
     gulp.src(['bootstrap/less/bootstrap.less'])
         .pipe($.plumber({errorHandler: $.notify.onError('Error: <%= error.message %>')}))
+        .pipe($.sourcemaps.init())
         .pipe($.less())
         .pipe($.autoprefixer({
             browsers: AUTOPREFIXER_BROWSERS, cascade: false
         }))
+        .pipe($.sourcemaps.write('./'))
         .pipe(gulp.dest('bootstrap/css'))
         .pipe($.livereload());
 });
 
 //编译AdminLET  less的编译
 gulp.task('main-less', function () {
-    console.log(11)
     gulp.src(['base-less/main.less'])
         .pipe($.plumber({errorHandler: $.notify.onError('Error: <%= error.message %>')}))
+        .pipe($.sourcemaps.init())
         .pipe($.less())
         .pipe($.autoprefixer({
             browsers: AUTOPREFIXER_BROWSERS, cascade: false
         }))
+        .pipe($.sourcemaps.write('./'))
         .pipe(gulp.dest('dist/base-css'))
         .pipe($.livereload());
 });
@@ -37,19 +40,27 @@ gulp.task('main-less', function () {
 
 var componentsOptions = [
 
-    // {
-    //     "name" : "bootstrap-colorpicker",
-    //     "cssPretreatment" : "sass",
-    //     "src" : "bower_components/bootstrap-colorpicker/src/sass/_colorpicker.scss",
-    //     "target" : "bower_components/bootstrap-colorpicker/dist/css"
-
-    // },
+    //components
     {
         "name" : "text",
         "cssPretreatment" : "less",
         "src" : ["components/component-1/styles/component-1.less"],
         "target" : "components/component-1/styles"
+    },
+    //pages
+    {
+        "name" : "page1",
+        "cssPretreatment" : "less",
+        "src" : ["pages/page1/styles/page1.less"],
+        "target" : "pages/page1/styles"
+    },
+    {
+        "name" : "main",
+        "cssPretreatment" : "less",
+        "src" : ["components/main/main.less"],
+        "target" : "components/main"
     }
+
 
 ]
 
@@ -61,10 +72,12 @@ gulp.task('components',function(){
         if(cssPretreatment=="less"||!cssPretreatment){
             gulp.src(componentsOptions[i].src)
                 .pipe($.plumber({errorHandler: $.notify.onError('Error: <%= error.message %>')}))
-                .pipe($.less())
+                .pipe($.sourcemaps.init()) //生成css对应less的映射文件，方便调试
+                .pipe($.less()) 
                 .pipe($.autoprefixer({
                     browsers: AUTOPREFIXER_BROWSERS, cascade: false
                 }))
+                .pipe($.sourcemaps.write('./'))
                 .pipe(gulp.dest(componentsOptions[i].target))
                 .pipe($.livereload());
         }else if (cssPretreatment=="sass"){

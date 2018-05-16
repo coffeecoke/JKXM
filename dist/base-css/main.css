@@ -15,6 +15,7 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   overflow-y: auto;
+  background: url(../../imgs/common/body-bg.jpg) 0 0 no-repeat;
 }
 /* Layout */
 .wrapper {
@@ -22,7 +23,6 @@ body {
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
-  background: url(../../imgs/common/body-bg.jpg) 0 50px no-repeat;
 }
 .wrapper:before,
 .wrapper:after {
@@ -194,7 +194,7 @@ a:focus {
   -webkit-transition: margin-left 0.3s ease-in-out;
   transition: margin-left 0.3s ease-in-out;
   margin-bottom: 0;
-  margin-left: 230px;
+  margin-left: 400px;
   border: none;
   min-height: 50px;
   border-radius: 0;
@@ -287,7 +287,7 @@ a:focus {
   font-size: 20px;
   line-height: 50px;
   text-align: center;
-  width: 230px;
+  width: 400px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 0 15px;
   font-weight: 300;
@@ -295,9 +295,17 @@ a:focus {
 }
 .main-header .logo .logo-lg {
   display: block;
+  height: 100%;
+  color: #fff;
+  background: url(../../imgs/header/logo-big.png) left center no-repeat;
+}
+.main-header .logo .logo-lg .logo__text {
+  margin-left: 104px;
 }
 .main-header .logo .logo-mini {
   display: none;
+  height: 100%;
+  background: url(../../imgs/header/logo-mini.png) center no-repeat;
 }
 .main-header .navbar-brand {
   color: #fff;
@@ -597,6 +605,9 @@ a:focus {
   }
   .sidebar-mini.sidebar-collapse .main-header .logo {
     width: 50px;
+    text-indent: 80px;
+    height: 50px;
+    line-height: 50px;
   }
   .sidebar-mini.sidebar-collapse .main-header .logo > .logo-mini {
     display: block;
@@ -6562,8 +6573,11 @@ fieldset[disabled] .btn-yahoo.focus {
  * Skin: Blue
  * ----------
  */
+.skin-blue .main-header {
+  background: url('../../imgs/header/header-bg.png') right center no-repeat;
+}
 .skin-blue .main-header .navbar {
-  background-color: #365ed2;
+  background: transparent;
 }
 .skin-blue .main-header .navbar .nav > li > a {
   color: #fff;
@@ -6601,14 +6615,6 @@ fieldset[disabled] .btn-yahoo.focus {
   .skin-blue .main-header .navbar .dropdown-menu li a:hover {
     background: #2c52c3;
   }
-}
-.skin-blue .main-header .logo {
-  background-color: #2c52c3;
-  color: #fff;
-  border-bottom: 0 solid transparent;
-}
-.skin-blue .main-header .logo:hover {
-  background-color: #2b51bf;
 }
 .skin-blue .main-header li.user-header {
   background-color: #365ed2;
@@ -6652,11 +6658,11 @@ fieldset[disabled] .btn-yahoo.focus {
   text-decoration: none;
 }
 .skin-blue .sidebar-menu .treeview-menu > li > a {
-  color: rgba(255, 255, 255, 0.6);
+  color: #333;
 }
 .skin-blue .sidebar-menu .treeview-menu > li.active > a,
 .skin-blue .sidebar-menu .treeview-menu > li > a:hover {
-  color: #fff;
+  color: #2c52c3;
 }
 .skin-blue .sidebar-form {
   border-radius: 3px;
@@ -6700,3 +6706,5 @@ fieldset[disabled] .btn-yahoo.focus {
 .skin-blue.layout-top-nav .main-header > .logo:hover {
   background-color: #325bd1;
 }
+
+/*# sourceMappingURL=main.css.map */

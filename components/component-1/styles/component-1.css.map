@@ -1,0 +1,1 @@
+{"version":3,"sources":["component-1.less","component-1.css"],"names":[],"mappings":"AAAA;EACI,WAAA;CCCH","file":"component-1.css","sourcesContent":["h3 {\n    color:red;\n}","h3 {\n  color: red;\n}\n"]}

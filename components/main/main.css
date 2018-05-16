@@ -1,0 +1,36 @@
+.sidebar-menu .treeview .slide-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.sidebar-menu .treeview .slide-icon1 {
+  background: url(../../imgs/slide-bar/slide-icon1.png) center no-repeat;
+  background-size: 100% 100%;
+}
+.sidebar-menu .treeview .slide-icon2 {
+  background: url(../../imgs/slide-bar/slide-icon2.png) center no-repeat;
+  background-size: 100% 100%;
+}
+.sidebar-menu .treeview .slide-icon3 {
+  background: url(../../imgs/slide-bar/slide-icon3.png) center no-repeat;
+  background-size: 100% 100%;
+}
+.sidebar-menu .treeview .slide-icon4 {
+  background: url(../../imgs/slide-bar/slide-icon4.png) center no-repeat;
+  background-size: 100% 100%;
+}
+.sidebar-menu .treeview .slide-icon5 {
+  background: url(../../imgs/slide-bar/slide-icon5.png) center no-repeat;
+  background-size: 100% 100%;
+}
+.sidebar-menu .treeview .slide-icon6 {
+  background: url(../../imgs/slide-bar/slide-icon6.png) center no-repeat;
+  background-size: 100% 100%;
+}
+.sidebar-menu .treeview .slide-icon7 {
+  background: url(../../imgs/slide-bar/slide-icon7.png) center no-repeat;
+  background-size: 100% 100%;
+}
+
+/*# sourceMappingURL=main.css.map */
