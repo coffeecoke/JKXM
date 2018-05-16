@@ -84,7 +84,7 @@ $(function () {
             type: 'pie',
             radius: ['50%', '70%'],
             avoidLabelOverlap: false,
-            center: ['20%', '50%'],
+            center: ['26%', '50%'],
             label: {
                 normal: {
                     show: false,
