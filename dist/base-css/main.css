@@ -6577,7 +6577,7 @@ fieldset[disabled] .btn-yahoo.focus {
  * ----------
  */
 .skin-blue .main-header {
-  background: url('../../imgs/header/header-bg.png') right center no-repeat;
+  background: #3f66d0 url('../../imgs/header/header-bg.png') right center no-repeat;
 }
 .skin-blue .main-header .navbar {
   background: transparent;
