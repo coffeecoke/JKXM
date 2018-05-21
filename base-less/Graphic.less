@@ -1,5 +1,10 @@
 .graphic {
     .circle-icon {
+        width:74px;
+        height:74px;
+        border-radius: 50%;
+        margin: 0 auto;
+        background: url(../../imgs/graphic/plane-icon.png) center no-repeat;
         &.blue-bg {
             background-color: @light-blue;
         }
@@ -10,33 +15,45 @@
             background-color: @red;
         }
         &.gray-bg {
-            background-color: @gray;
+            background-color: @gray-lte;
+        }
+        &.yellow-bg {
+            background-color: @yellow;
         }
     }
-    .circle-icon-large {
-        width:74px;
-        height:74px;
-        border-radius: 50%;
-    }
-    .circle-icon-mini {
-        width:42px;
-        height:42px;
-        border-radius: 50%;
-    }
-    & >.num {
-       font-size:14px;
-        color:#666;
-    }
     
+    
+    & >.num {
+        font-size:36px;
+        color:#333;
+        text-align: center
+    }
+    & > .desc {
+        font-size:14px;
+        color:#666;
+        text-align: center
+    }
     
 
 }
 .graphic-horizontal {
-    & > .desc {
-        color:#333;
-        font-size:36px;
+    margin-top:20px;
+    .circle-icon {
+        width:42px;
+        height:42px;
+        display:inline-block;
+        vertical-align: middle;
+        background-size: 60%;
     }
-}
-.graphic-vertical {
-
+    & > .num {
+        display:inline-block;
+        font-size:24px;
+        vertical-align: middle;
+        
+    }
+    & > .desc {
+        display:inline-block;
+        vertical-align: middle;
+        margin:0 10px;
+    }
 }
