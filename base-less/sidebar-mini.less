@@ -13,7 +13,7 @@
       .content-wrapper,
       .right-side,
       .main-footer {
-        margin-left: 50px !important;
+        margin-left: 90px !important;
         z-index: 840;
       }
 
@@ -21,7 +21,7 @@
       .main-sidebar {
         //Don't go away! Just shrink
         .translate(0, 0);
-        width: 50px !important;
+        width: 90px !important;
         z-index: 850;
       }
 
@@ -58,8 +58,14 @@
       .sidebar-menu > li > .treeview-menu,
       .sidebar-menu > li > a > .pull-right,
       .sidebar-menu li.header {
-        display: none !important;
+        display: none;
         -webkit-transform: translateZ(0);
+      }
+
+      .sidebar-menu > li > a > .slide-title {
+        text-align: center;
+        margin-top:4px;
+        display: block !important;
       }
 
       .main-header {
@@ -83,7 +89,7 @@
 
         //Since the logo got smaller, we need to fix the navbar's position
         .navbar {
-          margin-left: 50px;
+          margin-left: 90px;
           // margin-left:360px;
         }
       }
@@ -97,35 +103,38 @@
     > a {
       //overflow: visible;
     }
-    > a > span:not(.pull-right), //:not(.pull-right-container),
+    // > a > span:not(.pull-right), //:not(.pull-right-container),
     > .treeview-menu {
       display: block !important;
       position: absolute;
       width: @sidebar-width - 50;
-      left: 50px;
+      left: 90px;
+      padding-left:5px;
+      background-color:#fff;
     }
 
     //position the header & treeview menus
     > a > span {
-      top: 0;
-      margin-left: -3px;
-      padding: 12px 5px 12px 20px;
-      background-color: inherit;
+      // top: 0;
+      // margin-left: -3px;
+      // padding: 12px 5px 12px 20px;
+      // background-color: inherit;
     }
-    > a > .pull-right-container {
-      //display: block!important;
-      position: relative !important;
-      float: right;
-      width: auto !important;
-      left: 200px - 20px !important;
-      top: -22px !important;
-      z-index: 900;
-      > .label:not(:first-of-type) {
-        display: none;
-      }
-    }
+    // > a > .pull-right-container {
+    //   display: block!important;
+    //   position: relative !important;
+    //   float: right;
+    //   width: auto !important;
+    //   left: 200px - 20px !important;
+    //   top: -22px !important;
+    //   z-index: 900;
+    //   > .label:not(:first-of-type) {
+    //     display: none;
+    //   }
+    // }
     > .treeview-menu {
-      top: 44px;
+      // top:44px;
+      top: 0px;
       margin-left: 0;
     }
   }
