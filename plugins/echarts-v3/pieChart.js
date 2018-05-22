@@ -46,9 +46,13 @@ $(function () {
             formatter: "{a} <br/>{b}: {c} ({d}%)"
         },
         legend: {
+            icon:"circle",
             orient: 'vertical',
             top: 'middle',
             right: '20%',
+            itemWidth:8,
+            itemHeight:8,
+            
             // data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
             formatter: function(name) {
                 var totle = (function () {
@@ -146,9 +150,12 @@ $(function () {
             formatter: "{a} <br/>{b}: {c} ({d}%)"
         },
         legend: {
+            icon:'circle',
             orient: 'vertical',
             top: 'middle',
             right: '20%',
+            itemWidth:8,
+            itemHeight:8,
             // data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
             formatter: function(name) {
                 var totle = (function () {
