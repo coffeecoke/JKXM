@@ -86,15 +86,20 @@ $(function () {
         series: [{
             name: '检测占比',
             type: 'pie',
-            radius: ['40%', '70%'],
+            radius: ['42%', '70%'],
             avoidLabelOverlap: false,
             center: ['30%', '50%'],
             label: {
-                show:true,
-                formatter: '{b}',
-                position:'center',
-                textStyle: {
-                    fontSize: '20'
+                normal: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    show: true,
+                    formatter:'158\n全部监控桥梁',
+                    textStyle: {
+                        fontSize: '14'
+                    }
                 }
             },
             labelLine: {
@@ -180,23 +185,23 @@ $(function () {
         //     containLabel:true
         // },
         series: [{
-            name: '访问来源',
+            name: '告警占比',
             type: 'pie',
             radius: ['40%', '70%'],
             avoidLabelOverlap: false,//防止标签重叠 true
             center: ['30%', '50%'],
             label: {
                 normal: {
-                    show: true,
+                    show: false,
                     position: 'center'
                 },
-                // emphasis: {
-                //     show: true,
-                //     textStyle: {
-                //         fontSize: '20',
-                //         fontWeight: 'bold'
-                //     }
-                // }
+                emphasis: {
+                    show: false,
+                    formatter:'{a}\n{c}',
+                    textStyle: {
+                        fontSize: '20'
+                    }
+                }
             },
             labelLine: {
                 normal: {
