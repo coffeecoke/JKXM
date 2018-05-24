@@ -5,12 +5,15 @@ $(function(){
         //     text: '对数轴示例',
         //     left: 'center'
         // },
-        tooltip: {
+        tooltip : {
             trigger: 'item',
-            formatter: '{a} <br/>{b} : {c}'
+            // formatter: '{a} <br/>{b} : {c}',
+            axisPointer : {            // 坐标git轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
         },
         legend: {
-            show:false,
+            show:true,
             left: 'left',
             data: ['2的指数', '3的指数']
         },
@@ -27,24 +30,24 @@ $(function(){
             containLabel: true
         },
         yAxis: {
-            type: 'log',
+            type: 'value',
             name: 'y'
         },
         series: [
             {
                 name: '3的指数',
                 type: 'line',
-                data: [1, 3, 9, 27, 81, 247, 741, 2223, 6669]
+                data: [20,23, 15, 27, 21, 30, 25, 50, 40]
             },
             {
                 name: '2的指数',
                 type: 'line',
-                data: [1, 2, 4, 8, 16, 32, 64, 128, 256]
+                data: [25, 30, 20, 38, 23, 42, 30, 60, 50]
             },
             {
                 name: '1/2的指数',
                 type: 'line',
-                data: [1/2, 1/4, 1/8, 1/16, 1/32, 1/64, 1/128, 1/256, 1/512]
+                data: [50,40,70,60,90,80,100,90,120]
             }
         ]
     };
