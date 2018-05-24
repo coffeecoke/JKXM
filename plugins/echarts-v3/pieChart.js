@@ -49,7 +49,7 @@ $(function () {
             icon:"circle",
             orient: 'vertical',
             top: 'middle',
-            right: '20%',
+            right: '10%',
             itemWidth:8,
             itemHeight:8,
             
@@ -84,22 +84,17 @@ $(function () {
         //     containLabel:true
         // },
         series: [{
-            name: '访问来源',
+            name: '检测占比',
             type: 'pie',
-            radius: ['50%', '70%'],
+            radius: ['40%', '70%'],
             avoidLabelOverlap: false,
-            center: ['26%', '50%'],
+            center: ['30%', '50%'],
             label: {
-                normal: {
-                    show: false,
-                    position: 'center'
-                },
-                emphasis: {
-                    show: true,
-                    textStyle: {
-                        fontSize: '20',
-                        fontWeight: 'bold'
-                    }
+                show:true,
+                formatter: '{b}',
+                position:'center',
+                textStyle: {
+                    fontSize: '20'
                 }
             },
             labelLine: {
@@ -153,7 +148,7 @@ $(function () {
             icon:'circle',
             orient: 'vertical',
             top: 'middle',
-            right: '20%',
+            right: '10%',
             itemWidth:8,
             itemHeight:8,
             // data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
@@ -187,21 +182,21 @@ $(function () {
         series: [{
             name: '访问来源',
             type: 'pie',
-            radius: ['50%', '70%'],
-            avoidLabelOverlap: false,
-            center: ['26%', '50%'],
+            radius: ['40%', '70%'],
+            avoidLabelOverlap: false,//防止标签重叠 true
+            center: ['30%', '50%'],
             label: {
                 normal: {
-                    show: false,
+                    show: true,
                     position: 'center'
                 },
-                emphasis: {
-                    show: true,
-                    textStyle: {
-                        fontSize: '20',
-                        fontWeight: 'bold'
-                    }
-                }
+                // emphasis: {
+                //     show: true,
+                //     textStyle: {
+                //         fontSize: '20',
+                //         fontWeight: 'bold'
+                //     }
+                // }
             },
             labelLine: {
                 normal: {
