@@ -49,7 +49,7 @@ $(function () {
             icon:"circle",
             orient: 'vertical',
             top: 'middle',
-            right: '20%',
+            right: '10%',
             itemWidth:8,
             itemHeight:8,
             
@@ -84,11 +84,11 @@ $(function () {
         //     containLabel:true
         // },
         series: [{
-            name: '访问来源',
+            name: '检测占比',
             type: 'pie',
-            radius: ['50%', '70%'],
+            radius: ['42%', '70%'],
             avoidLabelOverlap: false,
-            center: ['26%', '50%'],
+            center: ['30%', '50%'],
             label: {
                 normal: {
                     show: false,
@@ -96,9 +96,9 @@ $(function () {
                 },
                 emphasis: {
                     show: true,
+                    formatter:'158\n全部监控桥梁',
                     textStyle: {
-                        fontSize: '20',
-                        fontWeight: 'bold'
+                        fontSize: '14'
                     }
                 }
             },
@@ -153,7 +153,7 @@ $(function () {
             icon:'circle',
             orient: 'vertical',
             top: 'middle',
-            right: '20%',
+            right: '10%',
             itemWidth:8,
             itemHeight:8,
             // data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
@@ -185,21 +185,21 @@ $(function () {
         //     containLabel:true
         // },
         series: [{
-            name: '访问来源',
+            name: '告警占比',
             type: 'pie',
-            radius: ['50%', '70%'],
-            avoidLabelOverlap: false,
-            center: ['26%', '50%'],
+            radius: ['40%', '70%'],
+            avoidLabelOverlap: false,//防止标签重叠 true
+            center: ['30%', '50%'],
             label: {
                 normal: {
                     show: false,
                     position: 'center'
                 },
                 emphasis: {
-                    show: true,
+                    show: false,
+                    formatter:'{a}\n{c}',
                     textStyle: {
-                        fontSize: '20',
-                        fontWeight: 'bold'
+                        fontSize: '20'
                     }
                 }
             },
