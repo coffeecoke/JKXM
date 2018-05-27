@@ -579,12 +579,37 @@
             </div>
           </div>
         </div>
+        <!-- 增长趋势 -->
+        <div class="box-wrapper margin-b-20">
+          <div class="row">
+            <!-- 增长趋势左侧 -->
+            <div class="col-sm-9 col-xs-12">
+              <div class="box">
+                <div class="box-header">
+                  <h3 class="box-title">增长趋势</h3>
+                </div>
+                <div class="box-body">
+                  <div class="chart" id="scatterChart" style="height:250px;"></div>
+                </div>
+              </div>
+            </div>
+            <!-- 位移量排名 -->
+            <div class="col-sm-3 col-xs-12">
+              <div class="box">
+                <div class="box-header">
+                  <h3 class="box-title">2018/5位移量排名</h3>
+                </div>
+                <div class="box-body"></div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="row margin-b-20">
           <div class="col-sm-6 col-xs-12">
             <div class="box-wrapper ">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">桥梁监测情况</h3>
+                  <h3 class="box-title">温度与位移相关性分析</h3>
                 </div>
                 <div class="box-body">
                   <div class="chart" id="lineChart" style="height:250px;"></div>
@@ -596,7 +621,7 @@
             <div class="box-wrapper">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">桥梁监测情况</h3>
+                  <h3 class="box-title">变化排名</h3>
                 </div>
                 <div class="box-body">
                   <div class="chart" id="chart1" style="height:250px;"></div>
@@ -656,7 +681,7 @@
             <div class="col-sm-9 col-xs-12">
               <div class="box">
                 <div class="box-header">
-                  <div class="box-title"></div>
+                  <h3 class="box-title">预测</h3>
                 </div>
                 <div class="box-body">
                   <div class="chart" id="scatterChart" style="height:250px;"></div>
@@ -667,7 +692,8 @@
             <div class="col-sm-3 col-xs-12">
               <div class="box">
                 <!-- 即使box-header内容为空也要写上 -->
-                <div class="box-header"></div>
+                <div class="box-header">
+                </div>
                 <div class="box-body"></div>
               </div>
             </div>
@@ -748,7 +774,7 @@
   <script src="../../plugins/echarts-v3/common.js"></script>
   <script src="../../plugins/echarts-v3/pieChart.js"></script>
   <script src="../../plugins/echarts-v3/lineChart.js"></script>
-  <script src="../../plugins/echarts-v3/scatterChart.js"></script>
+  <!-- <script src="../../plugins/echarts-v3/scatterChart.js"></script> -->
 
   <!-- 用户js -->
   <script src="../../common-js/common.js"></script>
