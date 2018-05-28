@@ -42,12 +42,13 @@ var componentsOptions = [
 
     //components
     {
-        "name" : "text",
+        "name" : "bridge-chart",
         "cssPretreatment" : "less",
-        "src" : ["components/component-1/styles/component-1.less"],
-        "target" : "components/component-1/styles"
+        "src" : ["components/bridge-chart/styles/bridge-chart.less"],
+        "target" : "components/bridge-chart/styles"
     },
     //pages
+
     {
         "name" : "page1",
         "cssPretreatment" : "less",

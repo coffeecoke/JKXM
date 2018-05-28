@@ -76,19 +76,13 @@ $(function () {
                 }
             }
         },
-        // grid:{
-        //     top:0,
-        //     left:0,
-        //     right:0,
-        //     bottom:0,
-        //     containLabel:true
-        // },
+       
         series: [{
             name: '检测占比',
             type: 'pie',
             radius: ['42%', '70%'],
             avoidLabelOverlap: false,
-            center: ['30%', '50%'],
+            center: ['30%', '40%'],
             label: {
                 normal: {
                     show: false,
@@ -189,9 +183,9 @@ $(function () {
          series: [{
              name: '告警占比',
              type: 'pie',
-             radius: ['40%', '70%'],
+             radius: ['70%', '70%'],
              avoidLabelOverlap: false,//防止标签重叠 true
-             center: ['30%', '50%'],
+             center: ['30%', '40%'],
              label: {
                  normal: {
                      show: false,
@@ -387,19 +381,16 @@ $(function () {
                 }
             }
         },
-        // grid:{
-        //     top:0,
-        //     left:0,
-        //     right:0,
-        //     bottom:0,
-        //     containLabel:true
-        // },
+        grid:{
+            bottom:0,
+            containLabel:true
+        },
         series: [{
             name: '告警占比',
             type: 'pie',
             radius: ['40%', '70%'],
             avoidLabelOverlap: false,//防止标签重叠 true
-            center: ['30%', '50%'],
+            center: ['30%', '40%'],
             label: {
                 normal: {
                     show: false,

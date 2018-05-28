@@ -251,7 +251,7 @@ a:focus {
   float: left;
   background-color: transparent;
   background-image: none;
-  padding: 15px 10px;
+  padding: 16.5px 10px;
   font-family: fontAwesome;
 }
 .main-header .sidebar-toggle:before {
@@ -370,7 +370,7 @@ a:focus {
   color: #fff;
   border: 0;
   margin: 0;
-  padding: 15px 10px;
+  padding: 16.5px 10px;
 }
 @media (max-width: 991px) {
   .navbar-custom-menu .navbar-nav > li {
@@ -1340,17 +1340,17 @@ a:focus {
 }
 /* support Font Awesome icons in form-control */
 .form-control-feedback.fa {
-  line-height: 34px;
+  line-height: 31px;
 }
 .input-lg + .form-control-feedback.fa,
 .input-group-lg + .form-control-feedback.fa,
 .form-group-lg .form-control + .form-control-feedback.fa {
-  line-height: 46px;
+  line-height: 42px;
 }
 .input-sm + .form-control-feedback.fa,
 .input-group-sm + .form-control-feedback.fa,
 .form-group-sm .form-control + .form-control-feedback.fa {
-  line-height: 30px;
+  line-height: 28px;
 }
 /*
  * Component: Progress Bar
