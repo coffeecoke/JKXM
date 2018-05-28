@@ -1,5 +1,128 @@
 .bridge-chart {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.bridge-chart .bridge-chart__num {
+  width: 34px;
+  height: 100%;
+}
+.bridge-chart .bridge-chart__num .num-lists {
+  margin-bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.bridge-chart .bridge-chart__num .num-lists li {
+  width: 100%;
+}
+.bridge-chart .bridge-chart__inner {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  height: 100%;
+  border-left: 1px solid #a4a4a4;
   border-bottom: 1px solid #a4a4a4;
+}
+.bridge-chart .bridge-chart__inner .bridge {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: url(../imgs/bridge-bg.png) center no-repeat;
+  background-size: 100% 100%;
+}
+.bridge-chart .bridge-chart__inner .gray {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #eceeef;
+}
+.bridge-chart .bridge-chart__inner .red {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 100%;
+  bottom: 0;
+  right: 0;
+  background-color: #ff6673;
+}
+.bridge-chart .bridge-chart__inner .blue {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 100%;
+  bottom: 0;
+  right: 0;
+  background-color: #3593fd;
+}
+.bridge-chart .bridge-chart__inner .red-line {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  top: 100%;
+  right: 0;
+  height: 0;
+  border-top: 1px dashed #eceeef;
+}
+.bridge-chart .bridge-chart__inner .blue-line {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  top: 100%;
+  right: 0;
+  height: 0;
+  border-top: 1px dashed #eceeef;
+}
+.bridge-chart .bridge-chart__inner .top-line {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 0;
+  border-top: 1px dashed #eceeef;
+}
+.bridge-chart .bridge-chart__legend {
+  width: 180px;
+  height: 100%;
+  padding-left: 50px;
+}
+.bridge-chart .bridge-chart__legend dl dt {
+  font-size: 22px;
+}
+.bridge-chart .bridge-chart__legend dl dd {
+  font-size: 14px;
+  color: #333;
+}
+.bridge-chart .bridge-chart__legend .gray dt {
+  color: #333;
+}
+.bridge-chart .bridge-chart__legend .red dt {
+  color: #ff6673;
+}
+.bridge-chart .bridge-chart__legend .blue dt {
+  color: #3593fd;
 }
 
 /*# sourceMappingURL=bridge-chart.css.map */
