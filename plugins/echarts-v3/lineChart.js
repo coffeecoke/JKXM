@@ -68,7 +68,6 @@ $(function () {
         },
         xAxis: {
             type: 'category',
-            name: 'x',
             splitLine: {
                 show: true,
                 lineStyle: {
@@ -79,7 +78,7 @@ $(function () {
         },
         yAxis: {
             type: 'value',
-            name: 'y',
+            name: '位移mm',
             splitLine: {
                 show: true,
                 lineStyle: {
@@ -207,7 +206,6 @@ $(function () {
         },
         xAxis: {
             type: 'category',
-            name: 'x',
             splitLine: {
                 show: true,
                 lineStyle: {
@@ -224,7 +222,7 @@ $(function () {
         },
         yAxis: {
             type: 'value',
-            name: 'mm',
+            name: '位移mm',
             splitLine:{
                 show:true,
                 lineStyle:{
@@ -283,7 +281,8 @@ $(function () {
                 type: 'none'
             },
             formatter: function (params) {
-                return params[0].name + ': ' + params[0].value;
+                return "桥梁编号" + ': ' + params[0].name+"<br/>"+
+                        "位移量"+":"+params[0].data
             }
         },
         xAxis: {
@@ -299,7 +298,7 @@ $(function () {
         },
         yAxis: {
             type: 'value',
-            name: 'y',
+            name: '位移mm',
             splitLine: {
                 show: true,
                 lineStyle: {
@@ -317,7 +316,7 @@ $(function () {
         series: [{
             name: 'hill',
             type: 'pictorialBar',
-            barCategoryGap: '-130%',
+            barCategoryGap: '-40%',
             // symbol: 'path://M0,10 L10,10 L5,0 L0,10 z',
             symbol: 'path://M0,10 L10,10 C5.5,10 5.5,5 5,0 C4.5,5 4.5,10 0,10 z',
             itemStyle: {
@@ -333,7 +332,7 @@ $(function () {
         }, {
             name: 'glyph',
             type: 'pictorialBar',
-            barGap: '-100%',
+            barGap: '-120%',
             symbolPosition: 'end',
             symbolSize: 0,
             symbolOffset: [0, '-120%'],
