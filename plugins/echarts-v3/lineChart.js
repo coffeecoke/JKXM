@@ -8,13 +8,62 @@ $(function () {
         // '{a} <br/>{b} : {c}'
         tooltip: {
             trigger: 'axis',
+<<<<<<< HEAD
             axisPointer: { // 坐标git轴指示器，坐标轴触发有效
                 type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+=======
+            backgroundColor: '#fff',  // 提示背景颜色，默认为透明度为0.7的黑色
+            borderColor: '#ccc',            // 提示边框颜色
+            borderRadius: 4,
+            padding:10,
+            formatter:function(prames){
+                var datas=prames[0].data
+                var datas1=prames[1].data
+                var datas2=prames[2].data
+                return '<div>三月增长趋势</div>'+
+                '<div style="color:#b3b4b4">最高位移量:<span>'+datas+'</span></div>'+
+                '<div style="color:#b3b4b4">最低位移量:<span>'+datas1+'</span></div>'+
+                '<div style="color:#b3b4b4">平均位移量<span>'+datas2+'</span></div>'
+            },
+            textStyle:{
+                color:"#000"
+            },   
+            axisPointer : {            // 坐标git轴指示器，坐标轴触发有效
+                type : 'line',       // 默认为直线，可选为：'line' | 'shadow'
+                backgroundColor:'rgba(239,246,255,0,8)',
+                
+                lineStyle:{
+                    width:80,
+                    // type:"shadow",
+                    shadowColor:"#f7faff",
+                    opacity:0.5,
+                    color: {
+                        type: 'linear',
+                        x: 0,
+                        y: 0,
+                        x2: 0,
+                        y2: 0.9,
+                        colorStops: [{
+                            offset: 0, color: '#f7faff',opacity:'0.1' // 0% 处的颜色
+                        }, {
+                            offset: 1, color: '#e3eeff',opacity:'0.1' // 100% 处的颜色
+                        }],
+                        globalCoord: false // 缺省为 false
+                    }
+                },
+                shadowStyle : {              // 阴影指示器样式设置
+                    width: 'auto',         // 阴影大小
+                    backgroungColor: 'rgba(239,246,255,0,1)'  // 阴影颜色
+                    
+                }
+>>>>>>> 6114477e25d7167033aebfa80f5ed7a039ffbc84
             }
         },
+        color:["#5b85f3","#f8c538","#fd582e"],
         legend: {
             show: true,
             left: 'right',
+<<<<<<< HEAD
             itemWidth: 8,
             itemHeight: 8,
             data: [{
@@ -25,6 +74,14 @@ $(function () {
                     name: '3的指数',
                     icon: 'circle'
                 }
+=======
+            itemWidth:8,
+            itemHeight:8,
+            data: [
+                {name:'最低位移量',icon:'circle'},
+                {name:'最高位移量',icon:'circle'},
+                {name:'平均位移量',icon:'circle'}
+>>>>>>> 6114477e25d7167033aebfa80f5ed7a039ffbc84
             ]
         },
         xAxis: {
@@ -54,8 +111,9 @@ $(function () {
             bottom: '3%',
             containLabel: true
         },
-        series: [{
-                name: '3的指数',
+        series: [
+            {
+                name: '最低位移量',
                 type: 'line',
                 data: [20, 23, 15, 27, 21, 30, 25, 50, 40, 70, 50, 40],
                 symbol: 'none',
@@ -66,7 +124,7 @@ $(function () {
                 }
             },
             {
-                name: '2的指数',
+                name: '最高位移量',
                 type: 'line',
                 symbol: 'none',
                 data: [25, 30, 20, 38, 23, 42, 30, 60, 50, 80, 120, 140],
@@ -77,7 +135,7 @@ $(function () {
                 }
             },
             {
-                name: '1/2的指数',
+                name: '平均位移量',
                 type: 'line',
                 symbol: 'none',
                 data: [50, 40, 70, 60, 90, 80, 100, 90, 120, 130, 140, 150],
@@ -107,14 +165,62 @@ $(function () {
         // },
         tooltip: {
             trigger: 'axis',
+            backgroundColor: '#fff',  // 提示背景颜色，默认为透明度为0.7的黑色
+            borderColor: '#ccc',            // 提示边框颜色
+            borderRadius: 4, 
+            padding:10,
+            formatter:function(prames){
+                console.log(prames)
+                var datas=prames[0].data
+                var datas1=prames[1].data
+                var datas2=prames[2].data
+                return '<div>桥梁编号：wy-1-1-5</div>'+
+                '<div style="color:#b3b4b4">偏移量:<span>'+datas+'</span></div>'
+            },
+            textStyle:{
+                color:"#000"
+            },   
             // formatter: '{a} <br/>{b} : {c}',
+<<<<<<< HEAD
             axisPointer: { // 坐标git轴指示器，坐标轴触发有效
                 type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+=======
+            axisPointer : {            // 坐标git轴指示器，坐标轴触发有效
+                type : 'line',       // 默认为直线，可选为：'line' | 'shadow'
+                backgroundColor:'rgba(239,246,255,0,8)',
+                
+                lineStyle:{
+                    width:100,
+                    // type:"shadow",
+                    shadowColor:"#f7faff",
+                    opacity:0.5,
+                    color: {
+                        type: 'linear',
+                        x: 0,
+                        y: 0,
+                        x2: 0,
+                        y2: 0.9,
+                        colorStops: [{
+                            offset: 0, color: '#f7faff',opacity:'0.1' // 0% 处的颜色
+                        }, {
+                            offset: 1, color: '#e3eeff',opacity:'0.1' // 100% 处的颜色
+                        }],
+                        globalCoord: false // 缺省为 false
+                    }
+                },
+                shadowStyle : {              // 阴影指示器样式设置
+                    width: 'auto',         // 阴影大小
+                    backgroungColor: 'rgba(239,246,255,0,1)'  // 阴影颜色
+                    
+                }
+>>>>>>> 6114477e25d7167033aebfa80f5ed7a039ffbc84
             }
         },
+        color:["#5b85f3","#f8c538","#fd582e"],
         legend: {
             show: true,
             left: 'right',
+<<<<<<< HEAD
             itemWidth: 8,
             itemHeight: 8,
             data: [{
@@ -125,6 +231,14 @@ $(function () {
                     name: '3的指数',
                     icon: 'circle'
                 }
+=======
+            itemWidth:8,
+            itemHeight:8,
+            data: [
+                {name:'最低位移量',icon:'circle'},
+                {name:'最高位移量',icon:'circle'},
+                {name:'平均位移量',icon:'circle'}
+>>>>>>> 6114477e25d7167033aebfa80f5ed7a039ffbc84
             ]
         },
         xAxis: {
@@ -136,7 +250,7 @@ $(function () {
                     type: 'dashed'
                 }
             },
-            data: ['01月', '02月', '03月', '04月', '05月', '06月', '07月']
+            data: ['01月', '02月', '03月', '04月', '05月', '06月']
         },
         grid: {
             left: '0',
@@ -146,6 +260,7 @@ $(function () {
         },
         yAxis: {
             type: 'value',
+<<<<<<< HEAD
             name: 'y',
             splitLine: {
                 show: true,
@@ -156,6 +271,19 @@ $(function () {
         },
         series: [{
                 name: '3的指数',
+=======
+            name: 'mm',
+            splitLine:{
+                show:true,
+                lineStyle:{
+                    type:'dashed'
+                }
+            },
+        },
+        series: [
+            {
+                name: '最低位移量',
+>>>>>>> 6114477e25d7167033aebfa80f5ed7a039ffbc84
                 type: 'line',
                 symbol: 'none',
                 data: [50, 55, 60, 65, 70, 80],
@@ -166,7 +294,7 @@ $(function () {
                 }
             },
             {
-                name: '2的指数',
+                name: '最高位移量',
                 type: 'line',
                 symbol: 'none',
                 data: [30, 35, 40, 45, 48, 50],
@@ -177,7 +305,7 @@ $(function () {
                 }
             },
             {
-                name: '1/2的指数',
+                name: '平均位移量',
                 type: 'line',
                 symbol: 'none',
                 data: [15, 20, 25, 30, 40, 40, 42],
