@@ -2763,13 +2763,49 @@ a:focus {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  border-top: 1px solid #f4f4f4;
+  border-bottom: 1px solid #f4f4f4;
+}
+.table > tbody td {
+  color: #999999;
 }
 .table > thead > tr > th {
-  border-bottom: 2px solid #f4f4f4;
+  border-bottom: 1px solid #3494fd;
+  color: #989898;
 }
 .table tr td .progress {
   margin-top: 5px;
+}
+.table-rank > thead tr th {
+  background-color: #5da9fd;
+  color: #fff;
+  border: none;
+  text-align: center;
+}
+.table-rank > tbody tr td {
+  text-align: center;
+  vertical-align: middle;
+}
+.table-rank > tbody tr td:first-child {
+  font-size: 16px;
+  color: #898989;
+}
+.table-rank > tbody tr:nth-child(-n+3) td:first-child {
+  color: #ff6666;
+  font-size: 20px;
+}
+.table-rank > tbody td .rank-up {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url(../../imgs/table/rank-up.png) no-repeat;
+}
+.table-rank > tbody td .rank-down {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url(../../imgs/table/rank-down.png) no-repeat;
 }
 .table-bordered {
   border: 1px solid #f4f4f4;

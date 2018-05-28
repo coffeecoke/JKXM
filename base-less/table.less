@@ -6,25 +6,83 @@
 .table {
   //Cells
   > thead,
+  
   > tbody,
   > tfoot {
     > tr {
       > th,
       > td {
-        border-top: 1px solid @box-border-color;
+        border-bottom: 1px solid @box-border-color;
       }
     }
   }
+
+  > tbody {
+    td{
+      color:#999999;
+    }
+    
+  }
   //thead cells
   > thead > tr > th {
-    border-bottom: 2px solid @box-border-color;
+    border-bottom: 1px solid #3494fd;
+    color:#989898;
   }
   //progress bars in tables
   tr td .progress {
     margin-top: 5px;
   }
 }
+//排名类table
+.table-rank {
+  > thead {
+    tr {
+      th {
+        background-color:#5da9fd;
+        color:#fff;
+        border:none;
+        text-align: center
+      }
+    }
+    
+  }
+  > tbody {
+    tr {
+      td {
+        text-align:center;
+        vertical-align: middle
+      }
+      td:first-child {
+        font-size:16px;
+        color:#898989;
+      }
+    }
+    tr:nth-child(-n+3) {
+      td:first-child {
+        color:#ff6666;
+        font-size:20px;
+        
+      }
+    }
 
+    td {
+      .rank-up{
+        width:12px;
+        height:12px;
+        display: inline-block;
+        vertical-align: middle;
+        background:url(../../imgs/table/rank-up.png)  no-repeat;
+      }
+      .rank-down{
+        width:12px;
+        height:12px;
+        display: inline-block;
+        vertical-align: middle;
+        background:url(../../imgs/table/rank-down.png)  no-repeat;
+      }
+    }
+  }
+}
 //Bordered Table
 .table-bordered {
   border: 1px solid @box-border-color;

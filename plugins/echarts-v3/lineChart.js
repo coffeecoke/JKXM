@@ -86,6 +86,7 @@ $(function(){
             }
         ]
     };
+    
     myChart1.setOption(option1);
     $(window).resize(function () {
         myChart1.resize();

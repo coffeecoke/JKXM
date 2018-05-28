@@ -322,6 +322,212 @@ $(function () {
      myChart2.setOption(option2);
 })
      
+$(function () {
+    // 告警占比
+    var myChart1 = echarts.init(document.getElementById('pieChart1'));
+    var colors = ['#a5222d', '#f03949', '#ff6673'];
+    var data = [{
+            value: 335,
+            name: '正常',
+            itemStyle:{
+                normal:{
+                    color:colors[0]
+                }
+            }
+        },
+        {
+            value: 310,
+            name: '维护',
+            itemStyle:{
+                normal:{
+                    color:colors[1]
+                }
+            }
+        },
+        {
+            value: 234,
+            name: '告警',
+            itemStyle:{
+                normal:{
+                    color:colors[2]
+                }
+            }
+        }
+    ]
+    var option1 = {
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            icon:'circle',
+            orient: 'vertical',
+            top: 'middle',
+            right: '10%',
+            itemWidth:8,
+            itemHeight:8,
+            // data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
+            formatter: function(name) {
+                var totle = (function () {
+                    var totle = 0;
+                    for(var i= 0;i<data.length;i++) {
+                        totle+=data[i].value;
 
+                    }
+
+                    return totle;
+                })()
+                console.log(totle)
+                if(name === data[0].name) {
+                    return name+'  '+ Math.round((data[0].value)/totle*100)+"%";
+                }else if(name === data[1].name){
+                    return name+'  '+ Math.round((data[1].value)/totle*100)+"%";
+                }else if(name === data[2].name) {
+                    return name+'  '+ Math.round((data[2].value)/totle*100)+"%";
+                }
+            }
+        },
+        // grid:{
+        //     top:0,
+        //     left:0,
+        //     right:0,
+        //     bottom:0,
+        //     containLabel:true
+        // },
+        series: [{
+            name: '告警占比',
+            type: 'pie',
+            radius: ['40%', '70%'],
+            avoidLabelOverlap: false,//防止标签重叠 true
+            center: ['30%', '50%'],
+            label: {
+                normal: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    show: false,
+                    formatter:'{a}\n{c}',
+                    textStyle: {
+                        fontSize: '20'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            data: data
+        }]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart1.setOption(option1);
+})
+
+
+// 维修状态占比
+$(function () {
+   var myChart3 = echarts.init(document.getElementById('pieChart3'));
+    var colors = ['#3494fd', '#ff6673', '#f8c138'];
+    var data = [{
+            value: 335,
+            name: '状态秀',
+            itemStyle:{
+                normal:{
+                    color:colors[0]
+                }   
+            }
+        },
+        {
+            value: 310,
+            name: '故障修',
+            itemStyle:{
+                normal:{
+                    color:colors[1]
+                }
+            }
+        },
+        {
+            value: 234,
+            name: '计划修',
+            itemStyle:{
+                normal:{
+                    color:colors[2]
+                }
+            }
+        }
+    ]
+    var option3 = {
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            show:false,
+            icon:'circle',
+            orient: 'vertical',
+            top: 'middle',
+            right: '10%',
+            itemWidth:8,
+            itemHeight:8,
+            formatter: function(name) {
+                var totle = (function () {
+                    var totle = 0;
+                    for(var i= 0;i<data.length;i++) {
+                        totle+=data[i].value;
+
+                    }
+
+                    return totle;
+                })()
+                console.log(totle)
+                if(name === data[0].name) {
+                    return name+'  '+ Math.round((data[0].value)/totle*100)+"%";
+                }else if(name === data[1].name){
+                    return name+'  '+ Math.round((data[1].value)/totle*100)+"%";
+                }else if(name === data[2].name) {
+                    return name+'  '+ Math.round((data[2].value)/totle*100)+"%";
+                }
+            }
+        },
+        // grid:{
+        //     top:0,
+        //     left:0,
+        //     right:0,
+        //     bottom:0,
+        //     containLabel:true
+        // },
+        series: [{
+            name: '维修状态占比',
+            type: 'pie',
+            radius: ['60%', '80%'],
+            avoidLabelOverlap: false,//防止标签重叠 true
+            center: ['50%', '50%'],
+            roseType : 'radius',
+            label: {
+                normal: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    show: false,
+                    formatter:'{a}\n{c}',
+                    textStyle: {
+                        fontSize: '20'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            data: data
+        }]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart3.setOption(option3);
+})
 
 
