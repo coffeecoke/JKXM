@@ -327,6 +327,7 @@ $(function () {
             barCategoryGap: '-40%',
             // symbol: 'path://M0,10 L10,10 L5,0 L0,10 z',
             symbol: 'path://M0,10 L10,10 C5.5,10 5.5,5 5,0 C4.5,5 4.5,10 0,10 z',
+            symbolSize:['100%','100%'],
             itemStyle: {
                 normal: {
                     opacity: 0.5
@@ -337,32 +338,6 @@ $(function () {
             },
             data: [120, 60, 25, 18, 12, 9],
             z: 10
-        }, {
-            name: 'glyph',
-            type: 'pictorialBar',
-            barGap: '-120%',
-            symbolPosition: 'end',
-            symbolSize: 0,
-            symbolOffset: [0, '-120%'],
-            data: [{
-                value: 120,
-
-            }, {
-                value: 60,
-
-            }, {
-                value: 25,
-
-            }, {
-                value: 18,
-
-            }, {
-                value: 12,
-
-            }, {
-                value: 9,
-
-            }]
         }]
     };
     Chart1.setOption(option1);
