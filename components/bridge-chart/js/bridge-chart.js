@@ -8,11 +8,11 @@ $(function () {
         },
         {
             name:'待维修设备',
-            value:65
+            value:80
         },
         {
             name:'已维修设备',
-            value:40
+            value:60
         }
     ]
     render(xAxis,data);
