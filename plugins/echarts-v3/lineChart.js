@@ -51,7 +51,7 @@ $(function () {
                     backgroungColor: 'rgba(239,246,255,0,1)'  // 阴影颜色
                 }
             },
-            extraCssText: 'box-shadow: 0 0 3px rgba(0, 0, 0, 0.3)'
+            extraCssText: 'box-shadow: 0 0 8px rgba(52, 148, 253, 0.3)' ,
         },
         color:["#5b85f3","#f8c538","#fd582e"],
         legend: {
@@ -190,7 +190,7 @@ $(function () {
                     
                 }
             },
-            extraCssText: 'box-shadow: 0 0 3px rgba(0, 0, 0, 0.3)'            
+            extraCssText: 'box-shadow: 0 0 8px rgba(52, 148, 253, 0.3)' ,            
         },
         color:["#5b85f3","#f8c538","#fd582e"],
         legend: {
@@ -291,7 +291,7 @@ $(function () {
                 return "桥梁编号" + ': ' + params[0].name+"<br/>"+
                         "位移量"+":"+params[0].data
             },
-            extraCssText: 'box-shadow: 0 0 3px rgba(0, 0, 0, 0.3)'            
+            extraCssText: 'box-shadow: 0 0 8px rgba(52, 148, 253, 0.3)' ,            
         },
         xAxis: {
             data: ['WY-1-1-5', ' WY-1-1-5', ' WY-1-1-5', 'WY-1-1-5', 'WY-1-1-5', 'WY-1-1-5'],
