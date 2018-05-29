@@ -27,7 +27,6 @@ $(function () {
             axisPointer : {            // 坐标git轴指示器，坐标轴触发有效
                 type : 'line',       // 默认为直线，可选为：'line' | 'shadow'
                 backgroundColor:'rgba(239,246,255,0,8)',
-                
                 lineStyle:{
                     width:80,
                     // type:"shadow",
@@ -50,9 +49,9 @@ $(function () {
                 shadowStyle : {              // 阴影指示器样式设置
                     width: 'auto',         // 阴影大小
                     backgroungColor: 'rgba(239,246,255,0,1)'  // 阴影颜色
-                    
                 }
-            }
+            },
+            extraCssText: 'box-shadow: 0 0 3px rgba(0, 0, 0, 0.3)'
         },
         color:["#5b85f3","#f8c538","#fd582e"],
         legend: {
@@ -190,7 +189,8 @@ $(function () {
                     backgroungColor: 'rgba(239,246,255,0,1)'  // 阴影颜色
                     
                 }
-            }
+            },
+            extraCssText: 'box-shadow: 0 0 3px rgba(0, 0, 0, 0.3)'            
         },
         color:["#5b85f3","#f8c538","#fd582e"],
         legend: {
@@ -212,7 +212,7 @@ $(function () {
                     type: 'dashed'
                 }
             },
-            data: ['01月', '02月', '03月', '04月', '05月', '06月']
+            data: ['19-20', '20-21', '22-23', '24-25', '25-26', '27-28','29-30']
         },
         grid: {
             left: '0',
@@ -235,7 +235,7 @@ $(function () {
                 name: '最低位移量',
                 type: 'line',
                 symbol: 'none',
-                data: [50, 55, 60, 65, 70, 80],
+                data: [50, 55, 60, 65, 70, 80,78],
                 lineStyle: {
                     normal: {
                         color: '#f8c538'
@@ -246,7 +246,7 @@ $(function () {
                 name: '最高位移量',
                 type: 'line',
                 symbol: 'none',
-                data: [30, 35, 40, 45, 48, 50],
+                data: [30, 35, 40, 45, 48, 50,52],
                 lineStyle: {
                     normal: {
                         color: '#5b85f3'
@@ -280,10 +280,18 @@ $(function () {
             axisPointer: {
                 type: 'none'
             },
+            backgroundColor: '#fff',  // 提示背景颜色，默认为透明度为0.7的黑色
+            borderColor: '#ccc',            // 提示边框颜色
+            borderRadius: 4,
+            padding:10,
+            textStyle:{
+                color:"#000"
+            }, 
             formatter: function (params) {
                 return "桥梁编号" + ': ' + params[0].name+"<br/>"+
                         "位移量"+":"+params[0].data
-            }
+            },
+            extraCssText: 'box-shadow: 0 0 3px rgba(0, 0, 0, 0.3)'            
         },
         xAxis: {
             data: ['WY-1-1-5', ' WY-1-1-5', ' WY-1-1-5', 'WY-1-1-5', 'WY-1-1-5', 'WY-1-1-5'],

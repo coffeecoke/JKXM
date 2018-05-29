@@ -233,10 +233,18 @@ $(function () {
             axisPointer: {
                 type: 'none'
             },
+            backgroundColor: '#fff',  // 提示背景颜色，默认为透明度为0.7的黑色
+            borderColor: '#ccc',            // 提示边框颜色
+            borderRadius: 4,
+            padding:10,
+            textStyle:{
+                color:"#000"
+            }, 
             formatter: function (params) {
                 return "桥梁编号" + ': ' + params[0].name+"<br/>"+
                         "位移量"+":"+params[0].data
-            }
+            },
+            extraCssText: 'box-shadow: 0 0 3px rgba(0, 0, 0, 0.3)'    
         },
         xAxis: {
             data: ['WY-1-1-5', ' WY-1-1-5', ' WY-1-1-5', 'WY-1-1-5', 'WY-1-1-5', 'WY-1-1-5'],
@@ -251,7 +259,7 @@ $(function () {
         },
         yAxis: {
             type: 'value',
-            name: 'y',
+            name: '位移mm',
             splitLine: {
                 show: true,
                 lineStyle: {
