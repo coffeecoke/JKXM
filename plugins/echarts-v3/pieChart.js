@@ -421,35 +421,36 @@ $(function () {
 $(function () {
    var myChart3 = echarts.init(document.getElementById('pieChart3'));
     var colors = ['#3494fd', '#ff6673', '#f8c138'];
-    // function setborder(colors){
-    //     var label={
-    //         normal: {
-    //             formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
-    //             borderWidth: 1,
-    //             borderRadius: 4,
-    //             rich: {
-    //                 a: {
-    //                     lineHeight: 22,
-    //                     align: 'center'
-    //                 },
-    //                 hr: {
-    //                     borderColor:color,
-    //                     width: '100%',
-    //                     borderWidth: 0.5,
-    //                     height: 0
-    //                 },
-    //                 b: {
-    //                     fontSize: 16,
-    //                     lineHeight: 33
-    //                 }
-    //             }
-    //         }
-    //     }
-    //     return lable;
-    // }
+    function setborder(colors){
+        var label={
+            normal: {
+                formatter: '  {b|{b}}{c}\n{hr|}\n',
+                borderWidth: 1,
+                borderRadius: 4,
+                rich: {
+                    a: {
+                        lineHeight: 22,
+                        align: 'center'
+                    },
+                    hr: {
+                        borderColor:colors,
+                        width: '100%',
+                        borderWidth: 0.5,
+                        height: 0
+                    },
+                    b: {
+                        fontSize: 12,
+                        lineHeight: 14
+                    }
+                }
+            }
+        }
+        return label;
+    }
     var data = [{
             value: 335,
             name: '状态秀',
+            label:setborder(colors[0]),
             itemStyle:{
                 normal:{
                     color:colors[0]
@@ -459,6 +460,7 @@ $(function () {
         {
             value: 310,
             name: '故障修',
+            label:setborder(colors[1]),
             itemStyle:{
                 normal:{
                     color:colors[1]
@@ -468,6 +470,7 @@ $(function () {
         {
             value: 234,
             name: '计划修',
+            label:setborder(colors[2]),
             itemStyle:{
                 normal:{
                     color:colors[2]
@@ -522,54 +525,6 @@ $(function () {
             avoidLabelOverlap: false,//防止标签重叠 true
             center: ['50%', '50%'],
             roseType : 'radius',
-           
-            label: {
-                show:true,
-                normal: {
-                    formatter: '  {b|{b}}{c}\n{hr|}\n',
-                   
-                    // shadowBlur:3,
-                    // shadowOffsetX: 2,
-                    // shadowOffsetY: 2,
-                    // shadowColor: '#999',
-                    // padding: [0, 7],
-                    rich: {
-                        a: {
-                            color: '#999',
-                            lineHeight: 20,
-                            align: 'center'
-                        },
-                        // abg: {
-                        //     backgroundColor: '#333',
-                        //     width: '100%',
-                        //     align: 'right',
-                        //     height: 22,
-                        //     borderRadius: [4, 4, 0, 0]
-                        // },
-                        hr: {
-                            borderColor: '#aaa',
-                            width: '100%',
-                            borderWidth: 0.5,
-                            height: 0
-                        },
-                        b: {
-                            fontSize: 12,
-                            lineHeight: 15
-                        },
-                        per: {
-                            color: '#eee',
-                            backgroundColor: '#334455',
-                            padding: [2, 4],
-                            borderRadius: 2
-                        }
-                    }
-                }
-            },
-            labelLine: {
-                normal: {
-                    show: true
-                }
-            },
             data: data
         }]
     };
