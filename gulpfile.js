@@ -50,10 +50,10 @@ var componentsOptions = [
     //pages
 
     {
-        "name" : "page1",
+        "name" : "page",
         "cssPretreatment" : "less",
-        "src" : ["pages/page1/styles/page1.less"],
-        "target" : "pages/page1/styles"
+        "src" : ["pages/**/*.less"],
+        "target" : "pages"
     },
     {
         "name" : "main",
