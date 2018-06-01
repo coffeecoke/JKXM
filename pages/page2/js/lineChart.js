@@ -1,3 +1,5 @@
+<<<<<<< HEAD:pages/page2/js/scatterChat.js
+=======
 $(function () {
     var myChart1 = echarts.init(document.getElementById('lineChart1'));
     var option1 = {
@@ -269,3 +271,4 @@ $(function () {
     })
 
 })
+>>>>>>> 51fd214a3738c562940bc08e57df925801b60a13:pages/page2/js/lineChart.js
