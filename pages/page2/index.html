@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>中国铁路物联网智慧平台</title>
- 
+
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
@@ -32,6 +32,7 @@
 
 </head>
 <!-- 如果左侧不想用弹出二级的形式，而是上下折叠显示，请去掉 “sidebar-mini” “sidebar-collapse”两个class类名-->
+
 <body class="hold-transition skin-blue sidebar-mini sidebar-collapse">
   <div class="wrapper">
 
@@ -55,10 +56,12 @@
           <ul class="nav navbar-nav">
             <!-- 用户信息弹出 -->
             <li class="dropdown user user-menu">
-              
+
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 
-                <span class="hidden-xs">超级管理员,你好 <i class="fa fa-arrow-circle-down"></i></span>
+                <span class="hidden-xs">超级管理员,你好
+                  <i class="fa fa-arrow-circle-down"></i>
+                </span>
               </a>
               <ul class="dropdown-menu">
                 <!-- User image -->
@@ -103,7 +106,7 @@
     </header>
     <!-- 左侧栏-->
     <aside class="main-sidebar">
-     
+
       <section class="sidebar">
 
         <ul class="sidebar-menu" data-widget="tree">
@@ -312,33 +315,33 @@
                     <div class="col-sm-9 col-xs-12">
                       <div class="row">
                         <div class="col-xs-6">
-                            <div class="graphic graphic-horizontal">
-                                <div class="circle-icon green-bg"></div>
-                                <div class="desc">正常设备</div>
-                                <div class="num">58</div>
-                            </div>
-                           
+                          <div class="graphic graphic-horizontal">
+                            <div class="circle-icon green-bg"></div>
+                            <div class="desc">正常设备</div>
+                            <div class="num">58</div>
+                          </div>
+
                         </div>
                         <div class="col-xs-6">
-                            <div class="graphic graphic-horizontal">
-                                <div class="circle-icon red-bg"></div>
-                                <div class="desc">告警设备</div>
-                                <div class="num">58</div>
-                            </div>
+                          <div class="graphic graphic-horizontal">
+                            <div class="circle-icon red-bg"></div>
+                            <div class="desc">告警设备</div>
+                            <div class="num">58</div>
+                          </div>
                         </div>
                         <div class="col-xs-6">
-                            <div class="graphic graphic-horizontal">
-                                <div class="circle-icon yellow-bg"></div>
-                                <div class="desc">维护设备</div>
-                                <div class="num">58</div>
-                            </div>
+                          <div class="graphic graphic-horizontal">
+                            <div class="circle-icon yellow-bg"></div>
+                            <div class="desc">维护设备</div>
+                            <div class="num">58</div>
+                          </div>
                         </div>
                         <div class="col-xs-6">
-                            <div class="graphic graphic-horizontal">
-                                <div class="circle-icon gray-bg"></div>
-                                <div class="desc">离线设备</div>
-                                <div class="num">58</div>
-                            </div>
+                          <div class="graphic graphic-horizontal">
+                            <div class="circle-icon gray-bg"></div>
+                            <div class="desc">离线设备</div>
+                            <div class="num">58</div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -372,66 +375,67 @@
             </div>
           </div>
         </div>
-        <!-- 增长趋势 -->
-        <div class="box-wrapper margin-b-20">
-          <div class="row">
-            <!-- 增长趋势左侧 -->
-            <div class="col-sm-6 col-xs-12">
+        <div class="row">
+          <!-- 所有坠砣劣化趋势排名 -->
+          <div class="col-sm-6 col-xs-12">
+            <div class="box-wrapper">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">增长趋势</h3>
+                  <h3 class="box-title">所有坠砣劣化趋势排名</h3>
                 </div>
                 <div class="box-body">
                   <!-- charts容器 -->
-                  <div class="chart" id="scatterChart_1" style="height:250px;"></div>
+                  <div class="chart" id="PictorialBar_1" style="height:250px;"></div>
                 </div>
               </div>
             </div>
-            <!--/. 增长趋势左侧 -->
+          </div>
+          <!--/. 所有坠砣劣化趋势排名 -->
 
-            <!-- 位移量排名 -->
-            <div class="col-sm-6 col-xs-12">
+          <!-- 坠砣高度排名 -->
+          <div class="col-sm-6 col-xs-12">
+            <div class="box-wrapper">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">20185月位移量排名</h3>
+                  <h3 class="box-title">坠砣高度排名</h3>
                 </div>
                 <div class="box-body">
-                 
+
                 </div>
               </div>
             </div>
-            <!-- /.位移量排名 -->
           </div>
+          <!-- /.位移量排名 -->
         </div>
         <div class="box-wrapper">
-            <div class="row margin-b-20">
+          <div class="row margin-b-20">
             <div class="col-sm-6 col-xs-12">
-                
-                <div class="box">
-                    <div class="box-header">
-                    <h3 class="box-title">温度与位移相关性分析</h3>
-                    </div>
-                    <div class="box-body">
-                    <!-- charts容器 -->
-                    <div class="chart" id="lineChart1" style="height:250px;"></div>
-                    </div>
-                
+
+              <div class="box">
+                <div class="box-header">
+                  <h3 class="box-title">温度与位移相关性分析</h3>
                 </div>
+                <div class="box-body">
+                  <!-- charts容器 -->
+                  <div class="chart" id="lineChart1" style="height:250px;"></div>
+                </div>
+
+              </div>
             </div>
             <div class="col-sm-6 col-xs-12">
-                
-                <div class="box">
-                    <div class="box-header">
-                    <h3 class="box-title">变化排名</h3>
-                    </div>
-                    <div class="box-body">
-                    <!-- charts容器 -->
-                    <div class="chart" id="lineChart2" style="height:250px;"></div>
-                    </div>
+
+              <div class="box">
+                <div class="box-header">
+                  <h3 class="box-title">变化排名</h3>
                 </div>
-            
+                <div class="box-body">
+                  <!-- charts容器 -->
+                  <div class="chart" id="lineChart2" style="height:250px;"></div>
+                </div>
+              </div>
+
             </div>
-            </div>
+          </div>
         </div>
         <!-- floo3 -->
         <div class="row  margin-b-20">
@@ -458,54 +462,54 @@
                       <h3 class="box-title">病态桥梁信息</h3>
                     </div>
                     <div class="box-body">
-                        <table class="table">
-                          <thead>
-                            <tr>
-                              <th>问题桥梁名称</th>
-                              <th>桥梁风险预估原因</th>
-                              <th>问题名称</th>
-                              <th>问题名称</th>
-                              <th>问题名称</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th>wy-1-2-3-4</th>
-                              <td>温度变化</td>
-                              <td>客运量增加</td>
-                              <td>温度变化</td>
-                              <td>临时文字</td>
-                            </tr>
-                            <tr>
-                              <th>wy-1-2-3-4</th>
-                              <td>温度变化</td>
-                              <td>客运量增加</td>
-                              <td>温度变化</td>
-                              <td>临时文字</td>
-                            </tr>
-                            <tr>
-                              <th>wy-1-2-3-4</th>
-                              <td>温度变化</td>
-                              <td>客运量增加</td>
-                              <td>温度变化</td>
-                              <td>临时文字</td>
-                            </tr>
-                            <tr>
-                              <th>wy-1-2-3-4</th>
-                              <td>温度变化</td>
-                              <td>客运量增加</td>
-                              <td>温度变化</td>
-                              <td>临时文字</td>
-                            </tr>
-                            <tr>
-                              <th>wy-1-2-3-4</th>
-                              <td>温度变化</td>
-                              <td>客运量增加</td>
-                              <td>温度变化</td>
-                              <td>临时文字</td>
-                            </tr>
-                          </tbody>
-                        </table>
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>问题桥梁名称</th>
+                            <th>桥梁风险预估原因</th>
+                            <th>问题名称</th>
+                            <th>问题名称</th>
+                            <th>问题名称</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th>wy-1-2-3-4</th>
+                            <td>温度变化</td>
+                            <td>客运量增加</td>
+                            <td>温度变化</td>
+                            <td>临时文字</td>
+                          </tr>
+                          <tr>
+                            <th>wy-1-2-3-4</th>
+                            <td>温度变化</td>
+                            <td>客运量增加</td>
+                            <td>温度变化</td>
+                            <td>临时文字</td>
+                          </tr>
+                          <tr>
+                            <th>wy-1-2-3-4</th>
+                            <td>温度变化</td>
+                            <td>客运量增加</td>
+                            <td>温度变化</td>
+                            <td>临时文字</td>
+                          </tr>
+                          <tr>
+                            <th>wy-1-2-3-4</th>
+                            <td>温度变化</td>
+                            <td>客运量增加</td>
+                            <td>温度变化</td>
+                            <td>临时文字</td>
+                          </tr>
+                          <tr>
+                            <th>wy-1-2-3-4</th>
+                            <td>温度变化</td>
+                            <td>客运量增加</td>
+                            <td>温度变化</td>
+                            <td>临时文字</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
@@ -516,62 +520,62 @@
           <!-- 健康评分排行榜 -->
           <div class="col-sm-3 col-xs-12">
             <div class="box-wrapper">
-                <div class="box">
-                    <div class="box-header">
-                      <h3 class="box-title">健康评分排行榜</h3>
-                    </div>
-                    <div class="box-body">
-                      <table class="table table-rank">
-                        <thead>
-                          <tr>
-                            <th>排名</th>
-                            <th>桥梁名称</th>
-                            <th>排名变化</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>WY-5-0-1-1</td>
-                            <td>
-                              <i class="rank-up"></i>
-                              <span>2</span>
-                            </td>
-                           
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td>WY-5-0-1-1</td>
-                            <td>
-                              <i class="rank-down"></i>
-                              <span>3</span>
-                            </td>
-                           
-                          </tr>
-                          <tr>
-                            <td>3</td>
-                            <td>WY-5-0-1-1</td>
-                            <td>
-                              <i class="rank-up"></i>
-                              <span>4</span>
-                            </td>
-                           
-                          </tr>
-                          <tr>
-                            <td>4</td>
-                            <td>WY-5-0-1-1</td>
-                            <td>
-                              <i class="rank-up"></i>
-                              <span>2</span>
-                            </td>
-                           
-                          </tr>
-                         
-                        </tbody>
-
-                      </table>
-                    </div>
+              <div class="box">
+                <div class="box-header">
+                  <h3 class="box-title">健康评分排行榜</h3>
                 </div>
+                <div class="box-body">
+                  <table class="table table-rank">
+                    <thead>
+                      <tr>
+                        <th>排名</th>
+                        <th>桥梁名称</th>
+                        <th>排名变化</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>WY-5-0-1-1</td>
+                        <td>
+                          <i class="rank-up"></i>
+                          <span>2</span>
+                        </td>
+
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>WY-5-0-1-1</td>
+                        <td>
+                          <i class="rank-down"></i>
+                          <span>3</span>
+                        </td>
+
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>WY-5-0-1-1</td>
+                        <td>
+                          <i class="rank-up"></i>
+                          <span>4</span>
+                        </td>
+
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>WY-5-0-1-1</td>
+                        <td>
+                          <i class="rank-up"></i>
+                          <span>2</span>
+                        </td>
+
+                      </tr>
+
+                    </tbody>
+
+                  </table>
+                </div>
+              </div>
 
             </div>
           </div>
@@ -586,10 +590,10 @@
             <div class="col-sm-9 col-xs-12">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">预测</h3>
+                  <h3 class="box-title">预测故障</h3>
                 </div>
                 <div class="box-body">
-                  <div class="chart" id="scatter3" style="height:250px;"></div>
+                  <div class="chart" id="scatter" style="height:250px;"></div>
                 </div>
               </div>
             </div>
@@ -597,12 +601,12 @@
             <!-- 预测右侧 -->
             <div class="col-sm-3 col-xs-12">
               <div class="box">
-                <!--为了布局美观， 即使box-header内容为空也要写上 -->
+
                 <div class="box-header">
+                  <h3 class="box-title">预测准确率</h3>
                 </div>
                 <div class="box-body">
-                  <!-- 地图前台没法实现 -->
-                  <!-- <img src="../../imgs/common/demo.png" alt=""> -->
+
                 </div>
               </div>
             </div>
@@ -612,39 +616,39 @@
 
         <!-- floor5 -->
         <div class="box-wrapper margin-b-20">
-        <div class="row margin-b-20">
-          <!-- 维修情况 -->
-          <div class="col-sm-9 col-xs-12">
-            
+          <div class="row margin-b-20">
+            <!-- 维修情况 -->
+            <div class="col-sm-9 col-xs-12">
+
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">维修情况</h3>
+                  <h3 class="box-title">维修类型占比</h3>
                 </div>
                 <div class="box-body">
                   <div class="bridge-chart" style="height:200px;">
-                    
+
                   </div>
                 </div>
               </div>
-          </div>
-          <!-- /.维修情况 -->
+            </div>
+            <!-- /.维修情况 -->
 
-          <!-- 维修状态占比 -->
-          <div class="col-sm-3 col-xs-12">
-           
+            <!-- 维修状态占比 -->
+            <div class="col-sm-3 col-xs-12">
+
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">维修状态占比</h3>
+                  <h3 class="box-title">计划修达成率</h3>
                 </div>
                 <div class="box-body">
                   <!-- <div class="chart" id="pieChart3" style="height:200px;"></div> -->
                 </div>
-             
-            </div>
 
+              </div>
+
+            </div>
+            <!-- /.维修状态占比 -->
           </div>
-          <!-- /.维修状态占比 -->
-        </div>
         </div>
         <!-- end floor5 -->
       </section>
@@ -656,7 +660,7 @@
     <!-- 侧边控制栏，暂时不用 -->
     <!-- 添加侧边栏的背景。 这个div必须放置
         紧随控制边栏之后 -->
-    
+
     <div class="control-sidebar-bg"></div>
   </div>
   <!-- ./wrapper -->
@@ -682,18 +686,31 @@
   <script src="../../plugins/fastclick/lib/fastclick.js"></script>
   <!-- echarts-v3  百度echarts3-->
   <script src="../../plugins/echarts-v3/echarts.min.js"></script>
+  <!-- 线性回归工具库 -->
+  <script src="../../plugins/echarts-v3/ecStat.min.js"></script>
   <!-- 引入自定义echart -->
-  <script src="../../plugins/echarts-v3/common.js"></script>
-  <script src="../../plugins/echarts-v3/pieChart.js"></script>
-  <!-- <script src="../../plugins/echarts-v3/lineChart.js"></script>
-  <script src="../../plugins/echarts-v3/scatterChart.js"></script> -->
+
+  <!-- 饼图 -->
+  <script src="../page2/js/pieChart.js"></script>
+  <!-- 折线图 -->
+  <script src="../page2/js/lineChart.js"></script>
+
+  <script src="../page2/js/pictorialBar.js"></script>
+
+  <script src="../page2/js/scatter.js"></script>
+
   <!-- components 自主开发组件-->
   <script src="../../components/bridge-chart/js/bridge-chart.js"></script>
   <!-- 用户js -->
 
+<<<<<<< HEAD
   <script src="../../common-js/common.js"></script>
   <script src="../page2/js/ecStat.js"></script>
 <script src="../page2/js/scatterChat.js"></script>
+=======
+  <!-- <script src="../../common-js/common.js"></script> -->
+
+>>>>>>> 51fd214a3738c562940bc08e57df925801b60a13
 
 </body>
 
