@@ -39,7 +39,7 @@ $(function () {
         },
         yAxis: {
             type: 'value',
-            // name: '位移mm',
+            name: '位移mm',
             splitLine: {
                 show: true,
                 lineStyle: {
