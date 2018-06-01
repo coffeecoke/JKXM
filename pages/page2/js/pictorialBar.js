@@ -19,7 +19,6 @@ $(function () {
                 
                 var totle = 0;
                 for(var i=0;i<=params[0].dataIndex;i++) {
-                    console.log(data[i])
                     totle += data[i]
                 };
                 return "坠跎编号" + ': ' + params[0].name+"<br/>"+

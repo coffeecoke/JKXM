@@ -148,7 +148,6 @@ $(function () {
             borderRadius: 4, 
             padding:10,
             formatter:function(prames){
-                console.log(prames)
                 var datas=prames[0].data
                 var datas1=prames[1].data
                 var datas2=prames[2].data

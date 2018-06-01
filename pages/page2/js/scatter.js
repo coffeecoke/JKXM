@@ -33,10 +33,8 @@ $(function () {
             }, 
             extraCssText: 'box-shadow: 0 0 8px rgba(52, 148, 253, 0.3)' ,
             formatter: function (params) {
-                console.log(params)
                 var totle = 0;
                 for(var i=0;i<=params[0].dataIndex;i++) {
-                    console.log(data[i][1])
                     totle += data[i][1]
                 };
                 return "未来" + ': ' + params[0].name+"<br/>"+
@@ -105,7 +103,6 @@ $(function () {
             name: 'scatter',
             type: 'scatter',
             symbolSize: function(data) {
-                console.log(data)
                 return Math.sqrt(data[1])*2;
             },
             label: {
