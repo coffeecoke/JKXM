@@ -3,6 +3,7 @@ $(function () {
         [10, 10],
         [15, 40],
         [30, 60],
+        [150,120],
         [180, 100],
         [365, 120],
         [540, 50],
@@ -124,34 +125,42 @@ $(function () {
                 }
             },
             data: data
-        }, {
-            name: 'line',
-            type: 'line',
-            showSymbol: false,
-            smooth: true,
-            data: myRegression.points,
-            markPoint: {
-                itemStyle: {
-                    normal: {
-                        color: 'transparent'
-                    }
-                },
-                label: {
-                    normal: {
-                        show: true,
-                        position: 'left',
-                        formatter: myRegression.expression,
-                        textStyle: {
-                            color: '#333',
-                            fontSize: 14
-                        }
-                    }
-                },
-                data: [{
-                    coord: myRegression.points[myRegression.points.length - 1]
-                }]
-            }
-        }]
+        }
+        // {
+        //     name: 'line',
+        //     type: 'line',
+        //     showSymbol: false,
+        //     smooth: true,
+        //     data: myRegression.points,
+        //     lineStyle:{
+        //         normal:{
+        //             color:"#acacad"
+        //         }
+        //     },
+        //     markPoint: {
+                
+        //         itemStyle: {
+        //             normal: {
+        //                 color: 'transparent'
+        //             }
+        //         },
+        //         label: {
+        //             normal: {
+        //                 show: true,
+        //                 position: 'left',
+        //                 formatter: myRegression.expression,
+        //                 textStyle: {
+        //                     color: '#333',
+        //                     fontSize: 14
+        //                 }
+        //             }
+        //         },
+        //         data: [{
+        //             coord: myRegression.points[myRegression.points.length - 1]
+        //         }]
+        //     }
+        // }
+    ]
     };
     scatter.setOption(option);
     

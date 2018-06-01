@@ -50,10 +50,10 @@ var componentsOptions = [
     //pages
 
     {
-        "name" : "page1",
+        "name" : "page",
         "cssPretreatment" : "less",
-        "src" : ["pages/page1/styles/page1.less"],
-        "target" : "pages/page1/styles"
+        "src" : ["pages/**/*.less"],
+        "target" : "pages"
     },
     {
         "name" : "main",
@@ -124,6 +124,12 @@ gulp.task('watchComponents-less', function (done) {
     gulp.watch('components/**/*.less', ['components'])
         .on('end',done);
 });
+//监控pages的less变化
+gulp.task('watchPages-less', function (done) {
+    $.livereload.listen();
+    gulp.watch('pages/**/*.less', ['components'])
+        .on('end',done);
+});
 
 //监控base-less的变化
 gulp.task('watchBaseLess',function (done) {
@@ -175,7 +181,7 @@ gulp.task('build:cssmin', ['main-less'], function () {
 //        .pipe(gulp.dest('dist/demo/js'));
 //});
 
-gulp.task('dev', ['bootstrap','main-less','components','watchBootstrap','watchBaseLess','watchComponents-less']);
+gulp.task('dev', ['bootstrap','main-less','components','watchBootstrap','watchBaseLess','watchComponents-less','watchPages-less']);
 
 //gulp.task('demo', ['demo:yoa_css', 'copeIconfont','copeJs','demo:uglify', 'demo:html']);
 
