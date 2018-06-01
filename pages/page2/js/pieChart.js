@@ -65,7 +65,6 @@ $(function () {
 
                     return totle;
                 })()
-                console.log(totle)
                 if(name === data[0].name) {
                     return name+'  '+ Math.round((data[0].value)/totle*100)+"%";
                 }else if(name === data[1].name){
@@ -164,7 +163,6 @@ $(function () {
  
                      return totle;
                  })()
-                 console.log(totle)
                  if(name === data[0].name) {
                      return name+'  '+ Math.round((data[0].value)/totle*100)+"%";
                  }else if(name === data[1].name){
@@ -184,7 +182,7 @@ $(function () {
          series: [{
              name: '告警占比',
              type: 'pie',
-             radius: ['70%', '70%'],
+             radius: ['30%', '70%'],
              avoidLabelOverlap: false,//防止标签重叠 true
              center: ['30%', '40%'],
              label: {
@@ -267,7 +265,6 @@ $(function () {
  
                      return totle;
                  })()
-                 console.log(totle)
                  if(name === data[0].name) {
                      return name+'  '+ Math.round((data[0].value)/totle*100)+"%";
                  }else if(name === data[1].name){

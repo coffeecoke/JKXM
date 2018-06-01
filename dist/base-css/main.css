@@ -3444,7 +3444,6 @@ table.text-center th {
   height: 74px;
   border-radius: 50%;
   margin: 0 auto;
-  background: url(../../imgs/graphic/plane-icon.png) center no-repeat;
 }
 .graphic .circle-icon.blue-bg {
   background-color: #3494fd;
@@ -3460,6 +3459,12 @@ table.text-center th {
 }
 .graphic .circle-icon.yellow-bg {
   background-color: #ffce22;
+}
+.graphic .icon-bridge {
+  background: url(../../imgs/graphic/icon-bridge.png) center no-repeat;
+}
+.graphic .icon-device {
+  background: url(../../imgs/graphic/icon-device.png) center no-repeat;
 }
 .graphic > .num {
   font-size: 36px;
