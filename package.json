@@ -1,6 +1,6 @@
 {
   "name": "jkxm",
-  "title": "物联网智慧平台",
+  "title": "",
   "version": "0.0.1",
   "description": "A website system for visual management system",
   "author": "tanghuan",
@@ -10,9 +10,6 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
-  },
-  "bugs": {
     "url": ""
   },
   "keywords": [
@@ -33,6 +30,7 @@
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
+    "gulp-rev": "^8.1.1",
     "gulp-rev-append": "^0.1.6",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^1.6.0",
