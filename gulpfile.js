@@ -191,7 +191,7 @@ gulp.task('build:cssmin', ['main-less'], function () {
 //        .pipe(gulp.dest('dist/demo/js'));
 //});
 
-gulp.task('dev', ['bootstrap','main-less','components','uglifyJs','watchBootstrap','watchBaseLess','watchComponents-less','watchPages-less']);
+gulp.task('dev', ['bootstrap','main-less','components','watchBootstrap','watchBaseLess','watchComponents-less','watchPages-less']);
 
 //gulp.task('demo', ['demo:yoa_css', 'copeIconfont','copeJs','demo:uglify', 'demo:html']);
 
