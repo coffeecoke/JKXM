@@ -47,6 +47,12 @@ var componentsOptions = [
         "src" : ["components/bridge-chart/styles/bridge-chart.less"],
         "target" : "components/bridge-chart/styles"
     },
+    {
+        "name" : "weight-chart",
+        "cssPretreatment" : "less",
+        "src" : ["components/weight-chart/styles/weight-chart.less"],
+        "target" : "components/weight-chart/styles"
+    },
     //pages
 
     {
