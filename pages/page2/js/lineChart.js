@@ -1,5 +1,5 @@
 $(function () {
-    var myChart1 = echarts.init(document.getElementById('scatterChart'));
+    var myChart1 = echarts.init(document.getElementById('lineChart1'));
     var option1 = {
         // title: {
         //     text: '对数轴示例',
@@ -73,7 +73,7 @@ $(function () {
                     type: 'dashed'
                 }
             },
-            data: ['01月', '02月', '03月', '04月', '05月', '06月', '07月', '08月', '09月', "10月", "11月", "12月"]
+            data: ['01月', '02月', '03月', '04月', '05月', '06月', '07月', '08月']
         },
         yAxis: {
             type: 'value',
@@ -95,7 +95,7 @@ $(function () {
             {
                 name: '最低位移量',
                 type: 'line',
-                data: [20, 23, 15, 27, 21, 30, 25, 50, 40, 70, 50, 40],
+                data: [40, 30, 25, 50, 40, 70, 50, 40],
                 symbol: 'none',
                 lineStyle: {
                     normal: {
@@ -107,7 +107,7 @@ $(function () {
                 name: '最高位移量',
                 type: 'line',
                 symbol: 'none',
-                data: [25, 30, 20, 38, 23, 42, 30, 60, 50, 80, 120, 140],
+                data: [ 23, 42, 30, 60, 50, 80, 120, 140],
                 lineStyle: {
                     normal: {
                         color: '#5b85f3'
@@ -118,7 +118,7 @@ $(function () {
                 name: '平均位移量',
                 type: 'line',
                 symbol: 'none',
-                data: [50, 40, 70, 60, 90, 80, 100, 90, 120, 130, 140, 150],
+                data: [90, 80, 100, 90, 120, 130, 90, 100],
                 lineStyle: {
                     normal: {
                         color: '#fd582e'
@@ -134,11 +134,9 @@ $(function () {
     })
 
 })
-
-
 $(function () {
-    var myChart = echarts.init(document.getElementById('lineChart'));
-    var option = {
+    var myChart2 = echarts.init(document.getElementById('lineChart2'));
+    var option2 = {
         // title: {
         //     text: '对数轴示例',
         //     left: 'center'
@@ -150,7 +148,6 @@ $(function () {
             borderRadius: 4, 
             padding:10,
             formatter:function(prames){
-                console.log(prames)
                 var datas=prames[0].data
                 var datas1=prames[1].data
                 var datas2=prames[2].data
@@ -266,79 +263,9 @@ $(function () {
             }
         ]
     };
-    myChart.setOption(option);
+    myChart2.setOption(option2);
     $(window).resize(function () {
-        myChart.resize();
+        myChart2.resize();
     })
 
-})
-$(function () {
-    var Chart1 = echarts.init(document.getElementById('chart1'));
-    var option1 = {
-        tooltip: {
-            trigger: 'axis',
-            axisPointer: {
-                type: 'none'
-            },
-            backgroundColor: '#fff',  // 提示背景颜色，默认为透明度为0.7的黑色
-            borderColor: '#ccc',            // 提示边框颜色
-            borderRadius: 4,
-            padding:10,
-            textStyle:{
-                color:"#000"
-            }, 
-            formatter: function (params) {
-                return "桥梁编号" + ': ' + params[0].name+"<br/>"+
-                        "位移量"+":"+params[0].data
-            },
-            extraCssText: 'box-shadow: 0 0 8px rgba(52, 148, 253, 0.3)' ,            
-        },
-        xAxis: {
-            data: ['WY-1-1-5', ' WY-1-1-5', ' WY-1-1-5', 'WY-1-1-5', 'WY-1-1-5', 'WY-1-1-5'],
-            splitLine: {
-                show: false
-            },
-            axisLabel: {
-                textStyle: {
-                    color: '#c5c5c5'
-                }
-            }
-        },
-        yAxis: {
-            type: 'value',
-            name: '位移mm',
-            splitLine: {
-                show: true,
-                lineStyle: {
-                    type: 'dashed'
-                }
-            }
-        },
-        color: ['#3494fd'],
-        grid: {
-            left: '0',
-            right: '0',
-            bottom: '0',
-            containLabel: true
-        },
-        series: [{
-            name: 'hill',
-            type: 'pictorialBar',
-            barCategoryGap: '-40%',
-            // symbol: 'path://M0,10 L10,10 L5,0 L0,10 z',
-            symbol: 'path://M0,10 L10,10 C5.5,10 5.5,5 5,0 C4.5,5 4.5,10 0,10 z',
-            symbolSize:['100%','100%'],
-            itemStyle: {
-                normal: {
-                    opacity: 0.5
-                },
-                emphasis: {
-                    opacity: 1
-                }
-            },
-            data: [120, 60, 25, 18, 12, 9],
-            z: 10
-        }]
-    };
-    Chart1.setOption(option1);
 })

@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-    $ = require('gulp-load-plugins')({rename: {'gulp-rev-append': 'rev'}});
+    $ = require('gulp-load-plugins')({rename: {'gulp-rev': 'rev'}});
 
 var pkg = require('./package.json');
 
@@ -50,10 +50,10 @@ var componentsOptions = [
     //pages
 
     {
-        "name" : "page1",
+        "name" : "page",
         "cssPretreatment" : "less",
-        "src" : ["pages/page1/styles/page1.less"],
-        "target" : "pages/page1/styles"
+        "src" : ["pages/**/*.less"],
+        "target" : "pages"
     },
     {
         "name" : "main",
@@ -91,7 +91,15 @@ gulp.task('components',function(){
     }
 });
 
-
+//压缩js
+// gulp.task('uglifyJs', function(){
+//     return gulp.src('js-demo/jquery.js')
+//         .pipe($.uglify())
+//         .pipe($.rev())
+//          .pipe(gulp.dest('js-demo'))
+//         .pipe($.rev.manifest())
+//         .pipe(gulp.dest('js-demo'));
+// });
 //gulp.task('concat', function () {
 //    gulp.src(['src/js/source/ydui.js', 'src/js/source/**/*.js'])
 //        .pipe($.concat('ydui.js'))
@@ -124,6 +132,12 @@ gulp.task('watchComponents-less', function (done) {
     gulp.watch('components/**/*.less', ['components'])
         .on('end',done);
 });
+//监控pages的less变化
+gulp.task('watchPages-less', function (done) {
+    $.livereload.listen();
+    gulp.watch('pages/**/*.less', ['components'])
+        .on('end',done);
+});
 
 //监控base-less的变化
 gulp.task('watchBaseLess',function (done) {
@@ -142,6 +156,8 @@ gulp.task('build:cssmin', ['main-less'], function () {
        }))
        .pipe(gulp.dest('dist/css'));
 });
+
+
 
 //gulp.task('build:uglify', function () {
 //    gulp.src(['src/js/{ydui.js,ydui.flexible.js}'])
@@ -175,7 +191,7 @@ gulp.task('build:cssmin', ['main-less'], function () {
 //        .pipe(gulp.dest('dist/demo/js'));
 //});
 
-gulp.task('dev', ['bootstrap','main-less','components','watchBootstrap','watchBaseLess','watchComponents-less']);
+gulp.task('dev', ['bootstrap','main-less','components','watchBootstrap','watchBaseLess','watchComponents-less','watchPages-less']);
 
 //gulp.task('demo', ['demo:yoa_css', 'copeIconfont','copeJs','demo:uglify', 'demo:html']);
 
