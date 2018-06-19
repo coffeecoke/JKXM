@@ -15,11 +15,10 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   overflow-y: auto;
-  background: url(../../imgs/common/body-bg.jpg) 0 0 no-repeat;
+  background-color: transparent;
 }
 /* Layout */
 .wrapper {
-  height: 100%;
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
@@ -139,7 +138,8 @@ body {
 /* Content */
 .content {
   min-height: 250px;
-  padding: 20px;
+  margin: 20px;
+  background: #fff;
 }
 /* H1 - H6 font */
 h1,
