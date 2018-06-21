@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../../dist/base-css/main.css">
 
     <!-- components style -->
-    <link rel="stylesheet" href="../../components/bridge-chart/styles/bridge-chart.css">
+    <link rel="stylesheet" href="../../components/fishbone/styles/fishbone.css">
     <link rel="stylesheet" href="../../components/main/main.css">
     <link rel="stylesheet" href="./styles/page3.css">
 
@@ -260,7 +260,16 @@
                                     <h3 class="box-title">预测故障</h3>
                                 </div>
                                 <div class="box-body">
-                                    <div class="chart" id="scatter" style="height:250px;"></div>
+                                    <div id="fishbone" class="fishbone" style="height:250px;">
+                                        <ul class="fishbone-lists">
+                                            <li class="fishbone-item red-line" style="left:10%;top:60%">
+                                                
+                                            </li>
+                                            <li class="fishbone-item blue-line" style="left:30%;top:40%"></li>
+                                            <li class="fishbone-item yellow-line" style="left:50%;top:30%"></li>
+                                            <li class="fishbone-item green-line" style="left:70%;top:10%"></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>

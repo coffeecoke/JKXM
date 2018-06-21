@@ -47,6 +47,12 @@ var componentsOptions = [
         "src" : ["components/bridge-chart/styles/bridge-chart.less"],
         "target" : "components/bridge-chart/styles"
     },
+    {
+        "name" : "fishbone",
+        "cssPretreatment" : "less",
+        "src" : ["components/fishbone/styles/fishbone.less"],
+        "target" : "components/fishbone/styles"
+    },
     //pages
 
     {

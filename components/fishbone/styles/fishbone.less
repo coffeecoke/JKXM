@@ -1,0 +1,89 @@
+.fishbone {
+    border-bottom:2px solid #4688fb;
+    margin:0 50px 30px;
+    position:relative;
+    &:after {
+        content:'';
+        position: absolute;
+        width:10px;
+        height:14px;
+        right:0;
+        bottom:-8px;
+        background: url(../../../imgs/fishbone/arrow-right.png) center no-repeat;
+    }
+}
+.fishbone-lists {
+    width:100%;
+    height:100%;
+    & > li {
+        position: absolute;
+        float:left;
+        width:4px;
+        left:10px;
+        top:30px;
+        bottom:0;
+        &.red-line {
+            background: linear-gradient(top, #FF0000, #fff);
+        }
+        &.blue-line {
+            background: linear-gradient(top, #447ef4, #fff);
+        }
+        &.yellow-line {
+            background: linear-gradient(top, #f8c138, #fff);
+        }
+        &.green-line {
+            background: linear-gradient(top, #7eda9b, #fff);
+        }
+        
+        position:absolute;
+        &:before {  
+            content:'';
+            position: absolute;
+            top:-11px;
+            left:50%;
+            transform:translateX(-50%);
+            width:14px;
+            height:14px;
+            border-radius:50%;
+            
+
+        }
+        &:after {
+            content:'';
+            position: absolute;
+            bottom:-4px;
+            left:50%;
+            transform:translateX(-50%);
+            width:8px;
+            height:8px;
+            border-radius:50%;
+            background-color:red;
+        }
+        
+        &.red-line:before{
+            border:3px solid red;
+        }
+        &.red-line:after{
+            background-color:red;
+        }
+        &.blue-line:before{
+            border:3px solid #447ef4;
+        }
+        &.blue-line:after{
+            background-color:#447ef4;
+        }
+        &.yellow-line:before{
+            border:3px solid #f8c138;
+        }
+        &.yellow-line:after{
+            background-color:#f8c138;
+        }
+        &.green-line:before{
+            border:3px solid #7eda9b;
+        }
+        &.green-line:after{
+            background-color:#7eda9b;
+        }
+
+    }
+}

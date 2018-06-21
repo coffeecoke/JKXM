@@ -81,7 +81,7 @@ $(function () {
     var eChart = echarts.init(document.getElementById('PictorialBar_2'));
     
 
-    var maxData = 2000;
+    var maxData = 1000;
 
     var option = {
         tooltip: {},
@@ -134,12 +134,11 @@ $(function () {
             type: 'pictorialBar',
             symbol: 'image://../../imgs/charts/blue-line.png',
             symbolRepeat: 'fixed',
-            symbolMargin: '5%',
+            symbolMargin: '150%',
             symbolClip: true,
-            // symbolSize: 20,
-            
+            symbolSize: [6,30],
             symbolBoundingData: maxData,
-            symbolOffset:[0,-10],
+            symbolOffset:[20,-10],
             data: [200, 1220, 660],
 
             z: 10
@@ -170,11 +169,11 @@ $(function () {
             },
             animationDuration: 0,
             symbolRepeat: 'fixed',
-            symbolMargin: '5%',
+            symbolMargin: '150%',
             symbol: 'image://../../imgs/charts/blue-line.png',
-            // symbolSize: 20,
+            symbolSize: [6,30],
             symbolBoundingData: maxData,
-            symbolOffset:[0,-10],
+            symbolOffset:[20,-10],
             data: [200, 1220, 660],
             z: 5
         }]
