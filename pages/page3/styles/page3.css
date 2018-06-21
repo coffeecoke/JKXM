@@ -1,0 +1,23 @@
+.shield {
+  height: 180px;
+  background: url("../../../imgs/graphic/bg.png") no-repeat center;
+  color: red;
+}
+.shield .precent {
+  color: #489bfc;
+  text-align: center;
+}
+.shield .precent span {
+  font-size: 30px;
+}
+.shield .middle {
+  color: #000;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 16px;
+}
+.formula {
+  color: #666;
+}
+
+/*# sourceMappingURL=page3.css.map */
