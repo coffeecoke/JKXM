@@ -68,7 +68,7 @@
                                         <div class="progress_bar progress-bar-primary">
                                             
                                             <div class="pro-bar">
-                                                <div class="process-icon pc-icon"></div>
+                                                <div class="progress-icon pc-icon"></div>
                                                 <small class="progress_bar_title">
                                                     设备总数
                                                     <span class="progress_number">500</span>
@@ -79,8 +79,9 @@
 
                                         <div class="progress_bar progress-bar-primary">
                                             <div class="pro-bar">
+                                                <div class="progress-icon right-icon"></div>
                                                 <small class="progress_bar_title">
-                                                    WY-5-1-4
+                                                    正常
                                                     <span class="progress_number">90</span>
                                                 </small>
                                                 <span class="progress-bar-inner" style="width: 90%;" data-value="90" data-percentage-value="90"></span>
@@ -89,8 +90,9 @@
 
                                         <div class="progress_bar progress-bar-primary">
                                             <div class="pro-bar">
+                                                <div class="progress-icon warning-icon"></div>
                                                 <small class="progress_bar_title">
-                                                    WY-5-2-1
+                                                    告警
                                                     <span class="progress_number">70</span>
                                                 </small>
                                                 <span class="progress-bar-inner" style="width: 35%;" data-value="65" data-percentage-value="65"></span>
@@ -108,6 +110,7 @@
                                 <div class="box-body">
                                     <!-- charts容器 -->
                                     <div class="chart" id="" style="">
+                                        <canvas id="c-process"></canvas>
                                     </div>
                                 </div>
                             </div>
@@ -119,7 +122,7 @@
                                 </div>
                                 <div class="box-body">
                                     <!-- charts容器 -->
-                                    <div class="chart" id="" style="">
+                                    <div class="chart" id="PictorialBar_1" style="height:200px;">
                                     </div>
                                 </div>
                             </div>
@@ -139,7 +142,7 @@
                                 </div>
                                 <div class="box-body">
                                     <!-- charts容器 -->
-                                    <div class="chart" id="PictorialBar_1" style="height:250px;"></div>
+                                    <div class="chart" id="bar" style="height:250px"></div>
                                 </div>
                             </div>
                         </div>
@@ -154,7 +157,7 @@
                         <div class="box-wrapper">
                             <div class="row">
                                 <!-- 健康类型占比 -->
-                                <div class="col-sm-4 col-xs-12">
+                                <div class="col-sm-6 col-xs-12">
                                     <div class="box">
                                         <div class="box-header">
                                             <h3 class="box-title">健康类型占比</h3>
@@ -166,6 +169,18 @@
                                     </div>
                                 </div>
                                 <!-- /.健康类型占比 -->
+
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="box">
+                                        <div class="box-header">
+                                            <h3 class="box-title"></h3>
+                                        </div>
+                                        <div class="box-body">
+                                            <!-- charts容器 -->
+                                            <div class="chart" id="PictorialBar_2" style="height:200px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -353,21 +368,21 @@
     <!-- 引入自定义echart -->
 
     <!-- 饼图 -->
-    <script src="../page2/js/pieChart.js"></script>
+    <script src="../page3/js/pieChart.js"></script>
     <!-- 折线图 -->
-    <script src="../page2/js/lineChart.js"></script>
+    <script src="../page3/js/lineChart.js"></script>
 
-    <script src="../page2/js/pictorialBar.js"></script>
+    <script src="../page3/js/pictorialBar.js"></script>
 
-    <script src="../page2/js/scatter.js"></script>
 
-    <script src="../page2/js/boxplotChart.js"></script>
+    <!-- 柱状图 -->
+    <script src="../page3/js/bar.js"></script>
 
     <!-- components 自主开发组件-->
-    <script src="../../components/bridge-chart/js/bridge-chart.js"></script>
+    <!-- <script src="../../components/bridge-chart/js/bridge-chart.js"></script> -->
     <!-- 用户js -->
 
-    <!-- <script src="../../common-js/common.js"></script> -->
+    <script src="js/index.js"></script>
 
 
 </body>

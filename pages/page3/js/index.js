@@ -7,8 +7,8 @@ $(function () {
     var nowRange = 50; //用于做一个临时的range
 
     //画布属性
-    var mW = canvas.width = 250;
-    var mH = canvas.height = 250;
+    var mW = canvas.width = 200;
+    var mH = canvas.height = 200;
     var lineWidth = 2;
 
     //圆属性
