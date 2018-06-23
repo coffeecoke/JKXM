@@ -3,9 +3,10 @@ $(function () {
     var data = [60, 50,40, 30, 20, 10];
     var option = {
         tooltip: {
+            show:true,
             trigger: 'axis',
             axisPointer: {
-                type: 'none'
+                type: 'shadow'
             },
             backgroundColor: '#fff', // 提示背景颜色，默认为透明度为0.7的黑色
             borderColor: '#ccc', // 提示边框颜色
