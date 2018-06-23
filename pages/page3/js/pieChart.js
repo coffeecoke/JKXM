@@ -251,7 +251,7 @@ $(function () {
              icon:'circle',
              orient: 'vertical',
              top: 'middle',
-             right: '10%',
+             right: '20%',
              itemWidth:8,
              itemHeight:8,
              // data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
@@ -286,7 +286,7 @@ $(function () {
              type: 'pie',
              radius: ['40%', '70%'],
              avoidLabelOverlap: false,//防止标签重叠 true
-             center: ['30%', '50%'],
+             center: ['40%', '40%'],
              roseType : 'radius',
              label: {
                  normal: {
@@ -379,13 +379,13 @@ $(function () {
              formatter: "{a} <br/>{b}: {c} ({d}%)"
          },
          legend: {
-             show:false,
              icon:'circle',
              orient: 'vertical',
              top: 'middle',
-             right: '10%',
+             right: '20%',
              itemWidth:8,
              itemHeight:8,
+             // data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
              formatter: function(name) {
                  var totle = (function () {
                      var totle = 0;
@@ -396,7 +396,6 @@ $(function () {
  
                      return totle;
                  })()
-                 console.log(totle)
                  if(name === data[0].name) {
                      return name+'  '+ Math.round((data[0].value)/totle*100)+"%";
                  }else if(name === data[1].name){
@@ -418,7 +417,7 @@ $(function () {
              type: 'pie',
              radius: ['40%', '60%'],
              avoidLabelOverlap: false,//防止标签重叠 true
-             center: ['50%', '50%'],
+             center: ['40%', '50%'],
              roseType : 'radius',
              data: data
          }]
