@@ -168,6 +168,10 @@ a:focus {
   text-decoration: none;
   color: #23527c;
 }
+p {
+  margin: 0;
+  padding: 0;
+}
 /* Page Header */
 .page-header {
   margin: 10px 0 20px 0;
@@ -1627,6 +1631,7 @@ a:focus {
   background: rgba(255, 255, 255, 0.4);
 }
 .box {
+  min-height: 250px;
   width: 100%;
 }
 .box.border-right::before {
@@ -1892,6 +1897,7 @@ a:focus {
   box-shadow: none;
 }
 .box-body {
+  position: relative;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 3px;

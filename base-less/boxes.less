@@ -9,6 +9,7 @@
    background:rgba(255,255,255,.4)
  }
 .box {
+  min-height:250px;
   &.border-right{
     &::before {
       content:'';
@@ -261,6 +262,7 @@
 
 //Box Body
 .box-body {
+  position: relative;
   .border-radius(0; 0; @box-border-radius; @box-border-radius);
   padding: @box-padding;
   padding-top:0;

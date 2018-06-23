@@ -1,0 +1,126 @@
+.device-base {
+
+    .shield{
+        height:180px;
+        background: url("../../../imgs/graphic/bg.png") no-repeat center;
+        color:red;
+        .precent{
+            color:#489bfc;
+            text-align: center;
+            span{
+                font-size:30px;
+            }
+        }
+        .middle{
+            color:#000;
+            text-align:center;
+            padding-top:50px;
+            font-size:16px;
+        }
+    }
+
+    
+}
+.device-lists {
+    margin-top:40px;
+    dl {
+        dt {
+           width:21px;
+           height:20px;
+           float:left; 
+           margin-right:10px;
+
+           &.pc-icon {
+            background: url(../../../imgs/pages/pc-icon.png) center no-repeat;
+            background-size:100% 100%;
+           }
+           &.lightning-icon {
+            background: url(../../../imgs/pages/lightning-icon.png) center no-repeat;
+            background-size:100% 100%;
+           }
+           &.wrench-icon {
+            background: url(../../../imgs/pages/wrench-icon.png) center no-repeat;
+            background-size:100% 100%;
+           }
+        }
+        dd {
+            .list-title {
+                color:#666;
+                font-size:12px;
+            }
+            .list-content {
+                color:#000;
+                font-size:14px;
+            }
+        }
+    }
+}
+.history-warning__bars {
+    padding-top:120px;
+    li {
+        height:20px;
+        float:left;
+        position: relative;
+        .line {
+            position: absolute;
+            left:20px;
+            top:-50px;
+            bottom:20px;
+            &:before {
+                content:'';
+                position: absolute;
+                top:-9px;
+                left:-5px;
+                width:10px;
+                height:10px;
+                
+                border-radius:50%;
+
+            }
+            .warning-des {
+                position: absolute;
+                left:-4px;
+                top:-100%;
+                min-width:60px;
+                color:#999;
+                span {
+                    color:#000;
+                    font-size:16px;
+                }
+            }
+        }
+        &.yellow-bar {
+            width:20%;
+            height:20px;
+            background-color:#face2f;
+            .line {
+                border-left:1px solid #face2f;
+                &:before {
+                    border:2px solid #face2f;
+                }
+            }
+        }
+        &.orange-bar {
+            width:30%;
+            height:20px;
+            background-color:#faa02b;
+            .line {
+                border-left:1px solid #faa02b;
+                &:before {
+                    border:2px solid #faa02b;
+                }
+            }
+        }
+        &.red-bar {
+            width:50%;
+            height:20px;
+            background-color: #ff6673;
+            .line {
+                border-left:1px solid #ff6673;
+                &:before {
+                    border:2px solid #ff6673;
+                }
+            }
+        }
+    }
+}

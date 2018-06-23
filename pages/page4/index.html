@@ -19,7 +19,7 @@
     <!-- components style -->
     <link rel="stylesheet" href="../../components/fishbone/styles/fishbone.css">
     <link rel="stylesheet" href="../../components/main/main.css">
-    <link rel="stylesheet" href="./styles/page3.css">
+    <link rel="stylesheet" href="./styles/page4.css">
 
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
@@ -40,7 +40,7 @@
             <!-- 内容标题（页面标题） 暂时不用-->
             <section class="content-header border-bottom">
                 <h1>
-                    Dashboard
+                    坠砣设备评估报告
                 </h1>
 
             </section>
@@ -57,17 +57,86 @@
                                     <h3 class="box-title">设备基本信息</h3>
                                 </div>
                                 <div class="box-body">
+                                    <div class="row">
+                                        <div class="device-base">
+                                            <div class="col-xs-6">
+                                                <div class="shield">
+                                                    <p class="middle">准确率</p>
+                                                    <h4 class="precent">
+                                                        <span>80</span>%</h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <div class="device-lists">
+                                                    <dl>
+                                                        <dt class="pc-icon">
+
+                                                        </dt>
+                                                        <dd>
+                                                            <span class="list-title">设备名称：</span>
+                                                            <span class="list-content">坠砣j_k_001</span>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt class="lightning-icon"></dt>
+                                                        <dd>
+                                                            <span class="list-title">运行状态：</span>
+                                                            <span class="list-content">状态正常</span>
+                                                        </dd>
+                                                    </dl>
+                                                    <dl>
+                                                        <dt class="wrench-icon"></dt>
+                                                        <dd>
+                                                            <span class="list-title">维修次数：</span>
+                                                            <span class="list-content">2次</span>
+                                                        </dd>
+                                                    </dl>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
 
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-4 col-xs-12">
-                            <div class="box">
+                            <div class="box border-right">
                                 <div class="box-header">
                                     <h3 class="box-title">历史告警</h3>
                                 </div>
                                 <div class="box-body">
+                                    <div class="history-warning">
+                                        <ul class="history-warning__bars">
+                                            <li class="yellow-bar">
+                                                <div class="line">
+                                                    <div class="warning-des">
+                                                        <p><span>3</span>次</p>
+                                                        <p>提示告警</p>
+                                                    </div>
+                                                </div>
 
+                                            </li>
+                                            <li class="orange-bar">
+                                                <div class="line">
+                                                    <div class="warning-des">
+                                                        <p><span>4</span>次</p>
+                                                        <p>重要告警</p>
+                                                    </div>
+                                                </div>
+                                                
+                                            </li>
+                                            <li class="red-bar">
+                                                <div class="line">
+                                                    <div class="warning-des">
+                                                        <p><span>10</span>次</p>
+                                                        <p>重要告警</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -95,6 +164,7 @@
                                 </div>
                                 <div class="box-body">
                                     <!-- charts容器 -->
+                                    <div class="chart" id=""></div>
                                 </div>
                             </div>
                         </div>
@@ -122,7 +192,7 @@
                             </div>
                             <div class="box-body">
                                 <div class="col-sm-4 col-xs-12">
-                                    
+
                                 </div>
                                 <div class="col-sm-4 col-xs-12"></div>
                                 <div class="col-sm-4 col-xs-12"></div>
@@ -229,17 +299,6 @@
     <!-- echarts dataTool -->
     <script src="../../plugins/echarts-v3/extension/dataTool.min.js"></script>
     <!-- 引入自定义echart -->
-
-    <!-- 饼图 -->
-    <script src="../page3/js/pieChart.js"></script>
-    <!-- 折线图 -->
-    <script src="../page3/js/lineChart.js"></script>
-
-    <script src="../page3/js/pictorialBar.js"></script>
-
-
-    <!-- 柱状图 -->
-    <script src="../page3/js/bar.js"></script>
 
     <!-- components 自主开发组件-->
     <!-- <script src="../../components/bridge-chart/js/bridge-chart.js"></script> -->
