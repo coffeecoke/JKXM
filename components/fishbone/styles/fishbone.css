@@ -87,5 +87,25 @@
 .fishbone-lists > li.green-line:after {
   background-color: #7eda9b;
 }
+.fishbone-lists > li .num {
+  position: absolute;
+  color: #666;
+  font-size: 16px;
+  top: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.fishbone-lists > li .text {
+  min-width: 100px;
+  position: absolute;
+  color: #666;
+  font-size: 12px;
+  bottom: -30px;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
 
 /*# sourceMappingURL=fishbone.css.map */

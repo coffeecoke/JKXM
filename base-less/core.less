@@ -138,6 +138,7 @@ body {
   min-height: 250px;
   // padding: 20px;
   margin:20px;
+  margin-top:0;
   background:#fff;
   // .container-fixed(@grid-gutter-width);
 }
@@ -182,7 +183,24 @@ a:focus {
     margin-top: 5px;
   }
 }
-
 .margin-b-20 {
   margin-bottom:20px;
 }
+.padding-wrapper {
+  padding:20px 0;
+}
+
+.border-bottom {
+  position:relative;
+  &:after {
+    content:'';
+    position: absolute;
+    left:20px;
+    right:20px;
+    bottom:0;
+    height:1px;
+    background-color: #ccc;
+
+  }
+}
+

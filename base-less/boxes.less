@@ -5,11 +5,23 @@
  .box-wrapper {
    border-radius: 5px;
    box-shadow: @box-boxshadow;
-   
+   position: relative;
    background:rgba(255,255,255,.4)
  }
 .box {
-  position: relative;
+  &.border-right{
+    &::before {
+      content:'';
+      position: absolute;
+      right:0;
+      top:10px;
+      bottom:0px;
+      width:1px;
+      background: #ccc;
+    }
+   
+
+  }
   // .border-radius(@box-border-radius);
   // background: #ffffff;
   // border-top: 3px solid @box-default-border-top-color;

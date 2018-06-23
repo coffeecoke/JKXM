@@ -139,6 +139,7 @@ body {
 .content {
   min-height: 250px;
   margin: 20px;
+  margin-top: 0;
   background: #fff;
 }
 /* H1 - H6 font */
@@ -179,6 +180,21 @@ a:focus {
 }
 .margin-b-20 {
   margin-bottom: 20px;
+}
+.padding-wrapper {
+  padding: 20px 0;
+}
+.border-bottom {
+  position: relative;
+}
+.border-bottom:after {
+  content: '';
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  height: 1px;
+  background-color: #ccc;
 }
 /*
  * Component: Main Header
@@ -311,11 +327,13 @@ a:focus {
 }
 .content-header {
   position: relative;
-  padding: 15px 15px 0 15px;
+  padding: 15px 0;
+  text-align: center;
 }
 .content-header > h1 {
   margin: 0;
   font-size: 24px;
+  font-weight: normal;
 }
 .content-header > h1 > small {
   font-size: 15px;
@@ -1605,11 +1623,20 @@ a:focus {
 .box-wrapper {
   border-radius: 5px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  position: relative;
   background: rgba(255, 255, 255, 0.4);
 }
 .box {
-  position: relative;
   width: 100%;
+}
+.box.border-right::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 10px;
+  bottom: 0px;
+  width: 1px;
+  background: #ccc;
 }
 .box.box-primary {
   border-top-color: #3494fd;
