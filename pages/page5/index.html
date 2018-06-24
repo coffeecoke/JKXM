@@ -50,20 +50,13 @@
                 <!-- floor1 -->
                 <div class=" border-bottom padding-wrapper">
                     <div class="row ">
-                        <div class="col-sm-1 col-xs-12">
+                        <div class="col-sm-6 col-xs-12">
                             <div class="box">
                                 <div class="box-header">
                                     <h3 class="box-title">基础信息</h3>
                                 </div>
                                 <div class="box-body">
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-5 col-xs-12">
-                            <div class="box">
-                               
-                                <div class="box-body">
+ <div class="box-body">
                                         <div class="row">
                     
                                                 <div class="col-sm-9 col-xs-12">
@@ -110,13 +103,15 @@
                                                 </div>
                                               </div>
                                 </div>
+                                </div>
                             </div>
                         </div>
+                        
                         <div class="col-sm-6 col-xs-12">
                             <div class="box">
                                 
                                 <div class="box-body">
-
+                                    <div class="gauge" id="gauge" style="width:100%;height:200px;"></div>
                                 </div>
                             </div>
                         </div>
@@ -127,19 +122,39 @@
                 <!-- floor2 -->
                 <div class=" padding-wrapper border-bottom">
                     <div class="row">
-                        <div class="col-sm-6 col-xs-12">
+                        <div class="col-sm-5 col-xs-12">
                             <div class="box">
                                 <div class="box-header">
                                     <h3 class="box-title">监测信息</h3>
                                 </div>
                                 <div class="box-body">
-                                    <!-- charts容器 -->
+                                    <div class="box-ti">
+                                        <div class="box-ti-top">
+                                            <div class="ti-top-text">
+                                                A值<span>200mm</span>
+                                            </div>
+                                        </div>
+                                        <div class="box-ti-center">
+                                                <div class="ti-top-text">
+                                                        控制值<span>200mm</span>
+                                                    </div>
+                                        </div>
+                                        <div class="box-ti-bottom">
+                                                <div class="ti-top-text">
+                                                        B值<span>200mm</span>
+                                                    </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6 col-xs-12">
+                        <div class="col-sm-7 col-xs-12">
                             <div class="box">
                                 <div class="box-body">
+                                    <div class="chart-text">
+                                        <p><span>20</span>小时</p>
+                                        <p>共运行时间</p>
+                                    </div>
                                     <div class="charts" id="piecharts" style="height:200px;width:60%;float:left;"></div>
                                     <div class="charts-wz" style="float:left;">
                                         <div class="box-wz">
@@ -323,6 +338,8 @@
     <script src="../page5/js/linecharts.js"></script>
 
     <script src="../page5/js/barcharts.js"></script>
+
+    <script src="../page5/js/gauge.js"></script>
 
 
     <!-- 柱状图 -->

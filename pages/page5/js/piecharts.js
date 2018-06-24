@@ -78,6 +78,16 @@ $(function () {
              avoidLabelOverlap: false,//防止标签重叠 true
              center: ['40%', '50%'],
              roseType : 'radius',
+            //  label: {
+            //     normal: {
+            //         show: true,
+            //         position: 'center',
+            //         formatter: '出境游',
+            //         color: '#fff',
+            //         fontSize: 16
+            //     }
+            // },
+            
              data: data
          }]
      };

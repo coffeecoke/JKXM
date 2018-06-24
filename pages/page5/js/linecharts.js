@@ -44,28 +44,70 @@ $(function () {
     var myChart1= echarts.init(document.getElementById('linecharts1'));
     option1 = {
         backgroundColor:'#f5f8ff',
+        title:{
+            show:true,
+            text:"A值",
+            textStyle:{
+                fontSize:70,
+                color:'#cfe0fd'
+            },
+            width:'100px',
+            height:'100px',
+            top:50,
+            left:"50%",
+            z:0
+        },
         xAxis: {
             type: 'category',
             data: ['5/10 15:00', '5/11 15:00', ' 5/12 15:00', ' 5/13 15:00', ' 5/14 15:00', ' 5/15 15:00', ' 5/16 15:00',' 5/17 15:00', ' 5/18 15:00', ' 5/19 15:00', ' 5/20 15:00']
         },
-        yAxis: {
+        yAxis: [{
+            name:'位移mm',
             type: 'value',
             min:0,
             max:80
         },
+        {   
+            name:'°C',
+            type: 'value',
+            min:0,
+            max:80
+        }
+    ],
          grid:{
-             top:'10%',
+             top:'15%',
              left:'2%',
              right:'2%',
              bottom:0,
              containLabel:true
          },
+         tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
         series: [{
             data: [40,80,30,80,40,60,40,70,40,80,20],
             type: 'line',
+            name:"A值",
+            symbol:0,
+            symbolSize:0,
             smooth: true,
             itemStyle:{
                 color:'#3494fd'
+            },
+            
+        },
+        {
+            data: [50,55,56,57,58,59,45,46,47,48,49],
+            type: 'line',
+            name:"B值",
+            symbol:0,
+            symbolSize:0,
+            smooth: true,
+            itemStyle:{
+                color:'#CCC'
             },
             
         }]
@@ -77,15 +119,50 @@ $(function () {
     var myChart2= echarts.init(document.getElementById('linecharts2'));
     option2 = {
         backgroundColor:'#fffcf5',
-        xAxis: {
-            type: 'category',
-            data: ['5/10 15:00', '5/11 15:00', ' 5/12 15:00', ' 5/13 15:00', ' 5/14 15:00', ' 5/15 15:00', ' 5/16 15:00',' 5/17 15:00', ' 5/18 15:00', ' 5/19 15:00', ' 5/20 15:00']
+        title:{
+            show:true,
+            text:"B值",
+            textStyle:{
+                fontSize:70,
+                color:'#cfe0fd'
+            },
+            width:'100px',
+            height:'100px',
+            top:50,
+            left:"50%",
+            z:0
         },
-        yAxis: {
+        xAxis:[ {
+            type: 'category',
+            // axisLine: { onZero: false },
+            data: ['', '', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ']
+        },
+        {
+            show:false,
+            type: 'category',
+            axisLine: { onZero: false },
+            
+            data: ['', '', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ']
+           
+            }
+    ],
+        yAxis: [{
+            name:'位移mm',
             type: 'value',
             min:0,
-            max:80
+            max:80,
+            nameLocation: "start",
+            inverse: true 
         },
+        {
+            name:'°C',
+            type: 'value',
+            min:0,
+            max:80,
+            nameLocation: "start",
+            inverse: true 
+        }
+    ],
          grid:{
              top:'10%',
              left:'2%',
@@ -97,8 +174,21 @@ $(function () {
             data: [40,80,30,80,40,60,40,70,40,80,20],
             type: 'line',
             smooth: true,
+            symbol:0,
+            symbolSize:0,
             itemStyle:{
                 color:'#fad984'
+            },
+            
+        },        {
+            data: [50,55,56,57,58,59,45,46,47,48,49],
+            type: 'line',
+            name:"B值",
+            symbol:0,
+            symbolSize:0,
+            smooth: true,
+            itemStyle:{
+                color:'#CCC'
             },
             
         }]
