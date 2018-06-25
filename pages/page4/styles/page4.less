@@ -124,3 +124,177 @@
         }
     }
 }
+
+#pictorialbar {
+    background:url(../../../imgs/charts/AB-bg.png) center no-repeat;
+}
+
+.Weights {
+    height:5px;
+    margin:120px 20px 80px 20px;
+    background:linear-gradient(left,#94c3fe,#348af7);
+    position: relative;
+    .dash-line {
+        position: absolute;
+        bottom:5px;
+        top:-26px;
+        border-left:1px dashed #ccc;
+        &:before {
+            content:'';
+            position: absolute;
+            top:-9px;
+            left:-5px;
+            width:10px;
+            height:10px;
+            border-radius:50%;
+            border:1px solid #ccc;
+
+        }
+        .line-title {
+            position: absolute;
+            min-width:60px;
+            text-align: center;
+            color:#ccc;
+            top:-100%;
+            left:50%;
+            transform:translateX(-50%);
+            
+        }
+        &.unimportant {
+            left:0;
+        }
+        &.normal {
+            left:50%;
+        }
+        &.important {
+            right:0;
+        }
+        &.red-line {
+            &:before {
+                border:none;
+                background-color:#ff6673;
+                z-index:1;
+            } 
+            &:after {
+                content:'';
+                position: absolute;
+                top:-11px;
+                left:-7px;
+                width:14px;
+                height:14px;
+                border-radius:50%;
+                background-color:#ff6673;
+                opacity: 0.5;
+
+            } 
+        }
+
+        &.yellow-line {
+            &:before {
+                border:none;
+                background-color:#face2f;
+                z-index:1;
+            } 
+            &:after {
+                content:'';
+                position: absolute;
+                top:-11px;
+                left:-7px;
+                width:14px;
+                height:14px;
+                border-radius:50%;
+                background-color:#face2f;
+                opacity: 0.5;
+
+            } 
+        }
+
+        &.blue-line {
+            &:before {
+                border:none;
+                background-color:#328cfe;
+                z-index:1;
+            } 
+            &:after {
+                content:'';
+                position: absolute;
+                top:-11px;
+                left:-7px;
+                width:14px;
+                height:14px;
+                border-radius:50%;
+                background-color:#328cfe;
+                opacity: 0.5;
+
+            } 
+        }
+    }
+    .bottom-text {
+        position:absolute;
+        bottom:-30px;
+        left:0;
+        right:0;
+        text-align:center;
+        color:#000;
+        font-size:14px;
+    }
+}
+.analysis-report-wrapper {
+    padding:36px;
+}
+.analysis-report {
+    background-color:#fffbee;
+}
+.analysis-report__head {
+    padding:20px;
+    position: relative;
+    color:#000;
+    font-size:18px;
+    text-align:center;
+    &::after {
+        content:'';
+        position: absolute;
+        bottom:0;
+        height:1px;
+        left:20px;
+        right:20px;
+        background-color: #ccc;
+    }
+
+}
+.analysis-report__body {
+
+    padding:20px 40px;
+    dl {
+        dt {
+            font-size:14px;
+            color:#000;
+        }
+        dd {
+            p {
+                line-height:24px;
+            }
+            margin:20px 0;
+            .name {
+                min-width:100px;
+                text-align: right;
+                color:#717171;
+                display: inline-block
+            }
+            .value {
+                color:#000;
+                margin-left:0;
+            }
+        }
+    }
+    .border-line {
+        margin:20px 0;
+        border-bottom:1px solid #ccc;
+    }
+    .result {
+        text-align:right;
+        span {
+            font-size:30px;
+        }
+    }
+}

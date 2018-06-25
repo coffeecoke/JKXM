@@ -112,7 +112,8 @@
                                             <li class="yellow-bar">
                                                 <div class="line">
                                                     <div class="warning-des">
-                                                        <p><span>3</span>次</p>
+                                                        <p>
+                                                            <span>3</span>次</p>
                                                         <p>提示告警</p>
                                                     </div>
                                                 </div>
@@ -121,16 +122,18 @@
                                             <li class="orange-bar">
                                                 <div class="line">
                                                     <div class="warning-des">
-                                                        <p><span>4</span>次</p>
+                                                        <p>
+                                                            <span>4</span>次</p>
                                                         <p>重要告警</p>
                                                     </div>
                                                 </div>
-                                                
+
                                             </li>
                                             <li class="red-bar">
                                                 <div class="line">
                                                     <div class="warning-des">
-                                                        <p><span>10</span>次</p>
+                                                        <p>
+                                                            <span>10</span>次</p>
                                                         <p>重要告警</p>
                                                     </div>
                                                 </div>
@@ -164,7 +167,7 @@
                                 </div>
                                 <div class="box-body">
                                     <!-- charts容器 -->
-                                    <div class="chart" id=""></div>
+                                    <div class="chart" id="linecharts" style="width:100%;height:250px;"></div>
                                 </div>
                             </div>
                         </div>
@@ -175,6 +178,7 @@
                                 </div>
                                 <div class="box-body">
                                     <!-- charts容器 -->
+                                    <div class="chart" id="pictorialbar" style="height:250px;"></div>
                                 </div>
                             </div>
                         </div>
@@ -192,10 +196,47 @@
                             </div>
                             <div class="box-body">
                                 <div class="col-sm-4 col-xs-12">
-
+                                    <div class="Weights">
+                                        <div class="dash-line unimportant">
+                                            <div class="line-title">不重要</div>
+                                        </div>
+                                        <div class="bottom-text">设备所处位置重要等级</div>
+                                        <div class="dash-line normal">
+                                            <div class="line-title">一般</div>
+                                        </div>
+                                        <div class="dash-line red-line important">
+                                            <div class="line-title">重要</div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-sm-4 col-xs-12"></div>
-                                <div class="col-sm-4 col-xs-12"></div>
+                                <div class="col-sm-4 col-xs-12">
+                                    <div class="Weights">
+                                        <div class="dash-line unimportant">
+                                            <div class="line-title">不重要</div>
+                                        </div>
+                                        <div class="bottom-text">设备所处位置重要等级</div>
+                                        <div class="dash-line yellow-line normal">
+                                            <div class="line-title">一般</div>
+                                        </div>
+                                        <div class="dash-line important">
+                                            <div class="line-title">重要</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-xs-12">
+                                    <div class="Weights">
+                                        <div class="dash-line unimportant">
+                                            <div class="line-title">不重要</div>
+                                        </div>
+                                        <div class="bottom-text">设备所处位置重要等级</div>
+                                        <div class="dash-line normal">
+                                            <div class="line-title">一般</div>
+                                        </div>
+                                        <div class="dash-line  blue-line important">
+                                            <div class="line-title">重要</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -205,7 +246,7 @@
                 <!-- end floo3 -->
 
                 <!-- floor4 -->
-                <div class="  padding-wrapper border-bottom">
+                <div class="padding-wrapper border-bottom">
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="box">
@@ -213,7 +254,7 @@
                                     <h3 class="box-title"></h3>
                                 </div>
                                 <div class="box-body">
-
+                                    <div class="chart" id="linecharts2" style="height:250px;"></div>
                                 </div>
                             </div>
                         </div>
@@ -232,7 +273,7 @@
                                     <h3 class="box-title">设备近12个月平均变化趋势</h3>
                                 </div>
                                 <div class="box-body">
-                                    <div class="chart" id="pieChart3" style="height:200px;">
+                                    <div class="chart" id="linecharts3" style="height:250px;">
 
                                     </div>
                                 </div>
@@ -248,7 +289,7 @@
                                     <h3 class="box-title">设备得分</h3>
                                 </div>
                                 <div class="box-body">
-                                    <div class="chart" id=""></div>
+                                    <div class="chart" id="linecharts4" style="height:250px;"></div>
                                 </div>
                             </div>
                         </div>
@@ -258,7 +299,67 @@
                 <!-- end floor5 -->
 
                 <!-- 分析报告 -->
-                <div class=""></div>
+                <div class="analysis-report-wrapper">
+                    <div class="analysis-report">
+                        <div class="analysis-report__head">
+                            分析报告
+                        </div>
+                        <div class="analysis-report__body">
+                            <dl>
+                                <dt>根据本周期对该设备的数据统计</dt>
+                                <dd>
+                                    <p>
+                                        <span class="name">设备编号：</span>
+                                        <span class="value">j_k_001</span>
+                                    </p>
+                                    <p>
+                                        <span class="name">已用年限：</span>
+                                        <span class="value">20年</span>
+                                    </p>
+                                    <p>
+                                        <span class="name">历史维护数：</span>
+                                        <span class="value">1次</span>
+                                    </p>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>告警情况</dt>
+                                <dd>
+                                    <p>
+                                        <span class="name">提示告警：</span>
+                                        <span class="value">3次</span>
+                                    </p>
+                                    <p>
+                                        <span class="name">重要告警：</span>
+                                        <span class="value">2次</span>
+                                    </p>
+                                    <p>
+                                        <span class="name">严重告警：</span>
+                                        <span class="value">10次</span>
+                                    </p>
+                                </dd>
+                            </dl>
+                            <p>劣化趋势：本期0.62</p>
+                            <p>A值：2100mm    处于合理区间</p>
+                            <p>B值：2422mm    处于合理区间</p>
+                            <p>权重得分：10</p>
+
+                            <div class="border-line"></div>
+
+                            <dl>
+                                <dt>设备处理建议：</dt>
+                                <dd>
+                                    <p>健康度高于平均值，有向亚健康状态发展趋势，建议及时关注防治该坠砣劣化成都加剧，健康成都降低，以便进行快速调整。</p>
+                                </dd>
+                            </dl>
+                            <div class="border-line"></div>
+                            <div class="result">
+                                健康度<span>82</span>分
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- /.分析报告 -->
             </section>
             <!-- /.content -->
@@ -299,12 +400,13 @@
     <!-- echarts dataTool -->
     <script src="../../plugins/echarts-v3/extension/dataTool.min.js"></script>
     <!-- 引入自定义echart -->
-
+    <script src="js/linecharts.js"></script>
+    <script src="js/pictorialBar.js"></script>
     <!-- components 自主开发组件-->
     <!-- <script src="../../components/bridge-chart/js/bridge-chart.js"></script> -->
     <!-- 用户js -->
 
-    <script src="js/index.js"></script>
+    <!-- <script src="js/index.js"></script> -->
 
 
 </body>

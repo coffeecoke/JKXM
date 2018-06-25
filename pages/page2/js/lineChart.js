@@ -24,8 +24,7 @@ $(function () {
             textStyle:{
                 color:"#000"
             },   
-            axisPointer : {            // 坐标git轴指示器，坐标轴触发有效
-                type : 'line',       // 默认为直线，可选为：'line' | 'shadow'
+            ç      // 默认为直线，可选为：'line' | 'shadow'
                 backgroundColor:'rgba(239,246,255,0,8)',
                 lineStyle:{
                     width:80,
