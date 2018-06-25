@@ -1,0 +1,155 @@
+.box-tab {
+  border-bottom: solid 1px #3494fd;
+}
+.box-tab p {
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #4385f5;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+}
+.box-tab p:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: url("../../../imgs/common/delect.png") no-repeat center;
+}
+.box-inputs {
+  width: 100%;
+  height: 60px;
+  border-bottom: solid 1px #ccc;
+}
+.box-inputs .box-sel {
+  float: left;
+}
+.box-inputs .box-sel lable {
+  float: left;
+}
+.box-inputs .box-sel .box-sel-p {
+  float: left;
+  width: 180px;
+  height: 30px;
+  border: solid 1px #3494fd;
+  border-radius: 5px;
+}
+.box-inputs .box-sel .box-sel-p span {
+  float: right;
+  width: 30px;
+  border-left: solid 1px #ccc;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.box-inputs .box-sel .box-sel-p span img {
+  margin-left: 10px;
+}
+.box-inputs lable {
+  padding: 5px 30px;
+  font-size: 16px;
+}
+.box-inputs lable input {
+  height: 30px;
+  border: solid 1px #4385f5;
+  border-radius: 5px;
+  padding-left: 5px;
+}
+.search-btn {
+  float: right;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  background: #4385f5;
+  margin-right: 20px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  position: relative;
+}
+.search-btn:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: url("../../../imgs/common/search_03.png") no-repeat center;
+}
+.box-icons {
+  height: 74px;
+  width: 100%;
+  background: #dbe8ff;
+}
+.box-icons .icon-float {
+  float: left;
+  padding: 0 30px;
+}
+.box-table {
+  width: 100%;
+  height: auto;
+}
+.box-table-list thead {
+  background: #3494fd;
+}
+.box-table-list thead tr th {
+  color: #fff;
+}
+.box-table-list thead tr td {
+  vertical-align: middle;
+}
+.box-table-list tbody tr {
+  height: 74px;
+}
+.box-table-list tbody tr td {
+  vertical-align: middle;
+  font-size: 14px;
+  color: #050505;
+}
+.box-table-list tbody tr:nth-child(even) {
+  background: #f4f7fd;
+}
+.row-size {
+  font-size: 14px;
+  color: #000;
+}
+.row-size-big {
+  font-size: 12px;
+  color: #6f6f6f;
+}
+.box-table-border {
+  background: #e3efff;
+  border-left: solid 3px #3494fd;
+}
+.box-table-leaf {
+  position: relative;
+}
+.box-table-leaf:before {
+  content: "";
+  width: 20px;
+  height: 25px;
+  position: absolute;
+  top: 0px;
+  left: -22px;
+}
+.gray:before {
+  background: url("../../../imgs/common/gray-tb.png") no-repeat center;
+}
+.red:before {
+  background: url("../../../imgs/common/red-tb.png") no-repeat center;
+}
+.yellow:before {
+  background: url("../../../imgs/common/yellow-tb.png") no-repeat center;
+}
+.box-pager {
+  float: right;
+  margin-right: 50px;
+}
+
+/*# sourceMappingURL=page7.css.map */
