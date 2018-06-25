@@ -1,0 +1,222 @@
+.box-tab{
+    border-bottom:solid 1px #3494fd;
+    p{
+        width:120px;
+        height:30px;
+        line-height: 30px;
+        text-align: center;
+        background: #4385f5;
+        color:#fff;
+        position: relative;
+        cursor: pointer;
+        &:after{
+            content: "";
+            width:10px;
+            height:10px;
+            position: absolute;
+            top:10px;
+            right:10px;
+            background: url("../../../imgs/common/delect.png") no-repeat center;
+        }
+    }
+}
+.box-inputs{
+    width:100%;
+    height:60px;
+    border-bottom:solid 1px #ccc;
+    .lables{
+        padding:5px 30px;
+        font-size:14px;
+        font-weight:normal;
+        input{
+            height:30px;
+            border-radius: 5px;
+            padding-left:5px;
+            outline: none;
+            border:none;
+            border:solid 1px #ccc;
+        }
+    }
+}
+.search-btn{
+    float: right;
+    width:80px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    color:#fff;
+    border-radius: 5px;
+    position: relative;
+    background: #4385f5;
+    margin-right:20px;
+    border:none;
+    outline: none;
+    font-size:14px;
+    position: relative;
+    &:before{
+        content: "";
+        width:10px;
+        height:10px;
+        position: absolute;
+        top:10px;
+        left:10px;
+        background: url("../../../imgs/common/search_03.png") no-repeat center;
+    }
+}
+.box-icons{
+    height:74px;
+    width:100%;
+    background: #dbe8ff;
+    .icon-float{
+        float: left;
+        padding:0 30px;
+    }
+}
+.box-table{
+    width:100%;
+    height:auto;
+}
+.box-table-list{
+    thead{
+        background: #3494fd;
+        tr{
+            th{
+                color:#fff;
+            }
+            td{
+                vertical-align: middle;
+            }
+        }
+    }
+    tbody{
+        tr{
+            height:74px;
+            td{
+                vertical-align: middle;
+                font-size:14px;
+                color:#050505
+            }
+        }
+        tr:nth-child(even){
+            background: #f4f7fd;
+        }
+    }
+}
+.row-size{
+    font-size:14px;
+    color:#000;
+}
+.row-size-big{
+    font-size:12px;
+    color:#6f6f6f;
+}
+.box-table-border{
+    background: #e3efff;
+    border-left:solid 3px #3494fd;
+}
+.box-table-leaf{
+    position: relative;
+    &:before{
+        content: "";
+        width:20px;
+        height:25px;
+        position: absolute;
+        top:0px;
+        left:-22px;
+    }
+}
+.gray{
+    &:before{
+        background: url("../../../imgs/common/gray-tb.png") no-repeat center;
+    }
+}
+.red{
+    &:before{
+        background: url("../../../imgs/common/red-tb.png") no-repeat center;
+    }
+}
+.yellow{
+    &:before{
+        background: url("../../../imgs/common/yellow-tb.png") no-repeat center;
+    }
+}
+.serious{
+    position: relative;
+    &:before{
+        content: "";
+        width:30px;
+        height:25px;
+        position: absolute;
+        top:0px;
+        left:-32px;
+        background: url("../../../imgs/common/red-wrong.png") no-repeat center;
+    }
+}
+.serious-yellow{
+    position: relative;
+    &:before{
+        content: "";
+        width:30px;
+        height:25px;
+        position: absolute;
+        top:0px;
+        left:-32px;
+        background: url("../../../imgs/common/yellow-wrong.png") no-repeat center;
+    }
+}
+.has-ok{
+        position: relative;
+        &:before{
+            content: "";
+            width:30px;
+            height:25px;
+            position: absolute;
+            top:0px;
+            left:-32px;
+            background: url("../../../imgs/common/sure1-img.png") no-repeat center;
+        }
+}
+.result{
+    position: relative;
+        &:before{
+            content: "";
+            width:30px;
+            height:25px;
+            position: absolute;
+            top:0px;
+            left:-32px;
+            background: url("../../../imgs/common/sure-img.png") no-repeat center;
+        }
+}
+.box-pager{
+    float: right;
+    margin-right:50px;
+}
+.box-ullist{
+    height:30px;
+    p{
+        float: left;
+        margin-left: 30px;
+        font-size:14px;
+    }
+    .box-ul-list{
+        margin-left:10px;
+        li{
+            font-size:14px;
+            padding:0 10px;
+            float: left;
+        }
+        .box-all{
+            color:#3494fd;
+        }
+    }
+}
+.text-red{
+    color:#fa3737;
+}
+.kils{
+    color:#3494fd;
+    span{
+        color:#8c8c8c;
+    }
+}
