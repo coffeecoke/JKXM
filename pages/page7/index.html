@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>中国铁路物联网智慧平台</title>
+
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap-pager.css">
+    <!-- Font Awesome 字体图标库 使用方式请参考官网-->
+    <link rel="stylesheet" href="../../components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="../../components/Ionicons/css/ionicons.min.css">
+    <!-- Theme style 项目主体公共样式-->
+    <link rel="stylesheet" href="../../dist/base-css/main.css">
+
+    <!-- components style -->
+    <link rel="stylesheet" href="../../components/fishbone/styles/fishbone.css">
+    <link rel="stylesheet" href="../../components/main/main.css">
+    <link rel="stylesheet" href="./styles/page7.css">
+
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link rel="stylesheet" href="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
+</head>
+<body>
+    <body class="hold-transition skin-blue sidebar-mini sidebar-collapse">
+        <div class="wrapper">
+            <!-- 内容包装器,包含页面内容 -->
+            <!-- 内容标题（页面标题） 暂时不用-->
+            <section class="content-header">
+                <h1>
+                    
+                </h1>
+            </section>
+            <!-- /.内容标题 -->
+            <section class="content">
+                <!-- floor1 -->
+                <div class="padding-wrapper">
+                    <div class="row ">
+                        <div class="col-sm-12 col-xs-12">
+                            <div class="box-tab">
+                                <p>状态总览</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- floor1 -->
+                <div class="padding-wrapper box-wrapper">
+                    <div class="row ">
+                        <div class="col-sm-12 col-xs-12">
+                            <div class="box">
+                                <div class="box-inputs clearfix">
+                                    <div class="box-sel">
+                                        <lable>选择路线：</lable>
+                                        <p class="box-sel-p">
+                                            <span><img  src="../../imgs/common/trun-down.png"></span>
+                                        </p>
+                                    </div>
+                                    <div class="box-sel">
+                                            <lable>所属桥梁：</lable>
+                                            <p class="box-sel-p">
+                                                <span><img  src="../../imgs/common/trun-down.png"></span>
+                                            </p>
+                                        </div>
+                                        
+                                    <lable>选择时间：
+                                        <input type="text" value="" id="datetimepicker"> 
+                                        <input type="text" value="" id="datetimepickers">
+                                    </lable>
+                                    <button class="search-btn">查询</button>
+                                </div>
+                                <div class="box-icons clearfix">
+                                        <div class="graphic graphic-horizontal icon-float">
+                                                <div class="circle-icon icon-bridge blue-bg"></div>
+                                                <div class="desc">正常桥梁</div>
+                                                <div class="num">58</div>
+                                        </div>
+                                        <div class="graphic graphic-horizontal icon-float">
+                                                <div class="circle-icon icon-bridge green-bg"></div>
+                                                <div class="desc">正常桥梁</div>
+                                                <div class="num">58</div>
+                                        </div>
+                                        <div class="graphic graphic-horizontal icon-float">
+                                                <div class="circle-icon icon-bridge red-bg"></div>
+                                                <div class="desc">正常桥梁</div>
+                                                <div class="num">58</div>
+                                        </div>
+                                        <div class="graphic graphic-horizontal icon-float">
+                                                <div class="circle-icon icon-bridge yellow-bg"></div>
+                                                <div class="desc">正常桥梁</div>
+                                                <div class="num">58</div>
+                                        </div>
+                                        <div class="graphic graphic-horizontal icon-float">
+                                                <div class="circle-icon icon-bridge gray-bg"></div>
+                                                <div class="desc">正常桥梁</div>
+                                                <div class="num">58</div>
+                                        </div>
+                                </div>
+                                <div class="box-table">
+                                    <table class="table box-table-list">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">桥梁信息</th>
+                                                <th scope="col">监测信息项目</th>
+                                                <th scope="col">监测信息</th>
+                                                <th scope="col">状态</th>
+                                                <th scope="col">首次告警时间</th>
+                                                <th scope="col">告警（次）</th>
+                                                <th scope="col">控制值</th>
+                                                <th scope="col">历史</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr class="box-table-border">
+                                                    <td scope="row">
+                                                        <p class="row-size-big">京沪线01号桥梁</p>
+                                                        <p class="row-size">横梁（梁体中间位置）梁体裂缝宽度</p>
+                                                    </td>
+                                                    <td>梁体裂缝宽度（mm）</td>
+                                                    <td>
+                                                        <p>初始值：0.00</p>
+                                                        <p>最大值：10.00 最小值：10.00 </p>
+                                                    </td>
+                                                    <td><p class="box-table-leaf gray">离线</p></td>
+                                                    <td>2018-03-17 10:00:00</td>
+                                                    <td>100</td>
+                                                    <td>3.01-100</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                        <td scope="row">
+                                                                <p class="row-size-big">京沪线01号桥梁</p>
+                                                                <p class="row-size">横梁（梁体中间位置）梁体裂缝宽度</p>
+                                                            </td>
+                                                            <td>梁体裂缝宽度（mm）</td>
+                                                            <td>
+                                                                <p>初始值：0.00</p>
+                                                                <p>最大值：10.00 最小值：10.00 </p>
+                                                            </td>
+                                                            <td><p class="box-table-leaf red">离线</p></td>
+                                                            <td>2018-03-17 10:00:00</td>
+                                                            <td>100</td>
+                                                            <td>3.01-100</td>
+                                                            <td></td>
+                                                </tr>
+                                                <tr>
+                                                        <td scope="row">
+                                                                <p class="row-size-big">京沪线01号桥梁</p>
+                                                                <p class="row-size">横梁（梁体中间位置）梁体裂缝宽度</p>
+                                                            </td>
+                                                            <td>梁体裂缝宽度（mm）</td>
+                                                            <td>
+                                                                <p>初始值：0.00</p>
+                                                                <p>最大值：10.00 最小值：10.00 </p>
+                                                            </td>
+                                                            <td><p class="box-table-leaf yellow">离线</p></td>
+                                                            <td>2018-03-17 10:00:00</td>
+                                                            <td>100</td>
+                                                            <td>3.01-100</td>
+                                                            <td></td>
+                                                </tr>
+                                                <tr>
+                                                        <td scope="row">
+                                                                <p class="row-size-big">京沪线01号桥梁</p>
+                                                                <p class="row-size">横梁（梁体中间位置）梁体裂缝宽度</p>
+                                                            </td>
+                                                            <td>梁体裂缝宽度（mm）</td>
+                                                            <td>
+                                                                <p>初始值：0.00</p>
+                                                                <p>最大值：10.00 最小值：10.00 </p>
+                                                            </td>
+                                                            <td><p class="box-table-leaf gray">离线</p></td>
+                                                            <td>2018-03-17 10:00:00</td>
+                                                            <td>100</td>
+                                                            <td>3.01-100</td>
+                                                            <td></td>
+                                                </tr>
+                                                <tr>
+                                                        <td scope="row">
+                                                                <p class="row-size-big">京沪线01号桥梁</p>
+                                                                <p class="row-size">横梁（梁体中间位置）梁体裂缝宽度</p>
+                                                            </td>
+                                                            <td>梁体裂缝宽度（mm）</td>
+                                                            <td>
+                                                                <p>初始值：0.00</p>
+                                                                <p>最大值：10.00 最小值：10.00 </p>
+                                                            </td>
+                                                            <td><p class="box-table-leaf gray">离线</p></td>
+                                                            <td>2018-03-17 10:00:00</td>
+                                                            <td>100</td>
+                                                            <td>3.01-100</td>
+                                                            <td></td>
+                                                </tr>
+                                                <tr>
+                                                        <td scope="row">
+                                                                <p class="row-size-big">京沪线01号桥梁</p>
+                                                                <p class="row-size">横梁（梁体中间位置）梁体裂缝宽度</p>
+                                                            </td>
+                                                            <td>梁体裂缝宽度（mm）</td>
+                                                            <td>
+                                                                <p>初始值：0.00</p>
+                                                                <p>最大值：10.00 最小值：10.00 </p>
+                                                            </td>
+                                                            <td><p class="box-table-leaf gray">离线</p></td>
+                                                            <td>2018-03-17 10:00:00</td>
+                                                            <td>100</td>
+                                                            <td>3.01-100</td>
+                                                            <td></td>
+                                                </tr>
+                                              </tbody>
+                                    </table>
+                                </div>
+                                <div id="page-container-static-normal" class="box-pager"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="../../plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../../plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- 使用Bootstrap工具提示解决jQuery UI工具提示中的冲突 -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button);
+    </script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="../../bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+
+    <!-- Bootstrap WYSIHTML5 -->
+    <script src="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+    <script src="../../bootstrap/dist/js/bootstrap-pager.js"></script>
+    <!-- Slimscroll -->
+    <script src="../../plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick 解决移动端300ms延迟问题 -->
+    <script src="../../plugins/fastclick/lib/fastclick.js"></script>
+    <!-- echarts-v3  百度echarts3-->
+    <script src="../../plugins/echarts-v3/echarts.min.js"></script>
+    <!-- 线性回归工具库 -->
+    <script src="../../plugins/echarts-v3/ecStat.min.js"></script>
+    <!-- echarts dataTool -->
+    <script src="../../plugins/echarts-v3/extension/dataTool.min.js"></script>
+    <!-- 引入自定义echart -->
+
+    <!-- 饼图 -->
+    <!-- <script src="../page5/js/piecharts.js"></script>
+    <!-- 折线图 -->
+    <!-- <script src="../page5/js/linecharts.js"></script> -->
+
+    <!-- <script src="../page5/js/barcharts.js"></script> -->
+
+    <!-- <script src="../page5/js/gauge.js"></script> -->
+
+
+    <!-- 柱状图 -->
+    <script src="../page3/js/bar.js"></script>
+
+    <!-- components 自主开发组件-->
+    <!-- <script src="../../components/bridge-chart/js/bridge-chart.js"></script> -->
+    <!-- 用户js -->
+
+    <script src="js/index.js"></script>
+    <script>
+    $("#page-container-static-normal").page({
+         count:100,
+         theme:"normal"
+    });
+    $("#page-container-static-normal").on("pageChanged",function (event,params) {
+        console.log(params);
+        $(this).data("page").refresh(params);
+    })</script>
+    <!-- <script>
+        $('#datetimepicker').datetimepicker();
+    </script> -->
+</body>
+</html>
