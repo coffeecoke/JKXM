@@ -48,17 +48,18 @@ var componentsOptions = [
         "target" : "components/bridge-chart/styles"
     },
     {
-<<<<<<< HEAD
         "name" : "fishbone",
         "cssPretreatment" : "less",
         "src" : ["components/fishbone/styles/fishbone.less"],
         "target" : "components/fishbone/styles"
-=======
+
+        
+    },
+    {
         "name" : "weight-chart",
         "cssPretreatment" : "less",
         "src" : ["components/weight-chart/styles/weight-chart.less"],
         "target" : "components/weight-chart/styles"
->>>>>>> 53a60878f3267f1ace1efd8775dd425fceac184a
     },
     //pages
 
