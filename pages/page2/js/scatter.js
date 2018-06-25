@@ -125,41 +125,41 @@ $(function () {
                 }
             },
             data: data
-        }
-        // {
-        //     name: 'line',
-        //     type: 'line',
-        //     showSymbol: false,
-        //     smooth: true,
-        //     data: myRegression.points,
-        //     lineStyle:{
-        //         normal:{
-        //             color:"#acacad"
-        //         }
-        //     },
-        //     markPoint: {
+        },
+        {
+            name: 'line',
+            type: 'line',
+            showSymbol: false,
+            smooth: true,
+            data: myRegression.points,
+            lineStyle:{
+                normal:{
+                    color:"#acacad"
+                }
+            },
+            markPoint: {
                 
-        //         itemStyle: {
-        //             normal: {
-        //                 color: 'transparent'
-        //             }
-        //         },
-        //         label: {
-        //             normal: {
-        //                 show: true,
-        //                 position: 'left',
-        //                 formatter: myRegression.expression,
-        //                 textStyle: {
-        //                     color: '#333',
-        //                     fontSize: 14
-        //                 }
-        //             }
-        //         },
-        //         data: [{
-        //             coord: myRegression.points[myRegression.points.length - 1]
-        //         }]
-        //     }
-        // }
+                itemStyle: {
+                    normal: {
+                        color: 'transparent'
+                    }
+                },
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'left',
+                        formatter: myRegression.expression,
+                        textStyle: {
+                            color: '#333',
+                            fontSize: 14
+                        }
+                    }
+                },
+                data: [{
+                    coord: myRegression.points[myRegression.points.length - 1]
+                }]
+            }
+        }
     ]
     };
     scatter.setOption(option);
