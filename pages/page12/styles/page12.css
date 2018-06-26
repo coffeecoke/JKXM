@@ -1,0 +1,155 @@
+.box-icons {
+  height: 74px;
+  width: 100%;
+}
+.box-icons .icon-float {
+  float: left;
+  padding: 0 30px;
+}
+.box-table {
+  width: 100%;
+  height: auto;
+}
+.box-table-list thead {
+  background: #3494fd;
+}
+.box-table-list thead tr th {
+  color: #fff;
+}
+.box-table-list thead tr td {
+  vertical-align: middle;
+}
+.box-table-list tbody tr {
+  height: 74px;
+  border: solid 1px #ccc;
+}
+.box-table-list tbody tr td {
+  vertical-align: middle;
+  font-size: 14px;
+  color: #050505;
+  border-bottom: solid 1px #ccc;
+}
+.box-table-list tbody tr:nth-child(even) {
+  background: #f4f7fd;
+}
+.row-size {
+  font-size: 14px;
+  color: #000;
+}
+.row-size-big {
+  font-size: 12px;
+  color: #6f6f6f;
+}
+.box-table-border {
+  background: #e3efff;
+  border-left: solid 3px #3494fd;
+}
+.box-table-leaf {
+  position: relative;
+}
+.box-table-leaf:before {
+  content: "";
+  width: 20px;
+  height: 25px;
+  position: absolute;
+  top: 0px;
+  left: -22px;
+}
+.gray:before {
+  background: url("../../../imgs/common/gray-tb.png") no-repeat center;
+}
+.red:before {
+  background: url("../../../imgs/common/red-tb.png") no-repeat center;
+}
+.yellow:before {
+  background: url("../../../imgs/common/yellow-tb.png") no-repeat center;
+}
+.serious {
+  position: relative;
+}
+.serious:before {
+  content: "";
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  top: 0px;
+  left: -32px;
+  background: url("../../../imgs/common/red-wrong.png") no-repeat center;
+}
+.serious-yellow {
+  position: relative;
+}
+.serious-yellow:before {
+  content: "";
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  top: 0px;
+  left: -32px;
+  background: url("../../../imgs/common/yellow-wrong.png") no-repeat center;
+}
+.has-ok {
+  position: relative;
+}
+.has-ok:before {
+  content: "";
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  top: 25px;
+  left: -32px;
+  background: url("../../../imgs/common/sure1-img.png") no-repeat center;
+}
+.result {
+  position: relative;
+}
+.result:before {
+  content: "";
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  top: 25px;
+  left: -32px;
+  background: url("../../../imgs/common/sure-img.png") no-repeat center;
+}
+.box-pager {
+  float: right;
+  margin-right: 50px;
+}
+.box-ullist {
+  height: 30px;
+}
+.box-ullist p {
+  float: left;
+  margin-left: 30px;
+  font-size: 14px;
+}
+.box-ullist .box-ul-list {
+  margin-left: 10px;
+}
+.box-ullist .box-ul-list li {
+  font-size: 14px;
+  padding: 0 10px;
+  float: left;
+}
+.box-ullist .box-ul-list .box-all {
+  color: #3494fd;
+}
+.text-red {
+  color: #fa3737;
+}
+.kils {
+  color: #3494fd;
+}
+.kils span {
+  color: #8c8c8c;
+}
+.blue-details {
+  color: #3494fd;
+}
+.box-look-more {
+  width: 100%;
+  text-align: center;
+}
+
+/*# sourceMappingURL=page12.css.map */

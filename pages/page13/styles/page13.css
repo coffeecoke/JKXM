@@ -1,0 +1,26 @@
+.box-table {
+  width: 100%;
+  height: auto;
+}
+.box-table-list thead {
+  background: #3494fd;
+}
+.box-table-list thead tr th {
+  color: #fff;
+}
+.box-table-list thead tr td {
+  vertical-align: middle;
+}
+.box-table-list tbody tr {
+  height: 74px;
+}
+.box-table-list tbody tr td {
+  vertical-align: middle;
+  font-size: 14px;
+  color: #050505;
+}
+.box-table-list tbody tr:nth-child(even) {
+  background: #f4f7fd;
+}
+
+/*# sourceMappingURL=page13.css.map */
