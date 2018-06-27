@@ -33,8 +33,9 @@
 }
 .box-inputs .box-sel {
   float: left;
+  margin-bottom: 5px;
 }
-.box-inputs .box-sel lable {
+.box-inputs .box-sel label {
   float: left;
 }
 .box-inputs .box-sel .box-sel-p {
@@ -54,11 +55,10 @@
 .box-inputs .box-sel .box-sel-p span img {
   margin-left: 10px;
 }
-.box-inputs lable {
-  padding: 5px 30px;
+.box-inputs label {
   font-size: 16px;
 }
-.box-inputs lable input {
+.box-inputs label input {
   height: 30px;
   border: solid 1px #4385f5;
   border-radius: 5px;
@@ -68,6 +68,7 @@
   float: right;
   width: 80px;
   height: 30px;
+  padding-left: 20px;
   line-height: 30px;
   text-align: center;
   color: #fff;
@@ -81,21 +82,24 @@
 }
 .search-btn:before {
   content: "";
-  width: 10px;
-  height: 10px;
+  width: 16px;
+  height: 16px;
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 7px;
+  left: 16px;
   background: url("../../../imgs/common/search_03.png") no-repeat center;
+  background-size: 100% 100%;
 }
 .box-icons {
-  height: 74px;
   width: 100%;
   background: #dbe8ff;
 }
 .box-icons .icon-float {
   float: left;
-  padding: 0 30px;
+  padding: 10px 30px;
+}
+.graphic-horizontal {
+  margin-top: 0 !important;
 }
 .box-table {
   width: 100%;
