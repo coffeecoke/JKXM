@@ -12,7 +12,7 @@
   vertical-align: middle;
 }
 .box-table-list tbody tr {
-  height: 74px;
+  height: 40px;
 }
 .box-table-list tbody tr td {
   vertical-align: middle;
@@ -21,6 +21,38 @@
 }
 .box-table-list tbody tr:nth-child(even) {
   background: #f4f7fd;
+}
+#piecharts {
+  position: relative;
+}
+.pie-legend {
+  position: absolute;
+  top: 46%;
+  left: 60%;
+}
+.pie-legend li {
+  font-size: 14px;
+  color: #3494fd;
+}
+.pie-legend li span {
+  min-width: 120px;
+  display: inline-block;
+  position: relative;
+  color: #000;
+}
+.pie-legend li span:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: -15px;
+  top: 4px;
+}
+.pie-legend li .span-blue:before {
+  background: #3494fd;
+}
+.pie-legend li .span-yellow:before {
+  background: #ffce22;
 }
 
 /*# sourceMappingURL=page13.css.map */
