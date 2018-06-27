@@ -80,6 +80,11 @@ body {
   // background-color: @body-bg;
   background-color:transparent;
   z-index: 800;
+  &:before {
+    content:'';
+    display: table
+  }
+
 }
 
 .main-footer {
@@ -136,11 +141,12 @@ body {
 /* Content */
 .content {
   min-height: 250px;
-  // padding: 20px;
-  margin:20px;
-  margin-top:0;
+  padding: 15px;
+  margin:40px 50px;
+  // margin-top:0;
   background:#fff;
   // .container-fixed(@grid-gutter-width);
+  border-radius:10px;
 }
 
 /* H1 - H6 font */

@@ -1,0 +1,46 @@
+.box-table-list {
+  border: solid 1px #ccc;
+}
+.box-table-list thead:first-child {
+  background: #3494fd;
+}
+.box-table-list thead:first-child tr th {
+  color: #fff;
+  border-left: solid 1px #fff;
+  text-align: center;
+}
+.box-table-list thead:first-child tr .th1 {
+  width: 12.5%;
+}
+.box-table-list thead:first-child tr .th2 {
+  width: 25%;
+}
+.box-table-list thead:first-child tr .th3 {
+  width: 25%;
+}
+.box-table-list thead:first-child tr .th4 {
+  width: 25%;
+}
+.box-table-list thead:first-child tr .th5 {
+  width: 12.5%;
+}
+.box-table-list thead:first-child tr td {
+  vertical-align: middle;
+}
+.box-table-list tbody tr {
+  height: 40px;
+}
+.box-table-list tbody tr td {
+  vertical-align: middle;
+  font-size: 14px;
+  color: #050505;
+  border-left: solid 1px #eee;
+}
+.box-table-list tbody tr td span {
+  color: red;
+}
+.box-table-list tbody tr:first-child {
+  background: #e8f3ff;
+}
+
+/*# sourceMappingURL=page14.css.map */
