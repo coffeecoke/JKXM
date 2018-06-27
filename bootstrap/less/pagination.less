@@ -34,6 +34,27 @@
         .border-right-radius(@border-radius-base);
       }
     }
+
+    .previous {
+      i {
+        width:16px;
+        height:16px;
+        display: block;
+        margin: 0 auto;
+        background:url(../../imgs/pagination/pagination-arrow-left.png) center no-repeat;
+        background-size: auto 100% ;
+      }
+    }
+    .next {
+      i {
+        width:16px;
+        height:16px;
+        display: block;
+        margin: 0 auto;
+        background:url(../../imgs/pagination/pagination-arrow-right.png) center no-repeat;
+        background-size: auto 100%;
+      }
+    }
   }
 
   > li > a,
@@ -54,8 +75,10 @@
     &:focus {
       z-index: 3;
       color: @pagination-active-color;
-      background-color: @pagination-active-bg;
-      border-color: @pagination-active-border;
+      // background-color: @pagination-active-bg;
+      background-color: #3593fe;
+      // border-color: @pagination-active-border;
+      border-color: #3593fe;
       cursor: default;
     }
   }

@@ -38,13 +38,13 @@
     BasePage.prototype.template = {
         ul: '<ul class="pagination">',
         li_pre: '<li class="paginate_button previous disabled" id="{0}_previous"></li>',
-        li_pre_a: '<a href="javascript:void(0)" class="previous" style="" aria-controls="{0}" data-dt-idx="0" tabindex="0">上一页</a>',
+        li_pre_a: '<a href="javascript:void(0)" class="previous" style="" aria-controls="{0}" data-dt-idx="0" tabindex="0"><i class="arrow"></i></a>',
         li_page: '<li class="paginate_button"></li>',
         li_page_a: '<a href="javascript:void(0)"  aria-controls="{0}" data-dt-idx="{1}" tabindex="{1}">{1}</a>',
         li_dots: '<li class="paginate_button"></li>',
         li_dots_a: '<a href="javascript:void(0)"  aria-controls="{0}" class="disabled" tabindex="{1}">{2}</a>',
         li_next: '<li class="paginate_button next disabled" id="{0}_next"></li>',
-        li_next_a: '<a href="javascript:void(0)" class="next"  aria-controls="{0}" data-dt-idx="{1}" tabindex="{1}">下一页</a>'
+        li_next_a: '<a href="javascript:void(0)" class="next"  aria-controls="{0}" data-dt-idx="{1}" tabindex="{1}"><i class="arrow"></i></a>'
     }
 
 

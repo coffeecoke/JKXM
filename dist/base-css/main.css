@@ -2732,6 +2732,8 @@ p {
 .pagination > li > a {
   background: #fafafa;
   color: #666;
+  margin: 0 6px;
+  border-radius: 2px;
 }
 .pagination.pagination-flat > li > a {
   border-radius: 0 !important;
@@ -2848,6 +2850,30 @@ p {
   display: inline-block;
   vertical-align: middle;
   background: url(../../imgs/table/rank-down.png) no-repeat;
+}
+.table-rank > tbody td .red-circle {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+  background-color: #ff7681;
+}
+.table-rank > tbody td .green-circle {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+  background-color: #7fcd60;
+}
+.table-rank > tbody td .orange-circle {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+  background-color: #ffce22;
 }
 .table-bordered {
   border: 1px solid #f4f4f4;
