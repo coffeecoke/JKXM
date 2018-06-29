@@ -1681,9 +1681,6 @@ p {
   max-height: 300px;
   overflow: auto;
 }
-.box .border-right {
-  border-right: 1px solid #f4f4f4;
-}
 .box .border-left {
   border-left: 1px solid #f4f4f4;
 }
