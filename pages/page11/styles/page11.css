@@ -1,0 +1,126 @@
+.box-ullist {
+  height: 30px;
+}
+.box-ullist p {
+  float: left;
+  margin-left: 30px;
+  font-size: 14px;
+}
+.box-ullist .box-ul-list {
+  margin-left: 10px;
+}
+.box-ullist .box-ul-list li {
+  font-size: 14px;
+  padding: 0 10px;
+  float: left;
+}
+.box-ullist .box-ul-list .box-all {
+  color: #3494fd;
+}
+.box-tab {
+  border-bottom: solid 1px #3494fd;
+}
+.box-tab li {
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #4385f5;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+  float: left;
+  margin-left: 10px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.box-tab li:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: url("../../../imgs/common/delect-white.png") no-repeat center;
+}
+.box-inputs {
+  width: 100%;
+  padding: 10px 0;
+  position: relative;
+  z-index: 10;
+}
+.box-inputs .labels {
+  padding: 5px 30px;
+  font-size: 14px;
+  font-weight: normal;
+}
+.box-inputs .labels input {
+  height: 30px;
+  border-radius: 5px;
+  padding-left: 5px;
+  outline: none;
+  border: none;
+  border: solid 1px #ccc;
+}
+.search-btn {
+  float: right;
+  width: 80px;
+  height: 30px;
+  padding-left: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  background: #4385f5;
+  margin-right: 20px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  position: relative;
+}
+.search-btn:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 7px;
+  left: 16px;
+  background: url("../../../imgs/common/search_03.png") no-repeat center;
+  background-size: 100% 100%;
+}
+.box-table {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+.box-table-list {
+  border: solid 1px #ccc;
+}
+.box-table-list thead {
+  background: #3494fd;
+}
+.box-table-list thead tr th {
+  color: #fff;
+}
+.box-table-list thead tr td {
+  vertical-align: middle;
+}
+.box-table-list tbody tr {
+  height: 42px;
+  border: solid 1px #ccc;
+}
+.box-table-list tbody tr td {
+  vertical-align: middle;
+  font-size: 14px;
+  color: #050505;
+  border-bottom: solid 1px #ccc;
+}
+.box-table-list tbody tr:nth-child(even) {
+  background: #f4f7fd;
+}
+.box-pager {
+  float: right;
+  margin-right: 50px;
+}
+
+/*# sourceMappingURL=page11.css.map */
