@@ -1,2 +1,115 @@
+.day-theme .big-screen-content {
+  margin-left: 340px;
+  margin-right: 340px;
+  min-height: 600px;
+  padding: 15px;
+  position: relative;
+}
+.day-theme .big-screen-content .big-screen-left {
+  width: 340px;
+  height: 100%;
+  float: left;
+  margin-left: -340px;
+}
+.day-theme .big-screen-content .big-screen-right {
+  width: 340px;
+  height: 100%;
+  float: right;
+  margin-right: -340px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+.day-theme .big-screen-content .big-screen-center {
+  margin: 0 24px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.day-theme .module {
+  width: 100%;
+  padding: 12px;
+  background: #fff;
+  box-shadow: 0 0 20px #2e61b3;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.day-theme .module .module-header {
+  position: relative;
+}
+.day-theme .module .module-header .module-title {
+  margin: 0;
+  color: #5b5b5b;
+  font-size: 16px;
+}
+.day-theme .module .module-header .module-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  background: url('../../../imgs/big-screen/close-day-icon.png') center no-repeat;
+  float: right;
+}
+.day-theme .module .module-body {
+  min-height: 200px;
+}
+.night-theme .big-screen-content {
+  margin-left: 340px;
+  margin-right: 340px;
+  min-height: 600px;
+  padding: 15px;
+  position: relative;
+}
+.night-theme .big-screen-content .big-screen-left {
+  width: 340px;
+  height: 100%;
+  float: left;
+  margin-left: -340px;
+}
+.night-theme .big-screen-content .big-screen-right {
+  width: 340px;
+  height: 100%;
+  float: right;
+  margin-right: -340px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+.night-theme .big-screen-content .big-screen-center {
+  margin: 0 24px;
+  height: 100px;
+  background-color: #7d74e2;
+  border-radius: 4px;
+}
+.night-theme .module {
+  width: 100%;
+  padding: 12px;
+  background: -webkit-linear-gradient(left, #6c6dd6, #2e61b3);
+  background: linear-gradient(left, #6c6dd6, #2e61b3);
+  box-shadow: 0 0 20px #2e61b3;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.night-theme .module .module-header {
+  position: relative;
+}
+.night-theme .module .module-header .module-title {
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+}
+.night-theme .module .module-header .module-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  background: url('../../../imgs/big-screen/close-night-icon.png') center no-repeat;
+  float: right;
+}
+.night-theme .module .module-body {
+  min-height: 200px;
+}
 
 /*# sourceMappingURL=big-screen.css.map */

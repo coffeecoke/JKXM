@@ -1,0 +1,131 @@
+
+.day-theme {
+    @close-url:'../../../imgs/big-screen/close-day-icon.png';
+    @module-title-color:#5b5b5b;
+    @module-bg :#fff;
+    @screen-center-bg:#fff;
+
+    .big-screen-content {
+        margin-left:340px;
+        margin-right:340px;
+        min-height:600px;
+        padding:15px;
+        position:relative;
+        .big-screen-left {
+            width:340px;
+            height:100%;
+            float:left;
+            margin-left:-340px;
+        }
+        .big-screen-right {
+            width:340px;
+            height:100%;
+            float:right;
+            margin-right:-340px;
+            position: absolute;
+            right:15px;
+            top:15px;
+        }
+        .big-screen-center {
+            margin:0 24px;
+            height:100px;
+            background-color:@screen-center-bg;
+            border-radius:4px;
+        }
+    }
+    .module {
+        width: 100%;
+        padding:12px;
+        background:@module-bg;
+        box-shadow: 0 0 20px #2e61b3;
+        border-radius:4px;
+        margin-bottom:10px;
+        .module-header {
+            position: relative;
+            .module-title {
+                margin:0;
+                color:@module-title-color;
+                font-size:16px;
+
+            }
+            .module-close {
+                position: absolute;
+                top:0;
+                right:0;
+                width:16px;
+                height:16px;
+                background:url('@{close-url}') center no-repeat;
+
+                float:right;
+            }
+        }
+        .module-body {
+            min-height:200px;
+        }
+    }
+}
+.night-theme {
+
+    @close-url:'../../../imgs/big-screen/close-night-icon.png';
+    @module-title-color:#fff;
+    @module-bg :linear-gradient(left,#6c6dd6,#2e61b3);
+    @screen-center-bg:#7d74e2;
+    .big-screen-content {
+        margin-left:340px;
+        margin-right:340px;
+        min-height:600px;
+        padding:15px;
+        position:relative;
+        .big-screen-left {
+            width:340px;
+            height:100%;
+            float:left;
+            margin-left:-340px;
+        }
+        .big-screen-right {
+            width:340px;
+            height:100%;
+            float:right;
+            margin-right:-340px;
+            position: absolute;
+            right:15px;
+            top:15px;
+        }
+        .big-screen-center {
+            margin:0 24px;
+            height:100px;
+            background-color:@screen-center-bg;
+            border-radius:4px;
+        }
+    }
+    .module {
+        width: 100%;
+        padding:12px;
+        background:@module-bg;
+        box-shadow: 0 0 20px #2e61b3;
+        border-radius:4px;
+        margin-bottom:10px;
+        .module-header {
+            position: relative;
+            .module-title {
+                margin:0;
+                color:@module-title-color;
+                font-size:16px;
+
+            }
+            .module-close {
+                position: absolute;
+                top:0;
+                right:0;
+                width:16px;
+                height:16px;
+                background:url('@{close-url}') center no-repeat;
+
+                float:right;
+            }
+        }
+        .module-body {
+            min-height:200px;
+        }
+    }
+}

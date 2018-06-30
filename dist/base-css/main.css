@@ -85,9 +85,21 @@ body {
     transform: translate(230px, 0);
   }
 }
+.content-iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.map-iframe {
+  height: 100%;
+}
 .content-wrapper {
+  position: relative;
   min-height: 100%;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 800;
 }
 .content-wrapper:before {
@@ -337,6 +349,16 @@ p {
   font-size: 9px;
   padding: 2px 3px;
   line-height: .9;
+}
+.main-header .header-logo {
+  position: absolute;
+  width: 400px;
+  height: 76px;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: url(../../imgs/header/logo.png) center no-repeat;
 }
 .main-header .logo {
   -webkit-transition: width 0.3s ease-in-out;

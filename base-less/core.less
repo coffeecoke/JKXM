@@ -75,10 +75,24 @@ body {
   }
 }
 
+.content-iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.map-iframe {
+  height: 100%;
+}
 .content-wrapper  {
+  position: relative;
   min-height: 100%;
   // background-color: @body-bg;
-  background-color:transparent;
+
+  background-color:rgba(0,0,0,.6);
   z-index: 800;
   &:before {
     content:'';
