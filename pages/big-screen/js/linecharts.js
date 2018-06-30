@@ -3,7 +3,13 @@ $(function () {
     option1 = {
         xAxis: {
             type: 'category',
+            boundaryGap: false,
             data:['01/17','02/17','03/17','04/17','05/17'],
+            axisLine: {
+                lineStyle: {
+                    color: '#5da9fb'
+                 }
+             },
         },
         yAxis: {
             type: 'value',
@@ -12,14 +18,20 @@ $(function () {
             max:240,
             splitLine:{
                 lineStyle:{
-                    type:'dashed'
+                    type:'dashed',
+                    color:'#6697e3'
                 }    
-            }   
+            },
+            axisLine: {
+                lineStyle: {
+                    color: '#5da9fb'
+                 }
+             },   
         },
          grid:{
              top:'15%',
              left:'2%',
-             right:'%',
+             right:'5%',
              bottom:0,
              containLabel:true
          },
@@ -27,6 +39,7 @@ $(function () {
             data: ['90','30','120','40','60'],
             type: 'line',
             smooth: true,
+            symbol: 'none',
             itemStyle:{
                 color:'transparent'
             },
