@@ -13,7 +13,7 @@ $(function () {
          grid:{
              top:'15%',
              left:'2%',
-             right:'4%',
+             right:'%',
              bottom:0,
              containLabel:true
          },
@@ -33,13 +33,14 @@ $(function () {
             },
             areaStyle: {
                 normal: {
-                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                        offset: 0,
-                        color: '#3494fd'
-                    }, {
-                        offset: 1,
-                        color: '#ffe'
-                    }])
+                    color: {
+                        type: 'linear',
+                        colorStops: [{
+                            offset: 0, color: '#fe8864' // 0% 处的颜色
+                        }, {
+                            offset: 1, color: '#f24899' // 100% 处的颜色
+                        }]
+                    }
                 }
             },
         }]
@@ -66,7 +67,7 @@ $(function () {
          grid:{
              top:'15%',
              left:'2%',
-             right:'4%',
+             right:'6%',
              bottom:0,
              containLabel:true
          },
@@ -104,10 +105,10 @@ $(function () {
                 normal: {
                     color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
                         offset: 0,
-                        color: '#fef1f1'
+                        color: '#feeeee'
                     }, {
                         offset: 1,
-                        color: '#fff'
+                        color: '#ffe'
                     }])
                 }
             },
