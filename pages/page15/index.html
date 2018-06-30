@@ -151,7 +151,20 @@
 
                         </div>
                         <div class="col-xs-12 col-sm-3">
-
+                            <div class="mr-left-20">
+                                <h4 class="forecast">天气预报</h4>
+                                <p class="data-color">
+                                    <span class="data-live">2018-04-10 12:00 </span><span class="data-live">实况</span>
+                                </p>
+                                <h1 class="temperature"><span>30</span>°C</h1> 
+                                <p class="yellow-warn">空气重污染预警</p>
+                                <ul class="relative-humidity">
+                                    <li class="humidity"><span class="gray-span">相对湿度</span><span>44%</span></li>
+                                    <li class="south-wind"><span class="gray-span">南风</span><span>2级</span></li>
+                                    <li class="pollute"><span class="gray-span">轻度污染</span><span>126</span></li>
+                                    <li class="limit-line"><span class="gray-span">限行</span><span>1和6</span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -164,7 +177,14 @@
                             <h3 class="box-title">生命周期</h3>
                         </div>
                         <div class="box-body">
-
+                            <div class="declarations-cycle">
+                                <ul class="cycle-line">
+                                    <li class="color-line color-green"><span>稳定期</span></li>
+                                    <li class="color-line color-yellow active"><span>低谷期</span></li>
+                                    <li class="color-line color-red"><span>危险期</span></li>
+                                    <li class="color-line color-white" style="width:10%;"><span>淘汰期</span></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
@@ -173,22 +193,48 @@
                 <!-- floor3 -->
                 <div class="border-bottom padding-wrapper">
                     <div class="row">
-                        <div class="box">
-                            <div class="box-header">告警信息</div>
+                        <div class="box-bodys">
+                            <div class="box-header">
+                                <h3 class="box-title">告警信息</h3>
+                            </div>
                             <div class="box-body">
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-4">
-                                        <div class="box border-right">
-
+                                        <div class="box-bodys border-right">
+                                            <div class="alarms-list">
+                                                <ul class="alarms-information">
+                                                    <li><span>告警级别：</span><span class="alarms-serisous">严重</span></li>
+                                                    <li><span>开始时间：</span><span class="alarms-serisous">2018-04-10 10:10:10 </span></li>
+                                                    <li><span>是否被预测：</span><span class="alarms-serisous">是</span></li>
+                                                    <li><span>相比同类设施劣化速度：</span><span class="alarms-serisous">超同类设备30%</span></li>
+                                                </ul>
+                                            </div>
                                         </div>
 
                                     </div>
                                     <div class="col-xs-12 col-sm-4">
-                                        <div class="box border-right"></div>
+                                        <div class="box-bodys border-right">
+                                            <div class="alarms-list">
+                                                <ul class="alarms-information">
+                                                    <li><span>告警阀值：</span><span class="alarms-serisous">10-15cm</span></li>
+                                                    <li><span>结束时间：</span><span class="alarms-serisous">2018-04-11 10:10:10 </span></li>
+                                                    <li><span>预测告警时间：</span><span class="alarms-serisous">2018-04-11 10:10:10 </span></li>
+                                                    <li><span>相比同类设施告警频度：</span><span class="alarms-serisous">超同类设备60%</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
 
                                     </div>
                                     <div class="col-xs-12 col-sm-4">
-                                        <div class="box"></div>
+                                        <div class="box-bodys">
+                                            <div class="alarms-list">
+                                                <ul class="alarms-information">
+                                                    <li><span>A值告警：</span><span class="alarms-serisous">14cm</span></li>
+                                                    <li><span>告警次数：</span><span class="alarms-serisous">6次</span></li>
+                                                    <li><span>预测偏差时间：</span><span class="alarms-serisous">1天</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -200,18 +246,67 @@
                 <!-- /.floor3 -->
 
                 <!-- floor4 -->
+                <div class="border-bottom padding-wrapper">
+                    <div class="row">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="box-title">设施J-J-001告警前24小时实时监测数据</h3>
+                            </div>
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="linecharts" id="linecharts" style="height:200px;width:100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- /.floor4 -->
                 <!-- floor5 -->
+                <div class="border-bottom padding-wrapper">
+                    <div class="row">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="box-title">设施J-J-001告警前24小时实时监测数据</h3>
+                            </div>
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="linecharts" id="linecharts1" style="height:200px;width:100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- /.floor5 -->
 
                 <!-- 导出故障单 -->
                 <div class="export-btn-container">
-                    <button class="exporta-btn"></button>
+                    <button class="exporta-btn">导出故障单</button>
                 </div>
 
-                <!--  -->
+                <!-- 导出故障单 -->
             </section>
-
+            <!-- 分析结果-->
+            <div class="analytic-result">
+                <div class="padding-32">
+                    <div class="box-header-title">
+                        <h3 class="box-title-h3">分析结果如下</h3>
+                    </div>   
+                    <div class="box-textarea">
+                        <textarea name="" id="textarea" class="result-textarea">环境温度突然降低导致的线的伸缩性变低</textarea>
+                    </div>
+                    <div class="box-header-title">
+                        <h3 class="box-title-h3">操作建议</h3>
+                    </div>   
+                    <div class="box-textarea">
+                        <textarea name=""  class="result-textarea">适当增加坠砣重量</textarea>
+                    </div>
+                    <div class="keep-btn-container">
+                            <button class="keep-modify keep-btn">保存</button>
+                            <button class="keep-modify modify-btn">修改</button>
+                    </div>
+                </div>          
+            </div>
+            <!-- 分析结果-->
 
         </div>
     </div>
@@ -255,6 +350,7 @@
     <!-- echarts dataTool -->
     <script src="../../plugins/echarts-v3/extension/dataTool.min.js"></script>
     <!-- 引入自定义echart -->
+    <script src="../page15/js/linecharts.js"></script>
     <!-- components 自主开发组件-->
     <!-- <script src="../../components/bridge-chart/js/bridge-chart.js"></script> -->
     <!-- 用户js -->
