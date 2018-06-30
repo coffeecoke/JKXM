@@ -1,0 +1,25 @@
+.content-left {
+  margin-right: 300px;
+}
+.content-right {
+  float: right;
+  background-color: #e8f3ff;
+  position: absolute;
+  width: 300px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.chart-inner {
+  position: absolute;
+  z-index: 10;
+  width: 30%;
+  left: 50%;
+  top: 24%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*# sourceMappingURL=page9.css.map */

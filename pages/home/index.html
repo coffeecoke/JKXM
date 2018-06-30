@@ -15,11 +15,12 @@
   <link rel="stylesheet" href="../../components/Ionicons/css/ionicons.min.css">
   <!-- Theme style 项目主体公共样式-->
   <link rel="stylesheet" href="../../dist/base-css/main.css">
-
+  <!-- plugins -->
+  <link rel="stylesheet" href="../../plugins/css3kg/css/style.css">
   <!-- components style -->
   <link rel="stylesheet" href="../../components/bridge-chart/styles/bridge-chart.css">
   <link rel="stylesheet" href="../../components/main/main.css">
-  <link rel="stylesheet" href="./styles/page2.css">
+  <link rel="stylesheet" href="./styles/home.css">
 
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
@@ -31,24 +32,26 @@
   <![endif]-->
 
   <style>
-      .content-wrapper {
-          position:relative;
+    .content-wrapper {
+      position: relative;
 
-      }
-      .content-iframe {
-          position:absolute;
-          width:100%;
-          height:100%;
-          top:0;
-          left:0;
-          background:rgba(0,0,0,.6);
-          display: block;
-      }
-      .map-iframe {
-          height:100%;
-      }
+    }
+
+    .content-iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, .6);
+      display: block;
+    }
+
+    .map-iframe {
+      height: 100%;
+    }
   </style>
-  
+
 </head>
 <!-- 如果左侧不想用弹出二级的形式，而是上下折叠显示，请去掉 “sidebar-mini” “sidebar-collapse”两个class类名 -->
 
@@ -56,21 +59,71 @@
   <div class="wrapper">
 
     <header class="main-header">
-      <!-- Logo -->
-      <a href="##" class="logo">
-        <!-- 小logo -->
-        <span class="logo-mini"></span>
-        <span class="logo-lg">
-          <span class="logo__text">中国铁路物理网智慧平台</span>
 
-        </span>
-      </a>
       <nav class="navbar navbar-static-top">
-        <!-- 切换按钮 暂时不用-->
-        <a href="##" class="sidebar-toggle" data-toggle="push-menu" role="button">
-          <span class="sr-only">Toggle navigation</span>
-        </a>
-        <!-- /.切换按钮 -->
+        <!-- header左侧 -->
+        <div class="navbar-papes-menu navbar-left">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="##" class="dropdown-toggle" data-toggle="dropdown">
+                <span>
+                  <i class="user-icon dtjc-icon"></i>动态监测</span>
+
+              </a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">
+                  <i class="user-icon dtjc-icon"></i>动态监测</div>
+                <ul class="dropdown-lists">
+                  <li>桥梁监测</li>
+                  <li>坠陀监测</li>
+                  <li>钢轨监测</li>
+                  <li>设备箱</li>
+                </ul>
+              </div>
+
+            </li>
+            <li>
+              <a href="##" class="dropdown-toggle" data-toggle="dropdown">
+                <span>
+                  <i class="user-icon gzzd-icon"></i>故障诊断</span>
+
+              </a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">
+                  <i class="user-icon gzzd-icon"></i>故障诊断</div>
+                <ul class="dropdown-lists">
+                  <li>桥梁监测</li>
+                  <li>坠陀监测</li>
+                  <li>钢轨监测</li>
+                  <li>设备箱</li>
+                </ul>
+              </div>
+
+            </li>
+            <li>
+              <a href="##" class="dropdown-toggle" data-toggle="dropdown">
+                <span>
+                  <i class="user-icon jkpg-icon"></i>健康评估</span>
+
+              </a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">
+                  <i class="user-icon jkpg-icon"></i>健康评估</div>
+                <ul class="dropdown-lists">
+                  <li>桥梁监测</li>
+                  <li>坠陀监测</li>
+                  <li>钢轨监测</li>
+                  <li>设备箱</li>
+                </ul>
+              </div>
+
+            </li>
+          </ul>
+        </div>
+        <!-- /.header左侧 -->
+
+
+        <!-- 配置选项卡 -->
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
             <!-- 用户信息弹出 -->
@@ -78,49 +131,131 @@
 
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 
-                <span class="hidden-xs">超级管理员,你好
-                  <i class="fa fa-arrow-circle-down"></i>
+                <span class="hidden-xs">
+                  <i class="user-icon tab-icon"></i>
+                  超级管理员,你好
+                  <i class="fa fa-arrow-up"></i>
                 </span>
               </a>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu" data-stopPropagation='true'>
                 <!-- User image -->
                 <li class="user-header">
                   <img src="../../imgs/header/3.jpg" class="img-circle" alt="User Image">
-
-                  <p>
-                    xxxx - xxx部门
-                    <small>2018年9月5日</small>
-                  </p>
+                  <div class="user-info">
+                    <h3>用户名，你好</h3>
+                    <ul class="">
+                      <li class="modify-pwd">修改密码</li>
+                      <li class="sign-out">退出</li>
+                    </ul>
+                  </div>
                 </li>
                 <!-- Menu Body -->
                 <li class="user-body">
-                  <div class="row">
-                    <div class="col-xs-4 text-center">
-                      <a href="#">Followers</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                      <a href="#">Sales</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                      <a href="#">Friends</a>
-                    </div>
+                  <div class="user-body__title">
+                    配置选项卡
                   </div>
-                  <!-- /.row -->
+                  <div class="user-body__lists">
+                    <label for="">
+                      <input type="checkbox" style="display:none">
+                      <i class="check-box-icon"></i>
+                      <span>告警级别分布</span>
+                    </label>
+                    <label for="">
+                      <input type="checkbox" style="display:none">
+                      <i class="check-box-icon"></i>
+                      <span>告警级别分布</span>
+                    </label>
+                    <label for="">
+                      <input type="checkbox" style="display:none">
+                      <i class="check-box-icon"></i>
+                      <span>告警级别分布</span>
+                    </label>
+                    <label for="">
+                      <input type="checkbox" style="display:none">
+                      <i class="check-box-icon"></i>
+                      <span>告警级别分布</span>
+                    </label>
+                  </div>
+
+                  <div class="toggle toggle--daynight">
+                    <input type="checkbox" id="toggle--daynight" class="toggle--checkbox">
+                    <label class="toggle--btn" for="toggle--daynight">
+                      <span class="toggle--feature"></span>
+                    </label>
+                  </div>
                 </li>
-                <!-- Menu Footer-->
-                <li class="user-footer">
-                  <div class="pull-left">
-                    <a href="#" class="btn btn-default btn-flat">Profile</a>
-                  </div>
-                  <div class="pull-right">
-                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                  </div>
-                </li>
+
               </ul>
             </li>
             <!-- /.用户信息弹出 -->
           </ul>
         </div>
+        <!-- /.配置选项卡 -->
+
+
+        <!-- header右侧 -->
+        <div class="navbar-papes-menu navbar-right">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="##" class="dropdown-toggle" data-toggle="dropdown">
+                <span>
+                  <i class="user-icon gzyc-icon"></i>故障预测</span>
+
+              </a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">
+                  <i class="user-icon gzyc-icon"></i>故障预测</div>
+                <ul class="dropdown-lists">
+                  <li>桥梁监测</li>
+                  <li>坠陀监测</li>
+                  <li>钢轨监测</li>
+                  <li>设备箱</li>
+                </ul>
+              </div>
+
+            </li>
+            <li>
+              <a href="##" class="dropdown-toggle" data-toggle="dropdown">
+                <span>
+                  <i class="user-icon wxjc-icon"></i>维修决策</span>
+
+              </a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">
+                  <i class="user-icon wxjc-icon"></i>维修决策</div>
+                <ul class="dropdown-lists">
+                  <li>桥梁监测</li>
+                  <li>坠陀监测</li>
+                  <li>钢轨监测</li>
+                  <li>设备箱</li>
+                </ul>
+              </div>
+
+            </li>
+            <li>
+              <a href="##" class="dropdown-toggle" data-toggle="dropdown">
+                <span>
+                  <i class="user-icon gis-icon"></i>GIS视图</span>
+
+              </a>
+              <div class="dropdown-menu">
+                <div class="dropdown-title">
+                  <i class="user-icon gis-icon"></i>GIS视图</div>
+                <ul class="dropdown-lists">
+                  <li>桥梁监测</li>
+                  <li>坠陀监测</li>
+                  <li>钢轨监测</li>
+                  <li>设备箱</li>
+                </ul>
+              </div>
+
+            </li>
+          </ul>
+        </div>
+        <!-- /.header右侧 -->
+
+
+
       </nav>
     </header>
     <!-- 左侧栏-->
@@ -296,16 +431,16 @@
     <!-- /.左侧栏 -->
     <!-- 内容包装器,包含页面内容 -->
     <div class="content-wrapper">
-        <!-- 地图iframe -->
-        <div class="map-iframe">
-            <iframe src="map.html" frameborder="0" style="width:100%;height:99%"></iframe>
-        </div>
-        <!-- 内容iframe -->
-        <div class="content-iframe">
-            <iframe src="../page7/index.html" frameborder="0" style="width:100%;height:99%"></iframe>
-        </div>
-    </div>  
-   
+      <!-- 地图iframe -->
+      <div class="map-iframe">
+        <iframe src="map.html" frameborder="0" style="width:100%;height:99%"></iframe>
+      </div>
+      <!-- 内容iframe -->
+      <div class="content-iframe">
+        <iframe src="../page7/index.html" frameborder="0" style="width:100%;height:99%"></iframe>
+      </div>
+    </div>
+
     <!-- 侧边控制栏，暂时不用 -->
     <!-- 添加侧边栏的背景。 这个div必须放置紧随控制边栏之后 -->
 
@@ -341,16 +476,8 @@
   <!-- 引入自定义echart -->
 
   <!-- 饼图 -->
-  <script src="../page2/js/pieChart.js"></script>
   <!-- 折线图 -->
-  <script src="../page2/js/lineChart.js"></script>
-
-  <script src="../page2/js/pictorialBar.js"></script>
-
-  <script src="../page2/js/scatter.js"></script>
-
-  <script src="../page2/js/boxplotChart.js"></script>
-
+  <!-- plugins -->
   <!-- components 自主开发组件-->
   <script src="../../components/bridge-chart/js/bridge-chart.js"></script>
   <!-- 用户js -->
@@ -359,14 +486,25 @@
 
   <script>
     $(function () {
-        // 计算content-wrapper的高度
-        function resizeContentWrapper () {
-            var headerHeight = $('.main-header').height();
-            var winHeight = $(window).height();
-            $('.content-wrapper').height(winHeight-headerHeight);
+      // 计算content-wrapper的高度
+      function resizeContentWrapper() {
+        var headerHeight = $('.main-header').height();
+        var winHeight = $(window).height();
+        $('.content-wrapper').height(winHeight - headerHeight);
 
-        }
-        resizeContentWrapper();
+      }
+      resizeContentWrapper();
+
+
+      $("body").on('click', '[data-stopPropagation]', function (e) {
+        e.stopPropagation();
+      });
+
+      $('.user-menu .dropdown-toggle').on('click',function () {
+        $(this).find('span').toggleClass('active')
+      })
+     
+
     })
   </script>
 </body>
