@@ -90,7 +90,9 @@
                             <h3 class="module-title">各种设施和数量</h3>
                             <span class="module-close"></span>
                         </div>
-                        <div class="module-body"></div>
+                         <div class="module-body">
+                            <div class="chart" id="bar3D" style="width:100%;height:200px;"></div>
+                        </div> 
                     </div>
                     <!-- 危险伤害评估 -->
                     <div class="module">
@@ -218,7 +220,9 @@
                             <h3 class="module-title">剩余时间预测</h3>
                             <span class="module-close"></span>
                         </div>
-                        <div class="module-body"></div>
+                        <div class="module-body">
+                            <div class="chart" id="bar1" style="width:100%;height:250px;"></div>
+                        </div>
                     </div>
                     <!-- 状态维修比例 -->
                     <div class="module">
@@ -226,7 +230,9 @@
                             <h3 class="module-title">状态维修比例</h3>
                             <span class="module-close"></span>
                         </div>
-                        <div class="module-body"></div>
+                        <div class="module-body">
+
+                        </div>
                     </div>
                     <!-- 工单趋势 -->
                     <div class="module">
@@ -234,7 +240,9 @@
                             <h3 class="module-title">工单趋势</h3>
                             <span class="module-close"></span>
                         </div>
-                        <div class="module-body"></div>
+                        <div class="module-body">
+                            <div class="chart" id="linecharts2" style="width:100%;height:250px;"></div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -264,20 +272,24 @@
     <!-- FastClick 解决移动端300ms延迟问题 -->
     <script src="../../plugins/fastclick/lib/fastclick.js"></script>
     <!-- echarts-v3  百度echarts3-->
-    <script src="../../plugins/echarts-v3/echarts.min.js"></script>
+    <script src="../../plugins/echarts-v3/echarts.js"></script>
     <!-- 线性回归工具库 -->
     <script src="../../plugins/echarts-v3/ecStat.min.js"></script>
     <!-- echarts dataTool -->
     <script src="../../plugins/echarts-v3/extension/dataTool.min.js"></script>
+    <script src="../../plugins/echarts-v3/echarts-gl.js"></script>  
     <!-- 引入自定义echart -->
+    <script src="js/bar3D.js"></script>
     <script src="js/pieChart.js"></script>
+    <script src="js/pie-bar.js"></script>
+    <script src="js/linecharts.js"></script>
     <!-- components 自主开发组件-->
     <!-- plugins -->
     <script src="../../plugins/rollslider/rollSlide.js"></script>
     <!-- <script src="../../components/bridge-chart/js/bridge-chart.js"></script> -->
     <!-- 用户js -->
 
-    <script src="js/index.js"></script>
+    <!-- <script src="js/index.js"></script> -->
 
 
 </body>

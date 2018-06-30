@@ -1,13 +1,5 @@
 $(function () {
     var myChart= echarts.init(document.getElementById('bar3D'));
-
-//     var hours = ['12a', '1a', '2a', '3a', '4a', '5a', '6a',
-//         '7a', '8a', '9a','10a','11a',
-//         '12p', '1p', '2p', '3p', '4p', '5p',
-//         '6p', '7p', '8p', '9p', '10p', '11p'];
-// var days = ['Saturday', 'Friday', 'Thursday',
-//         'Wednesday', 'Tuesday', 'Monday', 'Sunday'];
-
     var data = [[0,0,5],[0,1,1],[0,2,0],[0,3,0],[0,4,0],[0,5,0],[0,6,0],[0,7,0],[0,8,0],
     [0,9,0],[0,10,0],[0,11,2],[0,12,4],[0,13,1],[0,14,1],[0,15,3],[0,16,4],[0,17,6],[0,18,4],
     [0,19,4],[0,20,3],[0,21,3],[0,22,2],[0,23,5],[1,0,7],[1,1,0],[1,2,0],[1,3,0],[1,4,0],[1,5,0],
@@ -45,9 +37,15 @@ $(function () {
         zAxis3D: {
             type: 'value'
         },
+        grid:{
+            bottom:'20%'
+        },
+
         grid3D: {
-            boxWidth: 200,
-            boxDepth: 80,
+            boxWidth: 180,
+            boxDepth: 60,
+            left:0,
+            top:0,
             viewControl: {
                 // projection: 'orthographic'
             },
@@ -103,145 +101,3 @@ $(function () {
     myChart.setOption(option);
 })
 
-$(function () {
-    var myChart= echarts.init(document.getElementById('bar1'));
-option1 = {
-    angleAxis: {
-        interval: 1,
-        type: 'category',
-        data: ['YW-5-1',
-            'YW-5-2',
-            'YW-5-3',
-            'YW-5-4',
-            'YW-5-5',
-            'YW-5-6',
-            'YW-5-7',
-            'YW-5-8',
-            'YW-5-9',
-        ],
-        z: 10,
-        axisLine: {
-            show: true,
-            lineStyle: {
-                color: "#00c7ff",
-                width: 1,
-                type: "solid"
-            },
-        },
-        axisLabel: {
-            interval: 0,
-            show: true,
-            color: "#7fbcff",
-            margin: 8,
-            fontSize: 16
-        },
-    },
-    radiusAxis: {
-        min: 0,
-        max: 50,
-        interval: 10,
-        axisLine: {
-            show: true,
-            lineStyle: {
-                color: "#00c7ff",
-                width: 1,
-                type: "solid"
-            },
-        },
-        axisLabel: {
-            formatter: '{value}',
-            show: true,
-            padding: [0, 0, 20, 0],
-            color: "#00c7ff",
-            fontSize: 16
-        },
-        splitLine: {
-            lineStyle: {
-                color: "#00c7ff",
-                width: 1,
-                type: "solid"
-            }
-        }
-    },
-    polar: {},
-    series: [{
-        type: 'bar',
-        data: [
-            {
-                value: 45,
-                itemStyle: {
-                    normal: {
-                        color: "#fd755b"
-                    }
-                }
-            },
-            {
-                value: 40,
-                itemStyle: {
-                    normal: {
-                        color: "#fd755b"
-                    }
-                }
-            },
-            {
-                value: 38,
-                itemStyle: {
-                    normal: {
-                        color: "#fd755b"
-                    }
-                }
-            },
-            {
-                value: 35,
-                itemStyle: {
-                    normal: {
-                        color: "#fea158"
-                    }
-                }
-            },
-            {
-                value: 30,
-                itemStyle: {
-                    normal: {
-                        color: "#fea158"
-                    }
-                }
-            },
-            {
-                value: 28,
-                itemStyle: {
-                    normal: {
-                        color: "#53d3ac"
-                    }
-                }
-            },
-            {
-                value: 26,
-                itemStyle: {
-                    normal: {
-                        color: "#53d3ac"
-                    }
-                }
-            },
-            {
-                value: 20,
-                itemStyle: {
-                    normal: {
-                        color: "#53d3ac"
-                    }
-                }
-            },
-            {
-                value: 20,
-                itemStyle: {
-                    normal: {
-                        color: "#53d3ac"
-                    }
-                }
-            }
-        ],
-        coordinateSystem: 'polar',
-    }],
-};
-myChart.setOption(option1);
-})
