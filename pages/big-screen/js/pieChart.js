@@ -43,8 +43,8 @@ $(function () {
             avoidLabelOverlap: false,
             center: ['50%', '50%'],
             itemStyle:{
-                shadowColor:'#ccd1dc',
-                shadowBlur:6
+                shadowColor:'#4e8ffa',
+                shadowBlur:20
 
             },
             label: {

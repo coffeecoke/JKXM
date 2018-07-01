@@ -36,7 +36,7 @@
 <body class="hold-transition skin-blue sidebar-mini sidebar-collapse">
     <div class="wrapper">
         <!-- 内容包装器,包含页面内容 -->
-        <div class="content-wrapper night-theme" style="background-color:transparent">
+        <div class="content-wrapper day-theme" style="background-color:transparent">
             <!-- 主页面 -->
             <section class="big-screen-content">
                 <div class="big-screen-left">
@@ -90,9 +90,9 @@
                             <h3 class="module-title">各种设施和数量</h3>
                             <span class="module-close"></span>
                         </div>
-                         <div class="module-body">
+                        <div class="module-body">
                             <div class="chart" id="bar3D" style="width:100%;height:200px;"></div>
-                        </div> 
+                        </div>
                     </div>
                     <!-- 危险伤害评估 -->
                     <div class="module">
@@ -237,10 +237,32 @@
                             <span class="module-close"></span>
                         </div>
                         <div class="module-body">
-                            <div class="roll-wrap">
+                            <div class="roll-wrap chart-mouths" id="chart-mouths">
                                 <ul class="roll__list">
                                     <li>
-                                        <div class="chart" id="pieChart2" style="width:100%;height:250px;"></div>
+                                        <div class="chart" id="pieChartMonth12" style="width:100%;height:110px;"></div>
+                                        <div class="months-container">
+                                            <span class="left-month">一月</span>
+                                            <span class="right-month">二月</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="chart" id="pieChartMonth34" style="width:100%;height:110px;">
+
+                                        </div>
+                                        <div class="months-container">
+                                            <span class="left-month">三月</span>
+                                            <span class="right-month">四月</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="chart" id="pieChartMonth56" style="width:100%;height:110px;">
+
+                                        </div>
+                                        <div class="months-container">
+                                            <span class="left-month">五月</span>
+                                            <span class="right-month">六月</span>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -263,6 +285,19 @@
                             <span class="module-close"></span>
                         </div>
                         <div class="module-body">
+                            <div class="state-maintenance">
+                                <div class="progress_bar progress-bar-primary">
+
+                                    <div class="pro-bar">
+                                        <small class="progress_bar_title">
+                                            设备总数
+                                            <span class="progress_number">500</span>
+                                        </small>
+                                        <span class="progress-bar-inner" style="width: 100%;" data-value="500" data-percentage-value="500"></span>
+                                    </div>
+                                </div>
+                            </div>
+
 
                         </div>
                     </div>
@@ -309,7 +344,7 @@
     <script src="../../plugins/echarts-v3/ecStat.min.js"></script>
     <!-- echarts dataTool -->
     <script src="../../plugins/echarts-v3/extension/dataTool.min.js"></script>
-    <script src="../../plugins/echarts-v3/echarts-gl.js"></script>  
+    <script src="../../plugins/echarts-v3/echarts-gl.js"></script>
     <!-- 引入自定义echart -->
     <script src="js/bar3D.js"></script>
     <script src="js/pieChart.js"></script>

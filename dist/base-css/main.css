@@ -20,8 +20,6 @@ body {
 /* Layout */
 .wrapper {
   position: relative;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 .wrapper:before,
 .wrapper:after {
@@ -2967,7 +2965,7 @@ p {
   color: #898989;
 }
 .table-rank > tbody tr .highlight {
-  color: #ff6666;
+  color: #ff6666 !important;
   font-size: 20px;
 }
 .table-rank > tbody td .rank-up {

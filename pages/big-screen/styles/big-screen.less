@@ -6,8 +6,9 @@
     @desc-color: #0863ff;
     @bar-title-color: #1269de;
     @bar-bg : #c6deff;
-    @table-header-color: #fff;
-    @table-body-color:#fff;
+    @table-header-color: #0863ff;
+    @table-body-color:#1269de;
+    @chart-month-color:#0062ff;
     .big-screen-content {
         margin-left: 340px;
         margin-right: 340px;
@@ -16,13 +17,11 @@
         position: relative;
         .big-screen-left {
             width: 340px;
-            height: 100%;
             float: left;
             margin-left: -340px;
         }
         .big-screen-right {
             width: 340px;
-            height: 100%;
             float: right;
             margin-right: -340px;
             position: absolute;
@@ -249,6 +248,135 @@
             .bubble {
                 background: url(../../../imgs/big-screen/red-bubble_03.png) center no-repeat;
             }
+        }
+    }
+
+     //table
+     .table__header {
+        border-bottom:1px solid #afbde4;
+        padding-left:10px;
+        li {
+            font-size: 12px;
+            height: 30px;
+            line-height: 30px;
+            color: @table-header-color;
+            float:left;
+            &.li1 {
+                width: 30%;
+            }
+            &.li2 {
+                width: 20%;
+                text-align:center;
+            }
+            &.li3 {
+                width: 30%;
+                text-align:center;
+            }
+            &.li4 {
+                width: 20%;
+                text-align:center;
+            }
+        }
+    }
+    .table__body {
+        &.roll-wrap {
+            height:130px;
+            overflow:hidden;
+            position:relative;
+        }
+        .roll__list {
+            position: absolute;
+            top:0;
+            width:100%;
+        }
+        li {
+            font-size: 12px;
+            height: 36px;
+            line-height: 36px;
+            color: @table-body-color;
+            ol {
+                width:100%;
+                overflow:hidden;
+                padding-left:10px;
+                position:relative;
+                li {
+                    float:left;
+                    &.li1 {
+                        width: 30%;
+                    }
+                    &.li2 {
+                        width: 20%;
+                        text-align:center;
+                    }
+                    &.li3 {
+                        width: 30%;
+                        text-align:center;
+                    }
+                    &.li4 {
+                        width: 20%;
+                        text-align:center;
+                    }
+                }
+                &:before {
+                    content:'';
+                    position: absolute;
+                    left:0;
+                    top:6px;
+                    bottom:6px;
+                    width:3px;
+                }
+
+                &.red {
+                    &:before {
+                       background-color:#f95656;
+                    }
+                    li:last-child {
+                        color:#f95656;
+                    }
+                }
+                &.blue {
+                    &:before {
+                       background-color:#56f9ef;
+                    }
+                    li:last-child {
+                        color:#56f9ef;
+                    }
+                }
+                &.orange {
+                    &:before {
+                       background-color:#ffd028;
+                    }
+                    li:last-child {
+                        color:#ffd028;
+                    }
+                }
+                
+            }
+           
+        }
+    }
+    .chart-mouths {
+        height:130px;
+        overflow:hidden;
+        position:relative;
+        .roll__list {
+            position:absolute;
+            top:0;
+            width:100%;
+        }
+    }
+    .months-container {
+        color:@chart-month-color;
+        font-size:16px;
+        position:relative;
+        height:20px;
+        .left-month {
+            position:absolute;
+            left:20%;
+        }
+        .right-month {
+            position:absolute;
+            left:70%;
         }
     }
 }
@@ -263,6 +391,7 @@
     @bar-bg: #e3e3e3;
     @table-header-color:#a8b5dd;
     @table-body-color:#fff;
+    @chart-month-color:#fff;
     .big-screen-content {
         margin-left: 340px;
         margin-right: 340px;
@@ -505,7 +634,8 @@
                 background: url(../../../imgs/big-screen/red-bubble_03.png) center no-repeat;
             }
         }
-    } //table
+    } 
+    //table
     .table__header {
         border-bottom:1px solid #afbde4;
         padding-left:10px;
@@ -607,6 +737,37 @@
                 
             }
            
+        }
+    }
+    .chart-mouths {
+        height:130px;
+        overflow:hidden;
+        position:relative;
+        .roll__list {
+            position:absolute;
+            top:0;
+            width:100%;
+        }
+    }
+    .months-container {
+        color:@chart-month-color;
+        font-size:16px;
+        position:relative;
+        height:20px;
+        .left-month {
+            position:absolute;
+            left:20%;
+        }
+        .right-month {
+            position:absolute;
+            left:70%;
+        }
+    }
+
+    .state-maintenance {
+
+        .progress_bar .progress-bar-inner:after {
+            display:none;
         }
     }
 }

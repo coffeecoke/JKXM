@@ -46,7 +46,7 @@ option1 = {
         axisLabel: {
             formatter: '{value}',
             show: true,
-            padding: [0, 0, 20, 0],
+            padding: [0, 0, 10, 0],
             color: "#00c7ff",
             fontSize: 16
         },
@@ -66,7 +66,20 @@ option1 = {
                 value: 45,
                 itemStyle: {
                     normal: {
-                        color: "#fd755b"
+                        color: {
+                            type: 'linear',
+                            x: 0,
+                            y: 0,
+                            x2: 0,
+                            y2: 1,
+                            colorStops: [{
+                                offset: 0, color: '#fe8361' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: '#fc6554' // 100% 处的颜色
+                            }],
+                            globalCoord: false ,// 缺省为 false
+                            
+                        },
                     }
                 }
             },
@@ -74,7 +87,20 @@ option1 = {
                 value: 40,
                 itemStyle: {
                     normal: {
-                        color: "#fd755b"
+                        color: {
+                            type: 'linear',
+                            x: 0,
+                            y: 0,
+                            x2: 0,
+                            y2: 1,
+                            colorStops: [{
+                                offset: 0, color: '#fe8361' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: '#fc6554' // 100% 处的颜色
+                            }],
+                            globalCoord: false ,// 缺省为 false
+                            
+                        },
                     }
                 }
             },
@@ -82,7 +108,20 @@ option1 = {
                 value: 38,
                 itemStyle: {
                     normal: {
-                        color: "#fd755b"
+                        color: {
+                            type: 'linear',
+                            x: 0,
+                            y: 0,
+                            x2: 0,
+                            y2: 1,
+                            colorStops: [{
+                                offset: 0, color: '#fe8361' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: '#fc6554' // 100% 处的颜色
+                            }],
+                            globalCoord: false ,// 缺省为 false
+                            
+                        },
                     }
                 }
             },
@@ -90,7 +129,20 @@ option1 = {
                 value: 35,
                 itemStyle: {
                     normal: {
-                        color: "#fea158"
+                        color: {
+                            type: 'linear',
+                            x: 0,
+                            y: 0,
+                            x2: 0,
+                            y2: 1,
+                            colorStops: [{
+                                offset: 0, color: '#feb75f' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: '#ff8a50' // 100% 处的颜色
+                            }],
+                            globalCoord: false ,// 缺省为 false
+                            
+                        },
                     }
                 }
             },
@@ -98,7 +150,20 @@ option1 = {
                 value: 30,
                 itemStyle: {
                     normal: {
-                        color: "#fea158"
+                        color: {
+                            type: 'linear',
+                            x: 0,
+                            y: 0,
+                            x2: 0,
+                            y2: 1,
+                            colorStops: [{
+                                offset: 0, color: '#feb75f' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: '#ff8a50' // 100% 处的颜色
+                            }],
+                            globalCoord: false ,// 缺省为 false
+                            
+                        },
                     }
                 }
             },
@@ -106,7 +171,20 @@ option1 = {
                 value: 28,
                 itemStyle: {
                     normal: {
-                        color: "#53d3ac"
+                        color: {
+                            type: 'linear',
+                            x: 0,
+                            y: 0,
+                            x2: 0,
+                            y2: 1,
+                            colorStops: [{
+                                offset: 0, color: '#5bd7b6' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: '#3ac584' // 100% 处的颜色
+                            }],
+                            globalCoord: false ,// 缺省为 false
+                            
+                        },
                     }
                 }
             },
@@ -114,7 +192,20 @@ option1 = {
                 value: 26,
                 itemStyle: {
                     normal: {
-                        color: "#53d3ac"
+                        color: {
+                            type: 'linear',
+                            x: 0,
+                            y: 0,
+                            x2: 0,
+                            y2: 1,
+                            colorStops: [{
+                                offset: 0, color: '#5bd7b6' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: '#3ac584' // 100% 处的颜色
+                            }],
+                            globalCoord: false ,// 缺省为 false
+                            
+                        },
                     }
                 }
             },
@@ -122,7 +213,20 @@ option1 = {
                 value: 20,
                 itemStyle: {
                     normal: {
-                        color: "#53d3ac"
+                        color: {
+                            type: 'linear',
+                            x: 0,
+                            y: 0,
+                            x2: 0,
+                            y2: 1,
+                            colorStops: [{
+                                offset: 0, color: '#5bd7b6' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: '#3ac584' // 100% 处的颜色
+                            }],
+                            globalCoord: false ,// 缺省为 false
+                            
+                        },
                     }
                 }
             },
@@ -130,7 +234,20 @@ option1 = {
                 value: 20,
                 itemStyle: {
                     normal: {
-                        color: "#53d3ac"
+                        color: {
+                            type: 'linear',
+                            x: 0,
+                            y: 0,
+                            x2: 0,
+                            y2: 1,
+                            colorStops: [{
+                                offset: 0, color: '#5bd7b6' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: '#3ac584' // 100% 处的颜色
+                            }],
+                            globalCoord: false ,// 缺省为 false
+                            
+                        },
                     }
                 }
             }
