@@ -81,6 +81,9 @@
   padding-left: 4px;
   font-size: 18px;
 }
+.table-rank {
+  margin-top: 20px;
+}
 .table-rank tbody tr td {
   border-bottom: solid 1px #cbdcee;
 }
