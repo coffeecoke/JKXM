@@ -102,7 +102,15 @@ var rich = {
 
 
 var option6 = {
-    
+    title: [{
+        text: '亚健康',
+        x: 'center',
+        y: 'bottom',
+        textStyle: {
+            textAlign: 'center',
+            fontSize: 14 * scale,
+        },
+    }],
     series: [
         //内圈圆环
         {
@@ -340,7 +348,15 @@ var rich = {
 
 
 var option7 = {
-    
+    title: [{
+        text: '病态',
+        x: 'center',
+        y: 'bottom',
+        textStyle: {
+            textAlign: 'center',
+            fontSize: 14 * scale,
+        },
+    }],
     series: [
         //内圈圆环
         {
