@@ -1,3 +1,4 @@
+
 $(function () {
     $('#roll').rollNoInterval().top();
     // $('#chart-mouths').rollSlide({
@@ -8,6 +9,7 @@ $(function () {
     //     isRoll: true
     // });
 })
+
 
 $(function () {
     // 基于准备好的dom，初始化echarts实例
@@ -190,6 +192,7 @@ $(function () {
             trigger: 'item',
             formatter: "{a} <br/>{b} : {c} ({d}%)"
         },
+        calculable:false,
         series: [
             {
             name: '库存情况',

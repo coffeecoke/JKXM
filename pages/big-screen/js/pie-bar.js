@@ -27,8 +27,8 @@ option1 = {
             interval: 0,
             show: true,
             color: "#7fbcff",
-            margin: 4,
-            fontSize: 16
+            margin: 2,
+            fontSize: 14
         },
     },
     radiusAxis: {
@@ -64,6 +64,7 @@ option1 = {
         data: [
             {
                 value: 45,
+                
                 itemStyle: {
                     normal: {
                         color: {

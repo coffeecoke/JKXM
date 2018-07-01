@@ -21,5 +21,71 @@
   margin: 0 auto;
   text-align: center;
 }
+.content-right {
+  padding: 20px 20px;
+}
+.running-time {
+  width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+}
+.right-timer {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.right-timer .rnning-time-p {
+  padding-top: 20px;
+  font-size: 14px;
+  color: #fff;
+  padding-left: 10px;
+}
+.right-timer .rnning-time-ul {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 40px;
+}
+.right-timer .rnning-time-ul li {
+  float: left;
+  color: #fff;
+}
+.right-timer .rnning-time-ul li .rnning-time-num {
+  font-size: 24px;
+}
+.right-timer .rnning-time-ul li .rnning-time-text {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.blue-background {
+  background: #328cfe;
+}
+.blue-background .rnning-time-text {
+  color: #acd1ff;
+}
+.red-background {
+  background: #ff6773;
+}
+.red-background .rnning-time-text {
+  color: #ffc3c8;
+}
+.yellow-background {
+  background: #ffcf2f;
+}
+.yellow-background .rnning-time-text {
+  color: #fff;
+}
+.ranking-title {
+  font-weight: normal;
+  border-left: 2px #3d65d0 solid;
+  padding-left: 4px;
+  font-size: 18px;
+}
+.table-rank tbody tr td {
+  border-bottom: solid 1px #cbdcee;
+}
+.table-rank tbody tr td span {
+  padding-right: 10px;
+}
 
 /*# sourceMappingURL=page9.css.map */
