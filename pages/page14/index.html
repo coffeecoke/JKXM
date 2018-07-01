@@ -63,12 +63,7 @@
                                         <table class="table box-table-list" cellspacing="0">
                                             <thead>
                                                 <tr>
-                                                    <th class="th1" scope="col"></th>
-                                                    <th class="th1" scope="col"></th>
-                                                    <th class="th3" scope="col"></th>
-                                                    <th class="th4" scope="col">健康度评价标准</th>
-                                                    <th class="th5" scope="col"></th>
-                                                    <th class="th6" scope="col"></th>
+                                                        <th colspan="6">健康度评价标准</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -85,7 +80,7 @@
                                                         基础指标
                                                     </td>
                                                     <td scope="col">
-                                                        40%
+                                                       40%
                                                     </td>
                                                     <td scope="col">使用年限</td>
                                                     <td>
@@ -187,6 +182,9 @@
                             </div>
                         </div>
                     </div>
+                    <div class="edit-btn">
+                        <button class="edit-button-btn">编辑</button>
+                    </div>
                 </div>
             </section>
         
@@ -215,12 +213,7 @@
                                                 <table class="table box-table-list">
                                                     <thead>
                                                         <tr>
-                                                            <th class="th1" scope="col"></th>
-                                                            <th class="th1" scope="col"></th>
-                                                            <th class="th3" scope="col"></th>
-                                                            <th class="th4" scope="col">健康度评价标准</th>
-                                                            <th class="th5" scope="col"></th>
-                                                            <th class="th6" scope="col"></th>
+                                                            <th colspan="6">健康度评价标准</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -230,98 +223,100 @@
                                                             <td scope="col">名称</td>
                                                             <td scope="col">环比</td>
                                                             <td scope="col">同类占比</td>
-                                                            <td scope="col">分值dfdd</td>
+                                                            <td scope="col">分值</td>
                                                         </tr>
                                                         <tr class="box-table-border">
                                                             <td scope="col">
                                                                 基础指标
                                                             </td>
                                                             <td scope="col">
-                                                                40%
+                                                                <input class="table-input input-percent" type="text" value="40%">
                                                             </td>
                                                             <td scope="col">使用年限</td>
                                                             <td>
                                                                 根据不同设备已定的使用年限，</br> 达到50%后每增加10%减2分
                                                             </td>
                                                             <td scope="col">无</td>
-                                                            <td scope="col">10分</td>
+                                                            <td scope="col">
+                                                                <input class="table-input divid-value" type="text" value="10">分
+                                                            </td>
                                                         </tr>
                                                         <tr class="box-table-border">
                                                             <td scope="col" rowspan="5">
                                                                 运行指标
                                                             </td>
                                                             <td  scope="col" rowspan="5">
-                                                                30%
+                                                                <input class="table-input input-percent" type="text" value="30%">
                                                             </td>
                                                             <td scope="col">维护次数</td>
                                                             <td scope="col">
                                                                 大于一周期减
-                                                                <span>4</span>分
+                                                                <input class="table-input" type="text" value="4">分
                                                             </td>
                                                             <td>大于平均值减
-                                                                <span>6</span>分</td>
-                                                            <td>10分</td>
+                                                                <input class="table-input" type="text" value="6">分</td>
+                                                            <td><input class="table-input divid-value" type="text" value="10">分</td>
                                                         </tr>
                                                         <tr class="box-table-border">
         
                                                             <td>周期告警环比</td>
                                                             <td>
                                                                 大于一周期减
-                                                                <span>4</span>分
+                                                                <input class="table-input" type="text" value="4">分
                                                             </td>
                                                             <td>大于平均值减
-                                                                <span>6</span>分</td>
-                                                            <td>10分</td>
+                                                                <input class="table-input" type="text" value="4">分</td>
+                                                            <td><input class="table-input divid-value" type="text" value="10">分</td>
                                                         </tr>
                                                         <tr class="box-table-border">
         
                                                             <td>周期平均无告警运行时长</td>
                                                             <td>
                                                                 大于一周期减
-                                                                <span>4</span>分
+                                                                <input class="table-input" type="text" value="4">分
                                                             </td>
                                                             <td>大于平均值减
-                                                                <span>6</span>分</td>
-                                                            <td>10分</td>
+                                                                <input class="table-input" type="text" value="6">分</td>
+                                                            <td><input class="table-input divid-value" type="text" value="10">分</td>
                                                         </tr>
                                                         <tr class="box-table-border">
         
                                                             <td>周期同比指标劣化</td>
                                                             <td>
                                                                 大于一周期减
-                                                                <span>4</span>分
+                                                                <input class="table-input" type="text" value="4">分
                                                             </td>
                                                             <td>大于平均值减
-                                                                <span>6</span>分</td>
-                                                            <td>10分</td>
+                                                                <input class="table-input" type="text" value="6">分</td>
+                                                            <td><input class="table-input divid-value" type="text" value="10">分</td>
                                                         </tr>
                                                         <tr class="box-table-border">
         
                                                             <td>周期劣化速度</td>
                                                             <td>
                                                                 大于一周期减
-                                                                <span>4</span>分
+                                                                <input class="table-input" type="text" value="4">分
                                                             </td>
                                                             <td>大于平均值减
-                                                                <span>6</span>分</td>
-                                                            <td>10分</td>
+                                                                <input class="table-input" type="text" value="6">分</td>
+                                                            <td><input class="table-input divid-value" type="text" value="10">分</td>
                                                         </tr>
                                                         <tr class="box-table-border">
                                                             <td scope="row">
                                                                 安全指标
                                                             </td>
-                                                            <td>30%</td>
+                                                            <td><input class="table-input input-percent" type="text" value="30%"></td>
                                                             <td>当前状态</td>
                                                             <td>
                                                                 <p>大于一周期减
-                                                                    <span>4</span>分</p>
+                                                                    <input class="table-input" type="text" value="4">分</p>
                                                                 <p>大于一周期减
-                                                                    <span>4</span>分</p>
+                                                                    <input class="table-input" type="text" value="4">分</p>
                                                                 <p>大于一周期减
-                                                                    <span>4</span>分</p>
+                                                                    <input class="table-input" type="text" value="4">分</p>
                                                             </td>
                                                             <td>无</td>
-                                                            <td>40分</td>
+                                                            <td><input class="table-input divid-value" type="text" value="10">分</td>
                                                         </tr>
         
                                                     </tbody>
@@ -339,9 +334,11 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="edit-btn">
+                                    <button class="edit-button-btn save-btn">保存</button>
+                                </div>
                         </div>
                     </section>
->>>>>>> 9f9944ae118a83ab808db7059c0a0d17b05deada
         </div>
     </div>
 

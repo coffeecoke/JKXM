@@ -1,5 +1,5 @@
 .box-table-list{
-    // border:solid 1px #ccc;
+    border:solid 1px #ccc;
     thead:first-child{
         background: #3494fd;
         tr{
@@ -34,11 +34,15 @@
     tbody{
         tr{
             height:40px;
+            border-bottom:none;
+            border-top:none;
             td{
                 vertical-align: middle;
                 font-size:14px;
                 color:#050505;
-                // border-left:solid 1px #eee;
+                border-left:solid 1px #ccc;
+                border-bottom:none;
+                border-top:none;
                 span{
                     color:red;
                 }
@@ -46,7 +50,54 @@
         }
         tr:first-child{
             background: #e8f3ff;
+            td{
+                border-bottom:solid 1px #ccc;
+            }
+        }
+        tr:nth-child(2){
+            td{
+                border-bottom:solid 1px #ccc;
+            }
+        }
+        tr:nth-child(7){
+            td{
+                border-bottom:solid 1px #ccc;
+            }
         }
        
     }
+}
+.edit-btn{
+    width:100%;
+    position:relative;
+    margin-bottom:100px;
+    .edit-button-btn{
+        outline:none;
+        position:absolute;
+        left:50%;
+        transform:translateX(-50%);
+        padding:5px 20px;
+        color:#fff;
+        border-radius:5px;
+        background:#4385f5;
+    }
+}
+.table-input{
+    width:30px;
+    background:#ecf3fe;
+    border:none;
+    border-bottom:solid 1px #4385f5;
+    text-align:center;
+    color:#f00;
+}
+.input-percent{
+    width:78px;
+    text-align:left;
+    padding-left:5px;
+}
+.divid-value{
+    color:#000;
+}
+.save-btn{
+    background:#3494fd;
 }
