@@ -27,8 +27,8 @@ option1 = {
             interval: 0,
             show: true,
             color: "#7fbcff",
-            margin: 4,
-            fontSize: 16
+            margin: 2,
+            fontSize: 14
         },
     },
     radiusAxis: {
@@ -64,9 +64,17 @@ option1 = {
         data: [
             {
                 value: 45,
+                
                 itemStyle: {
                     normal: {
-                        color: "#fd755b"
+                        color: {
+                            type: 'linear',
+                            colorStops: [{
+                                offset: 0, color: '#fe8763' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: '#fd755b' // 100% 处的颜色
+                            }]
+                        }
                     }
                 }
             },
@@ -74,7 +82,14 @@ option1 = {
                 value: 40,
                 itemStyle: {
                     normal: {
-                        color: "#fd755b"
+                        color: {
+                            type: 'linear',
+                            colorStops: [{
+                                offset: 0, color: '#fe8763' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: '#fd755b' // 100% 处的颜色
+                            }]
+                        }
                     }
                 }
             },
@@ -82,7 +97,14 @@ option1 = {
                 value: 38,
                 itemStyle: {
                     normal: {
-                        color: "#fd755b"
+                        color: {
+                            type: 'linear',
+                            colorStops: [{
+                                offset: 0, color: '#fe8763' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: '#fd755b' // 100% 处的颜色
+                            }]
+                        }
                     }
                 }
             },
@@ -90,7 +112,14 @@ option1 = {
                 value: 35,
                 itemStyle: {
                     normal: {
-                        color: "#fea158"
+                        color: {
+                            type: 'linear',
+                            colorStops: [{
+                                offset: 0, color: '#febd61' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: '#ff8a50' // 100% 处的颜色
+                            }]
+                        }
                     }
                 }
             },
@@ -98,7 +127,14 @@ option1 = {
                 value: 30,
                 itemStyle: {
                     normal: {
-                        color: "#fea158"
+                        color: {
+                            type: 'linear',
+                            colorStops: [{
+                                offset: 0, color: '#febd61' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: '#ff8a50' // 100% 处的颜色
+                            }]
+                        }
                     }
                 }
             },
@@ -106,7 +142,14 @@ option1 = {
                 value: 28,
                 itemStyle: {
                     normal: {
-                        color: "#53d3ac"
+                        color: {
+                            type: 'linear',
+                            colorStops: [{
+                                offset: 0, color: '#48ce9c' // 0% 处的颜色
+                            }, {
+                                offset: 1, color: '#53d3ab' // 100% 处的颜色
+                            }]
+                        }
                     }
                 }
             },

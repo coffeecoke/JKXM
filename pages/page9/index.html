@@ -169,7 +169,7 @@
                             <div class="box">
                                 <div class="box-header">设备健康率与去年同比变化</div>
                                 <div class="box-body">
-                                    <div class="chart" style="height:250px;"></div>
+                                        <div class="chart" id="linecharts1" style="height:250px;">
                                 </div>
                             </div>
 
@@ -179,8 +179,95 @@
                     <!-- /.floor5 -->
                 </div>
                 <div class="content-right">
+                    <div class="running-time">
+                            <div class="right-timer blue-background clearfix">
+                                <p class="rnning-time-p">平均无故障运行时间</p>
+                                <ul class="rnning-time-ul">
+                                    <li><span class="rnning-time-num">1</span><span class="rnning-time-text">年</span></li>
+                                    <li><span class="rnning-time-num">100</span><span class="rnning-time-text">天</span></li>
+                                    <li><span class="rnning-time-num">10</span><span class="rnning-time-text">小时</span></li>
+                                    <li><span class="rnning-time-num">10</span><span class="rnning-time-text">分</span></li>
+                                    <li><span class="rnning-time-num">10</span><span class="rnning-time-text">秒</span></li>
+                                </ul>
+                            </div>
+                            <div class="right-timer red-background clearfix">
+                                    <p class="rnning-time-p">平均故障时间</p>
+                                    <ul class="rnning-time-ul">
+                                        <li><span class="rnning-time-num">0</span><span class="rnning-time-text">天</span></li>
+                                        <li><span class="rnning-time-num">10</span><span class="rnning-time-text">小时</span></li>
+                                        <li><span class="rnning-time-num">10</span><span class="rnning-time-text">分</span></li>
+                                        <li><span class="rnning-time-num">10</span><span class="rnning-time-text">秒</span></li>
+                                    </ul>
+                            </div>
+                            <div class="right-timer yellow-background clearfix">
+                                    <p class="rnning-time-p">平均维修时间</p>
+                                    <ul class="rnning-time-ul">
+                                        <li><span class="rnning-time-num">10</span><span class="rnning-time-text">天</span></li>
+                                        <li><span class="rnning-time-num">10</span><span class="rnning-time-text">小时</span></li>
+                                        <li><span class="rnning-time-num">10</span><span class="rnning-time-text">分</span></li>
+                                        <li><span class="rnning-time-num">10</span><span class="rnning-time-text">秒</span></li>
+                                    </ul>
+                            </div>
+                        </div>
+                
+                    <div class="box-table">
+                        <h3 class="ranking-title">健康度由低到高排名</h3>
+                        <table class="table table-rank" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>排名</th>
+                                        <th>设备名称及编号</th>
+                                        <th>排名变化</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>WY-5-0-1-1</td>
+                                        <td>
+                                            <span>2</span>
+                                            <i class="rank-up"></i>
+                                            <span>2</span>
+                                        </td>
 
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>WY-5-0-1-1</td>
+                                        <td>
+                                            <span>2</span>
+                                            <i class="rank-down"></i>
+                                            <span>3</span>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>WY-5-0-1-1</td>
+                                        <td>
+                                            <span>2</span>
+                                            <i class="rank-up"></i>
+                                            <span>4</span>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>WY-5-0-1-1</td>
+                                        <td>
+                                            <span>2</span>
+                                            <i class="rank-up"></i>
+                                            <span>2</span>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                        </div>
                 </div>
+
             </section>
             <!-- /.content -->
 
@@ -227,6 +314,7 @@
     <script src="js/pictorialBar.js"></script>
     <script src="js/treeChart.js"></script>
     <script src="js/mixing.js"></script>
+    <script src="js/linecharts.js"></script>
     <!-- components 自主开发组件-->
     <!-- <script src="../../components/bridge-chart/js/bridge-chart.js"></script> -->
     <!-- 用户js -->

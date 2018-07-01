@@ -38,11 +38,12 @@ $(function () {
             trigger: 'item',
             formatter: "{a} <br/>{b} : {c} ({d}%)"
         },
+        calculable:false,
         series: [
             {
             name: '库存情况',
             type: 'pie',
-            radius: '68%',
+            radius: '40%',
             center: ['25%', '50%'],
             clockwise: false,
             data: [{
@@ -65,7 +66,7 @@ $(function () {
             },
             itemStyle: {
                 normal: {
-                    borderWidth: 4,
+                    borderWidth: 0,
                     borderColor: '#ffffff',
                 },
                 emphasis: {
@@ -81,7 +82,7 @@ $(function () {
         {
             name: '库存情况',
             type: 'pie',
-            radius: '68%',
+            radius: '40%',
             center: ['75%', '50%'],
             clockwise: false,
             data: [{
@@ -120,7 +121,7 @@ $(function () {
             '#5cd7b8',
             '#fe8562'
         ],
-        backgroundColor: '#fff'
+        
     };
     // 使用刚指定的配置项和数据显示图表。
     myChart.setOption(option);
