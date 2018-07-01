@@ -36,7 +36,7 @@
 <body class="hold-transition skin-blue sidebar-mini sidebar-collapse">
     <div class="wrapper">
         <!-- 内容包装器,包含页面内容 -->
-        <div class="content-wrapper day-theme" style="background-color:transparent">
+        <div class="content-wrapper night-theme" style="background-color:transparent">
             <!-- 主页面 -->
             <section class="big-screen-content">
                 <div class="big-screen-left">
@@ -91,7 +91,7 @@
                             <span class="module-close"></span>
                         </div>
                         <div class="module-body">
-                            <div class="chart" id="bar3D" style="width:100%;height:200px;"></div>
+                            <div class="chart" id="bar3D" style="width:100%;height:250px;"></div>
                         </div>
                     </div>
                     <!-- 危险伤害评估 -->
@@ -220,14 +220,35 @@
                     </div>
                 </div>
                 <div class="big-screen-center">
-                    <div class="row">
-                        <div class="col-sm-3">
-
+                    <div class="wblock-container">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="wblock blue-wblock">
+                                    <h3 class="wblock-title">300</h3>
+                                    <span>监测总数</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="wblock green-wblock">
+                                    <h3 class="wblock-title">400</h3>
+                                    <span>监测总数</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="wblock red-wblock">
+                                    <h3 class="wblock-title">200</h3>
+                                    <span>监测总数</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="wblock orange-wblock">
+                                    <h3 class="wblock-title">100</h3>
+                                    <span>监测总数</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-sm-3"></div>
-                        <div class="col-sm-3"></div>
-                        <div class="col-sm-3"></div>
                     </div>
+
                 </div>
                 <div class="big-screen-right">
                     <!-- 月平均故障时长 -->
@@ -286,14 +307,17 @@
                         </div>
                         <div class="module-body">
                             <div class="state-maintenance">
-                                <div class="progress_bar progress-bar-primary">
+                                <div class="progress_bar">
 
                                     <div class="pro-bar">
-                                        <small class="progress_bar_title">
+                                        <smal class="progress_bar_title">
                                             设备总数
-                                            <span class="progress_number">500</span>
-                                        </small>
-                                        <span class="progress-bar-inner" style="width: 100%;" data-value="500" data-percentage-value="500"></span>
+                                            <span class="progress_number">40%</span>
+                                        </smal>
+                                        <span class="progress-bar-inner" style="width: 40%;" data-value="500" data-percentage-value="500"></span>
+                                        <div class="bar-desc">
+                                            平均故障时间
+                                        </div>
                                     </div>
                                 </div>
                             </div>

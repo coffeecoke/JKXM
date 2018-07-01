@@ -21,9 +21,6 @@
 .day-theme .big-screen-content .big-screen-center {
   margin: 0 24px;
   height: 100px;
-  background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0 0 20px #2e61b3;
 }
 .day-theme .module {
   width: 100%;
@@ -335,6 +332,98 @@
   position: absolute;
   left: 70%;
 }
+.day-theme .state-maintenance .progress_bar .pro-bar {
+  margin-left: 0;
+  height: 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 20px #849ade;
+  margin-bottom: 26px;
+}
+.day-theme .state-maintenance .progress_bar .progress_number {
+  margin-top: -40px;
+}
+.day-theme .state-maintenance .progress_bar .progress_bar_title {
+  top: -36px;
+  color: #1269de;
+}
+.day-theme .state-maintenance .progress_bar .progress_bar_title .progress_number {
+  color: #ff834e;
+  font-size: 22px;
+}
+.day-theme .state-maintenance .pro-bar .bar-desc {
+  color: #1269de;
+}
+.day-theme .state-maintenance .progress_bar .progress-bar-inner {
+  border-radius: 4px;
+  background: -webkit-linear-gradient(left, #fec162, #ff834e) !important;
+  background: linear-gradient(left, #fec162, #ff834e) !important;
+}
+.day-theme .state-maintenance .progress_bar .progress-bar-inner:after,
+.day-theme .state-maintenance .progress_bar .progress-bar-inner:before {
+  display: none;
+}
+.day-theme .wblock-container {
+  max-width: 710px;
+  margin: 0 auto;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 20px #2e61b3;
+  padding: 8px;
+}
+.day-theme .wblock-container .wblock {
+  width: 160px;
+  height: 82px;
+  border-radius: 4px;
+  position: relative;
+  color: #fff;
+  padding: 16px 24px;
+  overflow: hidden;
+}
+.day-theme .wblock-container .wblock .wblock-title {
+  margin: 0;
+  font-size: 30px;
+}
+.day-theme .wblock-container .wblock:before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 6px;
+  right: -5px;
+}
+.day-theme .wblock-container .blue-wblock {
+  background: -webkit-linear-gradient(left, #61b6f8, #4e90fa);
+  background: linear-gradient(left, #61b6f8, #4e90fa);
+}
+.day-theme .wblock-container .blue-wblock:before {
+  background: url(../../../imgs/big-screen/wblock-icon1.png) center no-repeat;
+  background-size: auto 100%;
+}
+.day-theme .wblock-container .green-wblock {
+  background: -webkit-linear-gradient(left, #62dac0, #31c178);
+  background: linear-gradient(left, #62dac0, #31c178);
+}
+.day-theme .wblock-container .green-wblock:before {
+  background: url(../../../imgs/big-screen/wblock-icon2.png) center no-repeat;
+  background-size: auto 100%;
+}
+.day-theme .wblock-container .red-wblock {
+  background: -webkit-linear-gradient(left, #fe8966, #ef6d6e);
+  background: linear-gradient(left, #fe8966, #ef6d6e);
+}
+.day-theme .wblock-container .red-wblock:before {
+  background: url(../../../imgs/big-screen/wblock-icon3.png) center no-repeat;
+  background-size: auto 100%;
+}
+.day-theme .wblock-container .orange-wblock {
+  background: -webkit-linear-gradient(left, #fec062, #fe814b);
+  background: linear-gradient(left, #fec062, #fe814b);
+}
+.day-theme .wblock-container .orange-wblock:before {
+  background: url(../../../imgs/big-screen/wblock-icon4.png) center no-repeat;
+  background-size: auto 100%;
+}
 .night-theme .big-screen-content {
   margin-left: 340px;
   margin-right: 340px;
@@ -360,9 +449,6 @@
 .night-theme .big-screen-content .big-screen-center {
   margin: 0 24px;
   height: 100px;
-  background-color: #7d74e2;
-  border-radius: 4px;
-  box-shadow: 0 0 20px #2e61b3;
 }
 .night-theme .module {
   width: 100%;
@@ -675,8 +761,97 @@
   position: absolute;
   left: 70%;
 }
-.night-theme .state-maintenance .progress_bar .progress-bar-inner:after {
+.night-theme .state-maintenance .progress_bar .pro-bar {
+  margin-left: 0;
+  height: 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 20px #849ade;
+  margin-bottom: 26px;
+}
+.night-theme .state-maintenance .progress_bar .progress_number {
+  margin-top: -40px;
+}
+.night-theme .state-maintenance .progress_bar .progress_bar_title {
+  top: -36px;
+  color: #fff;
+}
+.night-theme .state-maintenance .progress_bar .progress_bar_title .progress_number {
+  color: #ff834e;
+  font-size: 22px;
+}
+.night-theme .state-maintenance .pro-bar .bar-desc {
+  color: #fff;
+}
+.night-theme .state-maintenance .progress_bar .progress-bar-inner {
+  border-radius: 4px;
+  background: -webkit-linear-gradient(left, #fec162, #ff834e) !important;
+  background: linear-gradient(left, #fec162, #ff834e) !important;
+}
+.night-theme .state-maintenance .progress_bar .progress-bar-inner:after,
+.night-theme .state-maintenance .progress_bar .progress-bar-inner:before {
   display: none;
+}
+.night-theme .wblock-container {
+  max-width: 710px;
+  margin: 0 auto;
+  height: 100%;
+  background-color: #7d74e2;
+  border-radius: 4px;
+  box-shadow: 0 0 20px #2e61b3;
+  padding: 8px;
+}
+.night-theme .wblock-container .wblock {
+  width: 160px;
+  height: 82px;
+  border-radius: 4px;
+  position: relative;
+  color: #fff;
+  padding: 16px 24px;
+  overflow: hidden;
+}
+.night-theme .wblock-container .wblock .wblock-title {
+  margin: 0;
+  font-size: 30px;
+}
+.night-theme .wblock-container .wblock:before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 6px;
+  right: -5px;
+}
+.night-theme .wblock-container .blue-wblock {
+  background: -webkit-linear-gradient(left, #61b6f8, #4e90fa);
+  background: linear-gradient(left, #61b6f8, #4e90fa);
+}
+.night-theme .wblock-container .blue-wblock:before {
+  background: url(../../../imgs/big-screen/wblock-icon1.png) center no-repeat;
+  background-size: auto 100%;
+}
+.night-theme .wblock-container .green-wblock {
+  background: -webkit-linear-gradient(left, #62dac0, #31c178);
+  background: linear-gradient(left, #62dac0, #31c178);
+}
+.night-theme .wblock-container .green-wblock:before {
+  background: url(../../../imgs/big-screen/wblock-icon2.png) center no-repeat;
+  background-size: auto 100%;
+}
+.night-theme .wblock-container .red-wblock {
+  background: -webkit-linear-gradient(left, #fe8966, #ef6d6e);
+  background: linear-gradient(left, #fe8966, #ef6d6e);
+}
+.night-theme .wblock-container .red-wblock:before {
+  background: url(../../../imgs/big-screen/wblock-icon3.png) center no-repeat;
+  background-size: auto 100%;
+}
+.night-theme .wblock-container .orange-wblock {
+  background: -webkit-linear-gradient(left, #fec062, #fe814b);
+  background: linear-gradient(left, #fec062, #fe814b);
+}
+.night-theme .wblock-container .orange-wblock:before {
+  background: url(../../../imgs/big-screen/wblock-icon4.png) center no-repeat;
+  background-size: auto 100%;
 }
 
 /*# sourceMappingURL=big-screen.css.map */

@@ -31,9 +31,7 @@
         .big-screen-center {
             margin: 0 24px;
             height: 100px;
-            background-color: @screen-center-bg;
-            border-radius: 4px;
-            box-shadow: 0 0 20px #2e61b3;
+            
         }
     }
     .module {
@@ -379,6 +377,106 @@
             left:70%;
         }
     }
+    .state-maintenance{
+        .progress_bar .pro-bar {
+            margin-left:0;
+            height:10px;
+            border-radius:4px;
+            box-shadow: 0 0 20px #849ade;
+            margin-bottom:26px;
+        }
+        .progress_bar .progress_number {
+            margin-top: -40px;
+        }
+        .progress_bar .progress_bar_title  {
+            top:-36px;
+            color:@bar-title-color;
+            .progress_number {
+                color:#ff834e;
+                font-size:22px;
+            }
+        }
+        .pro-bar .bar-desc {
+            color:@bar-title-color;
+        }
+        .progress_bar .progress-bar-inner {
+            border-radius:4px;
+            background:linear-gradient(left,#fec162,#ff834e) !important; 
+            
+        }
+        .progress_bar .progress-bar-inner:after,
+        .progress_bar .progress-bar-inner:before {
+            display:none;
+        }
+    }
+
+    .wblock-container {
+        max-width:710px;
+        margin: 0 auto;
+        height:100%;
+        background-color: @screen-center-bg;
+        border-radius: 4px;
+        box-shadow: 0 0 20px #2e61b3;
+        padding:8px;
+        .wblock {
+            width:160px;
+            height:82px;
+            border-radius:4px;
+            position: relative;
+            color:#fff;
+            padding:16px 24px;
+            overflow: hidden;
+            .wblock-title {
+                margin:0;
+                font-size:30px;
+            }
+            &:before {
+                content:'';
+                position:absolute;
+                width:100px;
+                height:100px;
+                top:6px;
+                right:-5px;
+
+            }
+        }
+        .blue-wblock {
+            background:linear-gradient(left,#61b6f8,#4e90fa);
+            &:before {
+                background:url(../../../imgs/big-screen/wblock-icon1.png) center no-repeat;
+                background-size:auto 100%;
+                
+
+            }
+        }
+        .green-wblock {
+            background:linear-gradient(left,#62dac0,#31c178);
+            &:before {
+                background:url(../../../imgs/big-screen/wblock-icon2.png) center no-repeat;
+                background-size:auto 100%;
+                
+
+            }
+        }
+        .red-wblock {
+            background:linear-gradient(left,#fe8966,#ef6d6e);
+            &:before {
+                background:url(../../../imgs/big-screen/wblock-icon3.png) center no-repeat;
+                background-size:auto 100%;
+                
+
+            }
+        }
+        .orange-wblock {
+            background:linear-gradient(left,#fec062,#fe814b);
+            &:before {
+                background:url(../../../imgs/big-screen/wblock-icon4.png) center no-repeat;
+                background-size:auto 100%;
+                
+
+            }
+        }
+    }
 }
 
 .night-theme {
@@ -416,9 +514,7 @@
         .big-screen-center {
             margin: 0 24px;
             height: 100px;
-            background-color: @screen-center-bg;
-            border-radius: 4px;
-            box-shadow: 0 0 20px #2e61b3;
+           
         }
     }
     .module {
@@ -764,10 +860,104 @@
         }
     }
 
-    .state-maintenance {
-
-        .progress_bar .progress-bar-inner:after {
+    .state-maintenance{
+        .progress_bar .pro-bar {
+            margin-left:0;
+            height:10px;
+            border-radius:4px;
+            box-shadow: 0 0 20px #849ade;
+            margin-bottom:26px;
+        }
+        .progress_bar .progress_number {
+            margin-top: -40px;
+        }
+        .progress_bar .progress_bar_title  {
+            top:-36px;
+            color:@bar-title-color;
+            .progress_number {
+                color:#ff834e;
+                font-size:22px;
+            }
+        }
+        .pro-bar .bar-desc {
+            color:@bar-title-color;
+        }
+        .progress_bar .progress-bar-inner {
+            border-radius:4px;
+            background:linear-gradient(left,#fec162,#ff834e) !important; 
+            
+        }
+        .progress_bar .progress-bar-inner:after,
+        .progress_bar .progress-bar-inner:before {
             display:none;
+        }
+    }
+   
+    .wblock-container {
+        max-width:710px;
+        margin: 0 auto;
+        height:100%;
+        background-color: @screen-center-bg;
+        border-radius: 4px;
+        box-shadow: 0 0 20px #2e61b3;
+        padding:8px;
+        .wblock {
+            width:160px;
+            height:82px;
+            border-radius:4px;
+            position: relative;
+            color:#fff;
+            padding:16px 24px;
+            overflow: hidden;
+            .wblock-title {
+                margin:0;
+                font-size:30px;
+            }
+            &:before {
+                content:'';
+                position:absolute;
+                width:100px;
+                height:100px;
+                top:6px;
+                right:-5px;
+
+            }
+        }
+        .blue-wblock {
+            background:linear-gradient(left,#61b6f8,#4e90fa);
+            &:before {
+                background:url(../../../imgs/big-screen/wblock-icon1.png) center no-repeat;
+                background-size:auto 100%;
+                
+
+            }
+        }
+        .green-wblock {
+            background:linear-gradient(left,#62dac0,#31c178);
+            &:before {
+                background:url(../../../imgs/big-screen/wblock-icon2.png) center no-repeat;
+                background-size:auto 100%;
+                
+
+            }
+        }
+        .red-wblock {
+            background:linear-gradient(left,#fe8966,#ef6d6e);
+            &:before {
+                background:url(../../../imgs/big-screen/wblock-icon3.png) center no-repeat;
+                background-size:auto 100%;
+                
+
+            }
+        }
+        .orange-wblock {
+            background:linear-gradient(left,#fec062,#fe814b);
+            &:before {
+                background:url(../../../imgs/big-screen/wblock-icon4.png) center no-repeat;
+                background-size:auto 100%;
+                
+
+            }
         }
     }
 }
