@@ -23,7 +23,9 @@
     background-color: #eee;
   }
 }
-
+.dropdown-menu li.active {
+  color:#3593fe;
+}
 //Navbar custom dropdown menu
 .navbar-nav > .notifications-menu,
 .navbar-nav > .messages-menu,
@@ -176,20 +178,7 @@
 }
 
 //User menu
-.navbar-nav > .user-menu.open {
-  >.dropdown-toggle{
-    > span.active {
-      padding:20px;
-      color:#3b7de7;
-      background-color:#fff;
-      border-top-left-radius: 4px;
-      border-top-right-radius: 4px;
-      i {
-        color:#3b7de7;
-      }
-    }
-  }
-}
+
 .navbar-nav > .user-menu {
   
   > .dropdown-menu {
@@ -197,8 +186,7 @@
     border-top-left-radius: 4px;
     border-top-width: 0;
     width: 232px;
-    right:15px !important;
-    top:68px;
+    // top:68px;
 
     & > .user-body {
       .border-bottom-radius(4px);
@@ -412,15 +400,16 @@
   
   .dropdown-menu {
     min-width:auto;
-    border-radius:4px !important;
+    border-radius:0px !important;
     font-size:14px;
-    top:12px;
+    top:100%;
     left:0;
     right:0;
     li {
       line-height:36px;
       padding-left:40px;
       position: relative;
+      cursor: pointer;
       &:before {
         content:'';
         position:absolute;
@@ -440,6 +429,7 @@
     padding-top:16px;
     padding-bottom:20px;
     color:#3b7de7;
+    display:none;
   }
   
 }

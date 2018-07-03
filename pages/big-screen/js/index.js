@@ -1,13 +1,13 @@
 
 $(function () {
     $('#roll').rollNoInterval().top();
-    // $('#chart-mouths').rollSlide({
-    //     orientation: 'top1',
-    //     num: 1,
-    //     v: 1000,
-    //     space: 20000,
-    //     isRoll: true
-    // });
+    $('#chart-mouths').rollSlide({
+        orientation: 'top1',
+        num: 1,
+        v: 1000,
+        space: 2000,
+        isRoll: true
+    });
 })
 
 
@@ -387,5 +387,7 @@ $(function () {
     // 使用刚指定的配置项和数据显示图表。
     myChart.setOption(option);
 })
+
+
 
 

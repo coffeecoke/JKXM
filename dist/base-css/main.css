@@ -90,6 +90,7 @@ body {
   top: 0;
   left: 0;
   display: block;
+  z-index: 100;
 }
 .map-iframe {
   height: 100%;
@@ -154,9 +155,7 @@ body {
 .content {
   min-height: 250px;
   padding: 15px;
-  margin: 40px 50px;
   background: #fff;
-  border-radius: 10px;
   position: relative;
 }
 /* H1 - H6 font */
@@ -288,6 +287,10 @@ p {
 }
 .main-header .user-icon.tab-icon {
   background: url(../../imgs/header/tab-icon.png) center no-repeat;
+  background-size: 100% 100%;
+}
+.main-header .user-icon.pzgl-icon {
+  background: url(../../imgs/header/pzgl-icon.png) center no-repeat;
 }
 .main-header .navbar-custom-menu,
 .main-header .navbar-right {
@@ -351,7 +354,7 @@ p {
 }
 .main-header .header-logo {
   position: absolute;
-  width: 400px;
+  width: 630px;
   height: 76px;
   left: 50%;
   top: 0;
@@ -1012,6 +1015,9 @@ p {
 .dropdown-menu > .divider {
   background-color: #eee;
 }
+.dropdown-menu li.active {
+  color: #3593fe;
+}
 .navbar-nav > .notifications-menu > .dropdown-menu,
 .navbar-nav > .messages-menu > .dropdown-menu,
 .navbar-nav > .tasks-menu > .dropdown-menu {
@@ -1157,23 +1163,11 @@ p {
   padding: 0;
   margin: 0;
 }
-.navbar-nav > .user-menu.open > .dropdown-toggle > span.active {
-  padding: 20px;
-  color: #3b7de7;
-  background-color: #fff;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-}
-.navbar-nav > .user-menu.open > .dropdown-toggle > span.active i {
-  color: #3b7de7;
-}
 .navbar-nav > .user-menu > .dropdown-menu {
   border-top-right-radius: 0;
   border-top-left-radius: 4px;
   border-top-width: 0;
   width: 232px;
-  right: 15px !important;
-  top: 68px;
 }
 .navbar-nav > .user-menu > .dropdown-menu > .user-body {
   border-bottom-right-radius: 4px;
@@ -1396,9 +1390,9 @@ p {
 }
 .navbar-papes-menu .dropdown-menu {
   min-width: auto;
-  border-radius: 4px !important;
+  border-radius: 0px !important;
   font-size: 14px;
-  top: 12px;
+  top: 100%;
   left: 0;
   right: 0;
 }
@@ -1406,6 +1400,7 @@ p {
   line-height: 36px;
   padding-left: 40px;
   position: relative;
+  cursor: pointer;
 }
 .navbar-papes-menu .dropdown-menu li:before {
   content: '';
@@ -1424,6 +1419,7 @@ p {
   padding-top: 16px;
   padding-bottom: 20px;
   color: #3b7de7;
+  display: none;
 }
 /*
  * Component: Form
@@ -3783,6 +3779,9 @@ table.text-center th {
  * Skin: Blue
  * ----------
  */
+.skin-blue .dropdown-toggle.active {
+  color: #ffd919 !important;
+}
 .skin-blue .main-header {
   background: #3661d5 url('../../imgs/header/header-bg.png') right center no-repeat;
 }

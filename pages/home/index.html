@@ -20,6 +20,8 @@
   <!-- components style -->
   <link rel="stylesheet" href="../../components/bridge-chart/styles/bridge-chart.css">
   <link rel="stylesheet" href="../../components/main/main.css">
+
+  <link rel="stylesheet" href="../big-screen/styles/big-screen.css">
   <link rel="stylesheet" href="./styles/home.css">
 
   <!-- bootstrap wysihtml5 - text editor -->
@@ -32,7 +34,12 @@
   <![endif]-->
 
   <style>
-    
+    .content-iframe {
+      top:-100%;
+    }
+    .content-iframe.active{
+      top:0;
+    }
   </style>
 
 </head>
@@ -48,16 +55,15 @@
         <div class="navbar-papes-menu navbar-left">
           <ul class="nav navbar-nav">
             <li>
-              <a href="##" class="dropdown-toggle" data-toggle="dropdown">
+              <a href="##" class="dropdown-toggle" data-hover="dropdown">
                 <span>
                   <i class="user-icon dtjc-icon"></i>动态监测</span>
 
               </a>
-              <div class="dropdown-menu">
-                <div class="dropdown-title">
-                  <i class="user-icon dtjc-icon"></i>动态监测</div>
+              <div class="dropdown-menu" data-stopPropagation='true'>
+               
                 <ul class="dropdown-lists">
-                  <li>桥梁监测</li>
+                  <li data-url="../page3/index.html" >桥梁监测</li>
                   <li>坠陀监测</li>
                   <li>钢轨监测</li>
                   <li>设备箱</li>
@@ -66,14 +72,13 @@
 
             </li>
             <li>
-              <a href="##" class="dropdown-toggle" data-toggle="dropdown">
+              <a href="##" class="dropdown-toggle" data-hover="dropdown">
                 <span>
                   <i class="user-icon gzzd-icon"></i>故障诊断</span>
 
               </a>
               <div class="dropdown-menu">
-                <div class="dropdown-title">
-                  <i class="user-icon gzzd-icon"></i>故障诊断</div>
+                
                 <ul class="dropdown-lists">
                   <li>桥梁监测</li>
                   <li>坠陀监测</li>
@@ -84,14 +89,13 @@
 
             </li>
             <li>
-              <a href="##" class="dropdown-toggle" data-toggle="dropdown">
+              <a href="##" class="dropdown-toggle" data-hover="dropdown">
                 <span>
                   <i class="user-icon jkpg-icon"></i>健康评估</span>
 
               </a>
               <div class="dropdown-menu">
-                <div class="dropdown-title">
-                  <i class="user-icon jkpg-icon"></i>健康评估</div>
+               
                 <ul class="dropdown-lists">
                   <li>桥梁监测</li>
                   <li>坠陀监测</li>
@@ -114,12 +118,12 @@
             <!-- 用户信息弹出 -->
             <li class="dropdown user user-menu">
 
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <a href="#" class="dropdown-toggle" data-hover="dropdown">
 
                 <span class="hidden-xs">
                   <i class="user-icon tab-icon"></i>
-                  超级管理员,你好
-                  <i class="fa fa-arrow-up"></i>
+                  
+                  <i class="fa fa-arrow-down" style="position: relative;top:6px;"></i>
                 </span>
               </a>
               <ul class="dropdown-menu" data-stopPropagation='true'>
@@ -182,14 +186,12 @@
         <div class="navbar-papes-menu navbar-right">
           <ul class="nav navbar-nav">
             <li>
-              <a href="##" class="dropdown-toggle" data-toggle="dropdown">
+              <a href="##" class="dropdown-toggle" data-hover="dropdown">
                 <span>
                   <i class="user-icon gzyc-icon"></i>故障预测</span>
 
               </a>
               <div class="dropdown-menu">
-                <div class="dropdown-title">
-                  <i class="user-icon gzyc-icon"></i>故障预测</div>
                 <ul class="dropdown-lists">
                   <li>桥梁监测</li>
                   <li>坠陀监测</li>
@@ -200,14 +202,13 @@
 
             </li>
             <li>
-              <a href="##" class="dropdown-toggle" data-toggle="dropdown">
+              <a href="##" class="dropdown-toggle" data-hover="dropdown">
                 <span>
                   <i class="user-icon wxjc-icon"></i>维修决策</span>
 
               </a>
               <div class="dropdown-menu">
-                <div class="dropdown-title">
-                  <i class="user-icon wxjc-icon"></i>维修决策</div>
+                
                 <ul class="dropdown-lists">
                   <li>桥梁监测</li>
                   <li>坠陀监测</li>
@@ -218,14 +219,13 @@
 
             </li>
             <li>
-              <a href="##" class="dropdown-toggle" data-toggle="dropdown">
+              <a href="##" class="dropdown-toggle" data-hover="dropdown">
                 <span>
-                  <i class="user-icon gis-icon"></i>GIS视图</span>
+                  <i class="user-icon pzgl-icon"></i>配置管理</span>
 
               </a>
               <div class="dropdown-menu">
-                <div class="dropdown-title">
-                  <i class="user-icon gis-icon"></i>GIS视图</div>
+               
                 <ul class="dropdown-lists">
                   <li>桥梁监测</li>
                   <li>坠陀监测</li>
@@ -243,193 +243,332 @@
 
       </nav>
     </header>
-    <!-- 左侧栏-->
-    <aside class="main-sidebar" style="display:none">
 
-      <section class="sidebar">
-
-        <ul class="sidebar-menu" data-widget="tree">
-          <li class="active treeview">
-            <a href="#">
-              <i class="slide-icon slide-icon1"></i>
-              <span class="slide-title">首页</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li class="active">
-                <a href="index.html">
-                  <i class="fa fa-circle-o"></i> 首页1</a>
-              </li>
-              <li>
-                <a href="index2.html">
-                  <i class="fa fa-circle-o"></i> 首页2</a>
-              </li>
-            </ul>
-          </li>  
-          <li class="treeview">
-            <a href="#">
-              <i class="slide-icon slide-icon2"></i>
-              <span class="slide-title">桥梁监测</span>
-              <span class="pull-right-container">
-                <span class="label label-primary pull-right">4</span>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li>
-                <a href="pages/layout/top-nav.html">
-                  <i class="fa fa-circle-o"></i> Top Navigation</a>
-              </li>
-              <li>
-                <a href="pages/layout/boxed.html">
-                  <i class="fa fa-circle-o"></i> Boxed</a>
-              </li>
-              <li>
-                <a href="pages/layout/fixed.html">
-                  <i class="fa fa-circle-o"></i> Fixed</a>
-              </li>
-              <li>
-                <a href="pages/layout/collapsed-sidebar.html">
-                  <i class="fa fa-circle-o"></i> Collapsed Sidebar</a>
-              </li>
-            </ul>
-          </li>
-          <li class="treeview">
-            <a href="pages/widgets.html">
-              <i class="slide-icon slide-icon3"></i>
-              <span class="slide-title">故障诊断</span>
-              <span class="pull-right-container">
-                <small class="label pull-right bg-green">new</small>
-              </span>
-            </a>
-          </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="slide-icon slide-icon4"></i>
-              <span class="slide-title">健康评估</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li>
-                <a href="##">
-                  <i class="fa fa-circle-o"></i> 11</a>
-              </li>
-              <li>
-                <a href="##">
-                  <i class="fa fa-circle-o"></i> 22</a>
-              </li>
-              <li>
-                <a href="##">
-                  <i class="fa fa-circle-o"></i> 33</a>
-              </li>
-              <li>
-                <a href="##">
-                  <i class="fa fa-circle-o"></i> 44</a>
-              </li>
-            </ul>
-          </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="slide-icon slide-icon5"></i>
-              <span class="slide-title">故障监测</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li>
-                <a href="##">
-                  <i class="fa fa-circle-o"></i> 12</a>
-              </li>
-              <li>
-                <a href="##">
-                  <i class="fa fa-circle-o"></i> 2323</a>
-              </li>
-              <li>
-                <a href="##">
-                  <i class="fa fa-circle-o"></i> 2323</a>
-              </li>
-              <li>
-                <a href="##">
-                  <i class="fa fa-circle-o"></i> 123213</a>
-              </li>
-              <li>
-                <a href="##">
-                  <i class="fa fa-circle-o"></i> 32132</a>
-              </li>
-              <li>
-                <a href="##">
-                  <i class="fa fa-circle-o"></i> 323</a>
-              </li>
-            </ul>
-          </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="slide-icon slide-icon5"></i>
-              <span class="slide-title">维修决策</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li>
-                <a href="##">
-                  <i class="fa fa-circle-o"></i>32132</a>
-              </li>
-              <li>
-                <a href="##">
-                  <i class="fa fa-circle-o"></i> 32132</a>
-              </li>
-              <li>
-                <a href="##">
-                  <i class="fa fa-circle-o"></i> 32313</a>
-              </li>
-            </ul>
-          </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="slide-icon slide-icon6"></i>
-              <span class="slide-title">kpi指标</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li>
-                <a href="##">
-                  <i class="fa fa-circle-o"></i> 321323</a>
-              </li>
-              <li>
-                <a href="##">
-                  <i class="fa fa-circle-o"></i> 321321</a>
-              </li>
-            </ul>
-          </li>
-
-        </ul>
-      </section>
-      <!-- /.sidebar -->
-    </aside>
-    <!-- /.左侧栏 -->
     <!-- 内容包装器,包含页面内容 -->
-    <div class="content-wrapper">
+    <div class="content-wrapper night-theme" style="background-color:transparent">
+      <div class="big-screen-content">
+        <div class="big-screen-left">
+          <!-- 告警级别分布 -->
+          <div class="module">
+            <div class="module-header">
+              <h3 class="module-title">告警级别分布</h3>
+              <span class="module-close"></span>
+            </div>
+            <div class="module-body">
+              <div class="chart" id="pieChart1" style="width:140px;height:130px;"></div>
+              <div class="pieChart1-right">
+                <ul>
+                  <li class="red">
+                    <div class="num">
+                      40
+                      <span>%</span>
+                    </div>
+                    <div class="bar">
+                      <div class="bar-inner" style="width:40%"></div>
+                    </div>
+                    <div class="desc">严重</div>
+                  </li>
+                  <li class="green">
+                    <div class="num">
+                      25
+                      <span>%</span>
+                    </div>
+                    <div class="bar">
+                      <div class="bar-inner" style="width:25%"></div>
+                    </div>
+                    <div class="desc">重要</div>
+                  </li>
+                  <li class="orange">
+                    <div class="num">
+                      35
+                      <span>%</span>
+                    </div>
+                    <div class="bar">
+                      <div class="bar-inner" style="width:35%"></div>
+                    </div>
+                    <div class="desc">指示</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- 各种设施和数量 -->
+          <div class="module">
+            <div class="module-header">
+              <h3 class="module-title">各种设施和数量</h3>
+              <span class="module-close"></span>
+            </div>
+            <div class="module-body">
+              <div class="chart" id="bar3D" style="width:100%;height:150px;"></div>
+            </div>
+          </div>
+          <!-- 危险伤害评估 -->
+          <div class="module">
+            <div class="module-header">
+              <h3 class="module-title">危险伤害评估</h3>
+              <span class="module-close"></span>
+            </div>
+            <div class="module-body">
+              <div class="progress_bar1 progress-bar-primary">
+
+                <div class="pro-bar">
+                  <div class="progress-icon wd-icon"></div>
+                  <small class="progress_bar_title">
+                    温度
+                  </small>
+                  <span class="progress-bar-inner" style="width: 40%;" data-value="500" data-percentage-value="500">
+                    <i class="bubble">40</i>
+                  </span>
+                </div>
+              </div>
+
+              <div class="progress_bar1 progress-bar-green">
+                <div class="pro-bar">
+                  <div class="progress-icon cd-icon"></div>
+                  <small class="progress_bar_title">
+                    长度
+                  </small>
+                  <span class="progress-bar-inner" style="width: 70%;" data-value="70" data-percentage-value="70">
+                    <i class="bubble">70</i>
+                  </span>
+                </div>
+              </div>
+
+              <div class="progress_bar1 progress-bar-red">
+                <div class="pro-bar">
+                  <div class="progress-icon kd-icon"></div>
+                  <small class="progress_bar_title">
+                    跨度
+                  </small>
+                  <span class="progress-bar-inner" style="width: 35%;" data-value="65" data-percentage-value="65">
+                    <i class="bubble">50</i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 告警数据 -->
+          <div class="module">
+            <div class="module-header">
+              <h3 class="module-title">告警数据</h3>
+              <span class="module-close"></span>
+            </div>
+            <div class="module-body">
+              <div class="table-container">
+                <ul class="table__header clearfix">
+                  <li class="li1">名称及编号</li>
+                  <li class="li2">偏移量</li>
+                  <li class="li3">预警时间</li>
+                  <li class="li4">等级</li>
+                </ul>
+                <div class="table__body roll-wrap roll_col clearfix" id="roll">
+                  <ul class="table-list roll__list">
+                    <li>
+                      <ol class="red">
+                        <li class="li1">坠砣 zt-5-1</li>
+                        <li class="li2">15cm</li>
+                        <li class="li3">05-31 10:00</li>
+                        <li class="li4">严重</li>
+                      </ol>
+                    </li>
+                    <li>
+                      <ol class="blue">
+                        <li class="li1">坠砣 zt-5-1</li>
+                        <li class="li2">15cm</li>
+                        <li class="li3">05-31 10:00</li>
+                        <li class="li4">严重</li>
+                      </ol>
+                    </li>
+
+                    <li>
+                      <ol class="orange">
+                        <li class="li1">坠砣 zt-5-1</li>
+                        <li class="li2">15cm</li>
+                        <li class="li3">05-31 10:00</li>
+                        <li class="li4">严重</li>
+                      </ol>
+                    </li>
+                    <li>
+                      <ol class="red">
+                        <li class="li1">坠砣 zt-5-1</li>
+                        <li class="li2">15cm</li>
+                        <li class="li3">05-31 10:00</li>
+                        <li class="li4">严重</li>
+                      </ol>
+                    </li>
+                    <li>
+                      <ol class="blue">
+                        <li class="li1">坠砣 zt-5-1</li>
+                        <li class="li2">15cm</li>
+                        <li class="li3">05-31 10:00</li>
+                        <li class="li4">严重</li>
+                      </ol>
+                    </li>
+                    <li>
+                      <ol class="red">
+                        <li class="li1">坠砣 zt-5-1</li>
+                        <li class="li2">15cm</li>
+                        <li class="li3">05-31 10:00</li>
+                        <li class="li4">严重</li>
+                      </ol>
+                    </li>
+                    <li>
+                      <ol class="blue">
+                        <li class="li1">坠砣 zt-5-1</li>
+                        <li class="li2">15cm</li>
+                        <li class="li3">05-31 10:00</li>
+                        <li class="li4">严重</li>
+                      </ol>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="big-screen-center">
+          <div class="wblock-container">
+            <span class="close"></span>
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="wblock blue-wblock">
+                  <h3 class="wblock-title">300</h3>
+                  <span>监测总数</span>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="wblock green-wblock">
+                  <h3 class="wblock-title">400</h3>
+                  <span>监测总数</span>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="wblock red-wblock">
+                  <h3 class="wblock-title">200</h3>
+                  <span>监测总数</span>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="wblock orange-wblock">
+                  <h3 class="wblock-title">100</h3>
+                  <span>监测总数</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="big-screen-right">
+          <!-- 月平均故障时长 -->
+          <div class="module">
+            <div class="module-header">
+              <h3 class="module-title">月平均故障时长</h3>
+              <span class="module-close"></span>
+            </div>
+            <div class="module-body">
+              <div class="roll-wrap chart-mouths" id="chart-mouths">
+                <ul class="roll__list">
+                  <li>
+                    <div class="chart" id="pieChartMonth12" style="width:100%;height:110px;"></div>
+                    <div class="months-container">
+                      <span class="left-month">一月</span>
+                      <span class="right-month">二月</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="chart" id="pieChartMonth34" style="width:100%;height:110px;">
+
+                    </div>
+                    <div class="months-container">
+                      <span class="left-month">三月</span>
+                      <span class="right-month">四月</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="chart" id="pieChartMonth56" style="width:100%;height:110px;">
+
+                    </div>
+                    <div class="months-container">
+                      <span class="left-month">五月</span>
+                      <span class="right-month">六月</span>
+                    </div>
+                  </li>
+                  <li>
+                      <div class="chart" id="pieChartMonth12" style="width:100%;height:110px;">
+  
+                      </div>
+                      <div class="months-container">
+                        <span class="left-month">一月</span>
+                        <span class="right-month">二月</span>
+                      </div>
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- 剩余时间预测 -->
+          <div class="module">
+            <div class="module-header">
+              <h3 class="module-title">剩余时间预测</h3>
+              <span class="module-close"></span>
+            </div>
+            <div class="module-body">
+              <div class="chart" id="bar1" style="width:100%;height:250px;"></div>
+            </div>
+          </div>
+          <!-- 状态维修比例 -->
+          <div class="module">
+            <div class="module-header">
+              <h3 class="module-title">状态维修比例</h3>
+              <span class="module-close"></span>
+            </div>
+            <div class="module-body">
+              <div class="state-maintenance">
+                <div class="progress_bar">
+
+                  <div class="pro-bar">
+                    <smal class="progress_bar_title">
+                      设备总数
+                      <span class="progress_number">40%</span>
+                    </smal>
+                    <span class="progress-bar-inner" style="width: 40%;" data-value="500" data-percentage-value="500"></span>
+                    <div class="bar-desc">
+                      平均故障时间
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+          <!-- 工单趋势 -->
+          <div class="module">
+            <div class="module-header">
+              <h3 class="module-title">工单趋势</h3>
+              <span class="module-close"></span>
+            </div>
+            <div class="module-body">
+              <div class="chart" id="linecharts2" style="width:100%;height:150px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="toggle-btn">
+
+        </div>
+      </div>
+
       <!-- 地图iframe -->
       <div class="map-iframe">
-        <iframe src="map.html" frameborder="0" style="width:100%;height:99%"></iframe>
+        <iframe src="map.html" frameborder="0" style="width:100%;height:100%;display:block;"></iframe>
       </div>
       <!-- 内容iframe -->
       <div class="content-iframe">
-        <iframe src="../big-screen/index.html" frameborder="0" style="width:100%;height:100%;display:block;" name="contentIframe"></iframe>
+        <iframe src="content.html" frameborder="0" style="width:100%;height:100%;display:block;" name="contentIframe" id="contentIframe"></iframe>
       </div>
     </div>
-
-    <!-- 侧边控制栏，暂时不用 -->
-    <!-- 添加侧边栏的背景。 这个div必须放置紧随控制边栏之后 -->
-
-    <div class="control-sidebar-bg"></div>
   </div>
   <!-- ./wrapper -->
 
@@ -440,11 +579,58 @@
   <!-- 使用Bootstrap工具提示解决jQuery UI工具提示中的冲突 -->
   <script>
     $.widget.bridge('uibutton', $.ui.button);
+
+
+    $(function () {
+      // 计算content-wrapper的高度
+      function resizeContentWrapper() {
+        var headerHeight = $('.main-header').height();
+        var winHeight = $('body').height();
+        var contentWrapperHeight = winHeight - headerHeight
+        $('.content-wrapper').height(contentWrapperHeight);
+
+      }
+     
+
+
+      $("body").on('click', '[data-stopPropagation]', function (e) {
+        e.stopPropagation();
+      });
+
+     
+
+      $("#toggle--daynight").change(function () {
+        if ($(this).prop('checked')) {
+          $('.content-wrapper').removeClass('night-theme').addClass(
+            'day-theme')
+        } else {
+          $('.content-wrapper').removeClass('day-theme').addClass('night-theme')
+        }
+      });
+
+      // 屏幕缩放
+      function set(size) {
+
+        $('body')[0].style.zoom = size;
+        
+        // $('.main-header')[0].style.zoom = size;
+        document.body.style.cssText += '; -moz-transform: scale(' + size + ');-moz-transform-origin: 0 0; '; //
+      }
+      
+
+      if($(window).width()>1300&&$(window).width()<1400) {
+        set(0.65);
+        // $('.module').width(400);
+        // $('.chart').height(180);
+
+      }
+      resizeContentWrapper();
+       
+    })
   </script>
   <!-- Bootstrap 3.3.7 -->
   <script src="../../bootstrap/dist/js/bootstrap.min.js"></script>
-
-
+  <script src="../../bootstrap/dist/js/bootstrap-hover-dropdown.js"></script>
 
   <!-- Bootstrap WYSIHTML5 -->
   <script src="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
@@ -453,51 +639,46 @@
   <!-- FastClick 解决移动端300ms延迟问题 -->
   <script src="../../plugins/fastclick/lib/fastclick.js"></script>
   <!-- echarts-v3  百度echarts3-->
-  <script src="../../plugins/echarts-v3/echarts.min.js"></script>
+  <script src="../../plugins/echarts-v3/echarts.js"></script>
   <!-- 线性回归工具库 -->
   <script src="../../plugins/echarts-v3/ecStat.min.js"></script>
   <!-- echarts dataTool -->
   <script src="../../plugins/echarts-v3/extension/dataTool.min.js"></script>
+  <script src="../../plugins/echarts-v3/echarts-gl.js"></script>
   <!-- 引入自定义echart -->
-
-  <!-- 饼图 -->
-  <!-- 折线图 -->
-  <!-- plugins -->
+  <script src="../big-screen/js/bar3D.js"></script>
+  <script src="../big-screen/js/pieChart.js"></script>
+  <script src="../big-screen/js/pie-bar.js"></script>
+  <script src="../big-screen/js/linecharts.js"></script>
   <!-- components 自主开发组件-->
+  <!-- plugins -->
+  <script src="../../plugins/rollslider/rollSlide.js"></script>
+  <!-- <script src="../../plugins/Swiper-3.1.220150914/dist/js/swiper.js"></script> -->
   <!-- 用户js -->
 
-  <!-- <script src="../../common-js/common.js"></script> -->
+  <script src="../big-screen/js/index.js"></script>
 
   <script>
-    $(function () {
-      // 计算content-wrapper的高度
-      function resizeContentWrapper() {
-        var headerHeight = $('.main-header').height();
-        var winHeight = $(window).height();
-        $('.content-wrapper').height(winHeight - headerHeight);
-
+    function addTab(dom,title,linkSrc,isClearOldTab) {
+        document.getElementById('contentIframe').contentWindow['addTab']($(dom),title,linkSrc,isClearOldTab)
       }
-      resizeContentWrapper();
-
-
-      $("body").on('click', '[data-stopPropagation]', function (e) {
-        e.stopPropagation();
-      });
-
-      $('.user-menu .dropdown-toggle').on('click',function () {
-        $(this).find('span').toggleClass('active')
+    $(function () {
+      $('.dropdown-lists li').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.dropdown-toggle').removeClass('active');
+        $(this).parents('.dropdown-menu').prev().addClass('active');
+        // var $dom = $(this)
+        // var title =$(this).text();
+        // var linkSrc = $(this).data('url');
+        $('.content-iframe').addClass('active');
+        // document.getElementById('contentIframe').contentWindow['addTab']($dom,title,linkSrc,true)
       })
 
-     $("#toggle--daynight").change(function() { 
-       console.log($(this).prop('checked')) 
-       if($(this).prop('checked')) {
-        $(window.frames["contentIframe"].document).find('.content-wrapper').removeClass('night-theme').addClass('day-theme')
-       }else {
-        $(window.frames["contentIframe"].document).find('.content-wrapper').removeClass('day-theme').addClass('night-theme')
-       }
-     }); 
-     
-     
+      // 悬浮框显示切换
+      $('.toggle-btn').on('click',function () {
+        $(this).toggleClass('active');
+        $('.big-screen-left,.big-screen-right,.big-screen-center').toggleClass('active')
+      })
     })
   </script>
 </body>
