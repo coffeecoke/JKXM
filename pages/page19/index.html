@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>中国铁路物联网智慧平台</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <!-- Font Awesome 字体图标库 使用方式请参考官网-->
+    <link rel="stylesheet" href="../../components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="../../components/Ionicons/css/ionicons.min.css">
+    <!-- Theme style 项目主体公共样式-->
+    <link rel="stylesheet" href="../../dist/base-css/main.css">
+
+    <!-- components style -->
+    <link rel="stylesheet" href="../../components/main/main.css">
+    <link rel="stylesheet" href="styles/page19.css">
+</head>
+<body style="background-image: none; background:rgba(0,0,0,0.5);">
+<div class="wrapper">
+    <div class="content-wrapper" style="margin-left: 0;"> 
+        <section class="content">
+            <!-- 头部标题 -->
+            <!-- <div class="row margin-b-20 marginLR">
+                <div class="headTitle">
+                    <p>故障预测详情</p>
+                </div>
+            </div> -->
+            <!-- 设备情况 -->
+            <div class="row margin-b-20 marginLR borderBot">
+                <div class="col-sm-4 col-xs-12">
+                    <div class="box">
+                        <div class="box-header">
+                            <h3 class="box-title">设备情况</h3>
+                        </div>
+                        <div class="box-body" style="padding-left: 25px;">
+                            <div class="situation">
+                                <ul>
+                                    <li>
+                                        <i>设施：</i>
+                                        <span>坠坨  JJ-BJ-YZ-ZT-001</span>
+                                    </li>
+                                    <li>
+                                        <i>公里标：</i>
+                                        <span>K200+012</span>
+                                    </li>
+                                    <li>
+                                        <i>状态：</i>
+                                        <span>离线</span>
+                                    </li>
+                                    <li>
+                                        <i>预计告警时间:</i>
+                                        <span>2018-07-14</span>
+                                    </li>
+                                </ul>
+                                <div class="plan">维修计划</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8 col-xs-12">
+                    <div class="situationCon">
+                        <div class="situationText">
+                            <p>坠砣  JJ-BJ-YZ-ZT-001，由于结构特性易受温度影响和近一段时间温度变化较大，温度差可达12℃，平均风速7m/s等环境因素，导致监测设施健康状态持续下降，致使近期的健康评分过低，预计将于2018-7-13产生告警，请及时进行设施维护，乙方发生事故。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row  margin-b-20 marginLR borderBot" style="padding-bottom: 30px;">
+                <!-- 设施健康评分 -->
+                <div class="col-sm-7 col-xs-12">
+                    <div class="box">
+                        <div class="box-header">
+                            <h3 class="box-title">设施健康历史评分</h3>
+                        </div>
+                        <div class="box-body">
+                            <!-- charts容器 -->
+                            <div class="chart" id="pictorialBar" style="height:300px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 最新收录 -->
+                <div class="col-sm-5 col-xs-12">
+                    <div class="box">
+                        <!-- charts容器 -->
+                        <div class="chart" id="pieChart1" style="height:320px;"></div>
+                    </div>
+                </div>
+            </div>
+
+             <!-- 劣化趋势 -->
+             <div class="row margin-b-20 marginLR borderBot">
+                <div class="box" style="padding-bottom: 20px;">
+                    <div class="box-header">
+                        <h3 class="box-title" style="margin-left: 10px;">劣化趋势</h3>
+                    </div>
+                    <div class="box-body">
+                        <div style="padding: 15px 0 0 0;">
+                            <!-- charts容器 -->
+                            <div class="chart" id="lineChart1" style="height:250px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>   
+    </div> 
+</div>  
+
+<!-- jQuery 3 -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="../../plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- 使用Bootstrap工具提示解决jQuery UI工具提示中的冲突 -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+
+<!-- Bootstrap 3.3.7 -->
+<script src="../../bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick 解决移动端300ms延迟问题 -->
+<script src="../../plugins/fastclick/lib/fastclick.js"></script>
+<!-- echarts-v3  百度echarts3-->
+<script src="../../plugins/echarts-v3/echarts.min.js"></script>
+<!-- 线性回归工具库 -->
+<script src="../../plugins/echarts-v3/ecStat.min.js"></script>
+<!-- echarts dataTool -->
+<script src="../../plugins/echarts-v3/extension/dataTool.min.js"></script>
+<!-- 引入自定义echart -->
+<script type="text/javascript" src="js/faultDetails.js"></script>
+</body>
+</html>

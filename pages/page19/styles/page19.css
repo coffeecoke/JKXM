@@ -1,0 +1,87 @@
+
+
+.clear:after{
+    display:block;
+    clear:both;
+    content:"";
+    visibility:hidden;
+}
+.borderBot{
+    border-bottom: 1px solid #ececec;
+}
+.content{
+    width: 100%; 
+    background: #fff;
+}
+.marginLR{
+    margin-left: 0;
+    margin-right: 0;
+}
+i{
+    font-style: normal;
+}
+ 
+/* 鏍囬 */
+.headTitle{
+    position: relative;
+    border-bottom: 1px solid #d4dce6;
+    height: 70px;
+}
+.headTitle p{
+    width: 100%;
+    line-height: 70px;
+    font-size: 24px;
+    color: #333333;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+}
+.headTitle span{
+    position: absolute;
+    right: 30px;
+    top: 23px;
+    z-index: 2;
+}
+ 
+/* 璁惧鎯呭喌 */
+.situation{}
+.situation ul{}
+.situation li{
+    line-height: 30px;
+}
+.situation li i{
+    display: inline-block;
+    width: 30%;
+    font-size: 14px;
+    color: #999;
+}
+.situation li span{
+    font-size: 14px;
+    color: #202020;
+}
+.situation .plan{
+    width: 140px;
+    line-height: 33px;
+    background: url(../img/plan_bg.png) no-repeat;
+    background-size: 100% 100%;
+    font-size: 14px;
+    color: #397ef7;
+    text-align: center;
+    font-weight: bold;
+}
+.situationCon{
+    width: 100%;
+    height: 100%;
+    background: #e9f3ff;
+    padding: 40px;
+}
+.situationText{
+    background: #fff;
+    border: 1px solid #ccdfff;
+    padding: 12px 30px 30px;
+}
+.situationText p{
+    font-size: 14px;
+    color: #202020;
+    line-height: 34px;
+}

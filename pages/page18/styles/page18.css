@@ -1,0 +1,125 @@
+.clear:after{
+    display:block;
+    clear:both;
+    content:"";
+    visibility:hidden;
+}
+.borderBot{
+    border-bottom: 1px solid #ececec;
+}
+.content{
+    width: 100%; 
+    margin: 0 auto; 
+    padding: 0; 
+    background: #fff;
+}
+.marginLR{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* 标题 */
+.headTitle{
+    position: relative;
+    border-bottom: 1px solid #d4dce6;
+    height: 70px;
+}
+.headTitle p{
+    width: 100%;
+    line-height: 70px;
+    font-size: 24px;
+    color: #333333;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+}
+.headTitle span{
+    position: absolute;
+    right: 30px;
+    top: 23px;
+    z-index: 2;
+}
+
+/* 基本信息 */
+.information{
+    padding-top: 20px;
+}
+.information ul{
+    margin-bottom: 0;
+}
+.information li{
+    margin-bottom: 15px;
+}
+.information .leftCon{
+    float: left;
+}
+.information .leftCon img{
+    width: 47px;
+    height: auto;
+}
+.information .rightCon{
+    float: left;
+    padding: 5px 0 0 10px;
+}
+.information .rightCon p{
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+}
+.information .rightCon span{
+    font-size: 14px;
+    color: #999;
+}
+.basisContent li{
+    line-height: 34px;
+}
+.basisContent div i{
+    font-style: normal;
+    font-size: 14px;
+    color: #95989e;
+    text-align: right;
+}
+.basisContent div span{
+    font-size: 16px;
+    color: #323232;
+    padding-left: 8px;
+}
+.weather{
+    width: 100%;
+    height: 233px;
+    background: url(../img/weather_bg.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+/* 生命周期 */
+.ui-stepBar-wrap{position:relative;width:100%;height:104px;overflow:hidden;display:none;z-index:100;}
+.ui-stepBar-wrap .ui-stepBar{position:relative;width:90%;height:5px;background:#cccccc;top:47px;left:6%;z-index:101;}
+.ui-stepBar-wrap .ui-stepBar .ui-stepProcess{position:relative;width:0;height:5px;background:#00a0e9;top:0;left:1px;z-index:102;}
+.ui-stepBar-wrap .ui-stepInfo-wrap{width:90%;margin:0 auto;height:100%;}
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo{position:relative;float:left;padding-top:36px;text-align:center;}
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .ui-stepSequence{position:relative;padding:0 7px;border-radius:50%;z-index:103;}
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .ui-stepName{position:relative;line-height:50px;z-index:103; color: #323232; font-size: 12px;}
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .judge-stepSequence-pre-change,
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .judge-stepSequence-hind-change{cursor:pointer;}
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .judge-stepSequence-pre-change:hover{box-shadow:0 0 3px 1px #00a0e9;}
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .judge-stepSequence-hind-change:hover{box-shadow:0 0 3px 1px #cccccc;}
+.judge-stepSequence-pre{background:#00a0e9;color:#ffffff;}
+.judge-stepSequence-hind{background:#cccccc;color:#000000;}
+.author{position:absolute;bottom:0;width:100%;text-align:center;margin:40px auto;color:#1569ec;text-shadow:1px 1px 0 #e7e7e7, 0 1px 7px #fff;}
+
+/* 分析结果 操作建议 */
+.backgroundStyle{
+    padding: 30px 30px 20px 10px;
+}
+.backgroundStyle p{
+    color:#323232;
+    font-size: 16px;
+    height: 120px;
+    width: 100%;
+    border: 1px solid #d9e1e8;
+    padding: 14px 0 0 10px;
+}
+.backgroundStyle p:hover{
+    background: #f1f5ff;
+    border: 1px solid #f1f5ff;
+}

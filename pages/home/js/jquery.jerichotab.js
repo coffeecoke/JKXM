@@ -174,6 +174,7 @@ $.extend($.fn, {
                         // the tab's name
                         name:''
                     }, tabsetting);
+                    
                     //window.console && console.log('%o', tabsetting);
                     //check whether the tabFirer exists or not, and that it has an attribute['jerichotabindex'], then set the tab that tabFirer was connected activated
                     //otherwise attach the jerichotabindex' attribute

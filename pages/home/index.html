@@ -667,11 +667,11 @@
         $(this).addClass('active').siblings().removeClass('active');
         $('.dropdown-toggle').removeClass('active');
         $(this).parents('.dropdown-menu').prev().addClass('active');
-        // var $dom = $(this)
-        // var title =$(this).text();
-        // var linkSrc = $(this).data('url');
+        var $dom = $(this)
+        var title =$(this).text();
+        var linkSrc = $(this).data('url');
         $('.content-iframe').addClass('active');
-        // document.getElementById('contentIframe').contentWindow['addTab']($dom,title,linkSrc,true)
+        document.getElementById('contentIframe').contentWindow['addTab']($dom,title,linkSrc,true)
       })
 
       // 悬浮框显示切换

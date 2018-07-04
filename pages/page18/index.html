@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>中国铁路物联网智慧平台</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <!-- Font Awesome 字体图标库 使用方式请参考官网-->
+    <link rel="stylesheet" href="../../components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="../../components/Ionicons/css/ionicons.min.css">
+    <!-- Theme style 项目主体公共样式-->
+    <link rel="stylesheet" href="../../dist/base-css/main.css">
+
+    <!-- components style -->
+    <link rel="stylesheet" href="../../components/bridge-chart/styles/bridge-chart.css">
+    <link rel="stylesheet" href="../../components/main/main.css">
+    <link rel="stylesheet" href="styles/page18.css">
+</head>
+<body style="background-image: none; background:rgba(0,0,0,0.5);">
+<div class="wrapper">
+    <div class="content-wrapper" style="margin-left: 0;"> 
+        <section class="content">
+            <!-- 头部标题 -->
+            <div class="row margin-b-20 marginLR">
+                <div class="headTitle">
+                 
+                </div>
+            </div>
+            <!-- 基本信息 -->
+            <div class="row margin-b-20 marginLR borderBot">
+                <div class="col-sm-8 col-xs-12">
+                    <div class="box">
+                        <div class="box-header">
+                            <h3 class="box-title">基本信息</h3>
+                        </div>
+                        <div class="box-body">
+                            <div class="information">
+                                <ul class="clear row">
+                                    <li class="col-sm-4 col-xs-6">
+                                        <div class="leftCon"><img src="img/iconA.png" /></div>
+                                        <div class="rightCon">
+                                            <p>JJ-BJ-WQ-ZT-005</p>
+                                            <span>设备编号</span>
+                                        </div>
+                                    </li>
+                                    <li class="col-sm-4 col-xs-6">
+                                        <div class="leftCon"><img src="img/iconB.png" /></div>
+                                        <div class="rightCon">
+                                            <p>jt_k+300</p>
+                                            <span>公里标</span>
+                                        </div>
+                                    </li>
+                                    <li class="col-sm-4 col-xs-6">
+                                        <div class="leftCon"><img src="img/iconE.png" /></div>
+                                        <div class="rightCon">
+                                            <p>坠坨</p>
+                                            <span>设备类型</span>
+                                        </div>
+                                    </li>
+                                    <li class="col-sm-4 col-xs-6">
+                                        <div class="leftCon"><img src="img/iconC.png" /></div>
+                                        <div class="rightCon">
+                                            <p>京津线</p>
+                                            <span>线路</span>
+                                        </div>
+                                    </li>
+                                    <li class="col-sm-4 col-xs-6">
+                                        <div class="leftCon"><img src="img/iconD.png" /></div>
+                                        <div class="rightCon">
+                                            <p>2018-04-10</p>
+                                            <span>安装日期</span>
+                                        </div>
+                                    </li>
+                                    <li class="col-sm-4 col-xs-6">
+                                        <div class="leftCon"><img src="img/iconF.png" /></div>
+                                        <div class="rightCon">
+                                            <p>200kg</p>
+                                            <span>坠砣质量</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="basisContent row">
+                                <li class="col-sm-4 col-xs-6">
+                                    <div>
+                                        <i>总高度:</i><span>400cm</span>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 col-xs-6">
+                                    <div>
+                                        <i>坠砣厚度:</i><span>78cm</span>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 col-xs-6">
+                                    <div>
+                                        <i>维修次数:</i><span>4次</span>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 col-xs-6">
+                                    <div>
+                                        <i>电缆长度:</i><span>10000cm</span>
+                                    </div>
+                                </li>
+                                <li class="col-sm-4 col-xs-6">
+                                    <div>
+                                        <i>电缆材质:</i><span>PVC</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <div class="weather">
+                        <iframe id="fancybox-frame" name="fancybox-frame1528441752067" frameborder="0" scrolling="no" hspace="0"  style="padding-top: 60px;" src="http://i.tianqi.com/index.php?c=code&a=getcode&id=38&h=60&w=610"></iframe>
+                    </div>
+                </div>
+            </div>
+            <!-- 生命周期 -->
+            <div class="row  margin-b-20 marginLR borderBot">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title" style="margin-left: 10px;">生命周期</h3>
+                    </div> 
+                    <div class="box-body">
+                        <div id="stepBar" class="ui-stepBar-wrap">
+                            <div class="ui-stepBar">
+                                <div class="ui-stepProcess"></div>
+                            </div>
+                            <div class="ui-stepInfo-wrap">
+                                <table class="ui-stepLayout" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td class="ui-stepInfo">
+                                            <a class="ui-stepSequence"></a>
+                                            <p class="ui-stepName">稳定期</p>
+                                        </td>
+                                        <td class="ui-stepInfo">
+                                            <a class="ui-stepSequence"></a>
+                                            <p class="ui-stepName">低谷期</p>
+                                        </td>
+                                        <td class="ui-stepInfo">
+                                            <a class="ui-stepSequence"></a>
+                                            <p class="ui-stepName">危险期</p>
+                                        </td>
+                                        <td class="ui-stepInfo">
+                                            <a class="ui-stepSequence"></a>
+                                            <p class="ui-stepName">淘汰期</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 告警信息 -->
+            <div class="row margin-b-20 marginLR borderBot">
+                <div class="box">
+                    <div class="box-header" style="margin-left: 10px;">
+                        <h3 class="box-title">告警信息</h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="information">
+                            <ul class="clear row" style="padding-left: 22px;">
+                                <li class="col-sm-3 col-xs-6">
+                                    <div class="leftCon"><img src="img/alarm1.png" /></div>
+                                    <div class="rightCon">
+                                        <p>严重</p>
+                                        <span>告警级别</span>
+                                    </div>
+                                </li>
+                                <li class="col-sm-3 col-xs-6">
+                                    <div class="leftCon"><img src="img/alarm2.png" /></div>
+                                    <div class="rightCon">
+                                        <p>10~15CM</p>
+                                        <span>告警阈值</span>
+                                    </div>
+                                </li>
+                                <li class="col-sm-3 col-xs-6">
+                                    <div class="leftCon"><img src="img/alarm3.png" /></div>
+                                    <div class="rightCon">
+                                        <p>13CM</p>
+                                        <span>a值告警 </span>
+                                    </div>
+                                </li>
+                                <li class="col-sm-3 col-xs-6">
+                                    <div class="leftCon"><img src="img/alarm4.png" /></div>
+                                    <div class="rightCon">
+                                        <p>超同类30%</p>
+                                        <span>相比同类设施劣势速度</span>
+                                    </div>
+                                </li>
+                                <li class="col-sm-3 col-xs-6">
+                                    <div class="leftCon"><img src="img/alarm5.png" /></div>
+                                    <div class="rightCon">
+                                        <p>京津线</p>
+                                        <span>线路</span>
+                                    </div>
+                                </li>
+                                <li class="col-sm-3 col-xs-6">
+                                    <div class="leftCon"><img src="img/alarm6.png" /></div>
+                                    <div class="rightCon">
+                                        <p>2018-04-10</p>
+                                        <span>预测告警时间</span>
+                                    </div>
+                                </li>
+                                <li class="col-sm-3 col-xs-6">
+                                    <div class="leftCon"><img src="img/alarm7.png" /></div>
+                                    <div class="rightCon">
+                                        <p>1天</p>
+                                        <span>预测偏差时间</span>
+                                    </div>
+                                </li>
+                                <li class="col-sm-3 col-xs-6">
+                                    <div class="leftCon"><img src="img/alarm8.png" /></div>
+                                    <div class="rightCon">
+                                        <p>超同类30%</p>
+                                        <span>相比同类设施告警频度</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 图表  -->
+            <div class="row margin-b-20 marginLR borderBot" style="padding-bottom: 20px;">
+                <div class="col-sm-6 col-xs-12">
+                    <div style="padding: 15px 0 0 0;">
+                        <!-- charts容器 -->
+                        <div class="chart" id="monitoringChart1" style="height:250px;"></div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <div style="padding-top: 15px">
+                        <!-- charts容器 -->
+                        <div class="chart" id="monitoringChart2" style="height:250px;"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 分析结果 操作建议 -->
+            <div class="row  margin-b-20 marginLR">
+                <!-- 分析结果 -->
+                <div class="col-sm-6 col-xs-12">
+                    <div class="box">
+                        <div class="box-header">
+                            <h3 class="box-title">分析结果</h3>
+                        </div>
+                        <div class="box-body">
+                            <div class="backgroundStyle">
+                                <p>环境温度突然降低导致的线的伸缩性发生改变</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 操作建议 -->
+                <div class="col-sm-6 col-xs-12">
+                    <div class="box">
+                        <div class="box-header">
+                            <h3 class="box-title">操作建议</h3>
+                        </div>
+                        <div class="box-body">
+                            <div class="backgroundStyle">
+                                <p>适当增加坠砣质量</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>   
+    </div> 
+</div>  
+
+<!-- jQuery 3 -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="../../plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- 使用Bootstrap工具提示解决jQuery UI工具提示中的冲突 -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+
+<!-- Bootstrap 3.3.7 -->
+<script src="../../bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick 解决移动端300ms延迟问题 -->
+<script src="../../plugins/fastclick/lib/fastclick.js"></script>
+<!-- echarts-v3  百度echarts3-->
+<script src="../../plugins/echarts-v3/echarts.min.js"></script>
+<!-- 线性回归工具库 -->
+<script src="../../plugins/echarts-v3/ecStat.min.js"></script>
+<!-- echarts dataTool -->
+<script src="../../plugins/echarts-v3/extension/dataTool.min.js"></script>
+<!-- 进度流程 -->
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/stepBar.js"></script>
+<!-- 引入自定义echart -->
+<script type="text/javascript" src="js/faultDiagnosis.js"></script>
+
+<script>
+    // 生命周期
+    $(function(){
+        stepBar.init("stepBar", {
+            step : 3, //控制进程
+            change : true,
+            animation : true
+        });
+    })
+</script>
+</body>
+</html>
