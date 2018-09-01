@@ -143,26 +143,46 @@
                   <div class="user-body__title">
                     配置选项卡
                   </div>
-                  <div class="user-body__lists">
-                    <label for="">
-                      <input type="checkbox" style="display:none">
+                  <div class="user-body__lists" id="user-tabs">
+                    <label>
+                      <input type="checkbox" style="display:none"  checked data-mark="gjfb">
                       <i class="check-box-icon"></i>
                       <span>告警级别分布</span>
                     </label>
-                    <label for="">
-                      <input type="checkbox" style="display:none">
+                    <label>
+                      <input type="checkbox" style="display:none"  checked data-mark="sssl">
                       <i class="check-box-icon"></i>
-                      <span>告警级别分布</span>
+                      <span>各种设施和数量</span>
                     </label>
-                    <label for="">
-                      <input type="checkbox" style="display:none">
+                    <label>
+                      <input type="checkbox" style="display:none"  checked data-mark="shpg">
                       <i class="check-box-icon"></i>
-                      <span>告警级别分布</span>
+                      <span>危险伤害评估</span>
                     </label>
-                    <label for="">
-                      <input type="checkbox" style="display:none">
+                    <label>
+                      <input type="checkbox" style="display:none"  checked data-mark="gjsj">
                       <i class="check-box-icon"></i>
-                      <span>告警级别分布</span>
+                      <span>告警数据</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" style="display:none"  checked data-mark="gzsc">
+                      <i class="check-box-icon"></i>
+                      <span>月平均故障时长</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" style="display:none"  checked data-mark="sjyc">
+                      <i class="check-box-icon"></i>
+                      <span>剩余时间预测</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" style="display:none"  checked data-mark="wxbl">
+                      <i class="check-box-icon"></i>
+                      <span>状态维修比例</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" style="display:none"  checked data-mark="gdqs">
+                      <i class="check-box-icon"></i>
+                      <span>工单趋势</span>
                     </label>
                   </div>
 
@@ -249,7 +269,7 @@
       <div class="big-screen-content">
         <div class="big-screen-left">
           <!-- 告警级别分布 -->
-          <div class="module">
+          <div class="module" id="gjfb">
             <div class="module-header">
               <h3 class="module-title">告警级别分布</h3>
               <span class="module-close"></span>
@@ -293,7 +313,7 @@
             </div>
           </div>
           <!-- 各种设施和数量 -->
-          <div class="module">
+          <div class="module" id="sssl">
             <div class="module-header">
               <h3 class="module-title">各种设施和数量</h3>
               <span class="module-close"></span>
@@ -303,7 +323,7 @@
             </div>
           </div>
           <!-- 危险伤害评估 -->
-          <div class="module">
+          <div class="module" id="shpg">
             <div class="module-header">
               <h3 class="module-title">危险伤害评估</h3>
               <span class="module-close"></span>
@@ -348,7 +368,7 @@
             </div>
           </div>
           <!-- 告警数据 -->
-          <div class="module">
+          <div class="module" id="gjsj">
             <div class="module-header">
               <h3 class="module-title">告警数据</h3>
               <span class="module-close"></span>
@@ -461,7 +481,7 @@
         </div>
         <div class="big-screen-right">
           <!-- 月平均故障时长 -->
-          <div class="module">
+          <div class="module" id="gzsc">
             <div class="module-header">
               <h3 class="module-title">月平均故障时长</h3>
               <span class="module-close"></span>
@@ -508,7 +528,7 @@
             </div>
           </div>
           <!-- 剩余时间预测 -->
-          <div class="module">
+          <div class="module" id="sjyc">
             <div class="module-header">
               <h3 class="module-title">剩余时间预测</h3>
               <span class="module-close"></span>
@@ -518,7 +538,7 @@
             </div>
           </div>
           <!-- 状态维修比例 -->
-          <div class="module">
+          <div class="module" id="wxbl">
             <div class="module-header">
               <h3 class="module-title">状态维修比例</h3>
               <span class="module-close"></span>
@@ -544,7 +564,7 @@
             </div>
           </div>
           <!-- 工单趋势 -->
-          <div class="module">
+          <div class="module" id="gdqs">
             <div class="module-header">
               <h3 class="module-title">工单趋势</h3>
               <span class="module-close"></span>
@@ -671,13 +691,43 @@
         var title =$(this).text();
         var linkSrc = $(this).data('url');
         $('.content-iframe').addClass('active');
-        document.getElementById('contentIframe').contentWindow['addTab']($dom,title,linkSrc,true)
+        document.getElementById('contentIframe').contentWindow['addTab']($dom,title,linkSrc,false)
       })
 
       // 悬浮框显示切换
       $('.toggle-btn').on('click',function () {
         $(this).toggleClass('active');
         $('.big-screen-left,.big-screen-right,.big-screen-center').toggleClass('active')
+      })
+
+      //选项卡
+      function checkStatus(status) {
+        $('#user-tabs label input').each(function () {
+          var mark = $(this).data('mark');
+          var $mark = $('#'+mark)
+          var wrapContainer = $mark.parent();
+          if($(this).prop('checked')) {
+            $mark.css('opacity',1)
+            if(status==1) {
+              wrapContainer.append($mark);
+            }else {
+              wrapContainer.prepend($mark);
+            }
+            
+          }else {
+            $mark.css('opacity',0)
+          }
+        })
+      }
+
+      checkStatus(1);
+      $('#user-tabs').on('change','label input',function () {
+        checkStatus(2);
+      })
+
+      $('.module-close').on('click',function () {
+       var mark = $(this).parents('.module').attr('id');
+       $('#user-tabs label').find('[data-mark="'+mark+'"]').click();
       })
     })
   </script>

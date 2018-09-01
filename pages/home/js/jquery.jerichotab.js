@@ -375,6 +375,7 @@ $.extend($.fn, {
             else {
                 holder.attr('class', 'curholder').css({ 'display': 'block' });
                 if ($.fn.jerichoTab.loadOnce && !flag){
+                    alert(1)
                     removeLoading();
                 } else {
                     holder.html('');
