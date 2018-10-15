@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="dp" width="200px" height="220px"></canvas>
+    <!-- <canvas id="duxing.org" width="200px" height="220px"></canvas> -->
+</body>
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+<script>
+    function getRads(degrees) {
+        return (Math.PI * degrees) / 180;
+    }
+    var canvas = document.getElementById('dp');
+    // 创建一个舞台
+    var stage = new createjs.Stage(canvas);
+    // 画图形，比如矩形，圆形等用(Shape) 
+    // 左侧斜线
+    var leftLine = new createjs.Shape();
+    leftLine.graphics.beginStroke("#e4e4e4");
+    leftLine.graphics.setStrokeStyle(6);
+    leftLine.graphics.moveTo(74, 70);
+    leftLine.graphics.lineTo(10, 100);
+    // 右侧斜线
+    var rightLine = new createjs.Shape();
+    rightLine.graphics.beginStroke("#e4e4e4");
+    rightLine.graphics.setStrokeStyle(6);
+    rightLine.graphics.moveTo(74, 70);
+    rightLine.graphics.lineTo(140, 100);
+    // 左侧圆弧
+    var cricle1 = new createjs.Shape();
+    cricle1.graphics.beginStroke("#e4e4e4");
+    cricle1.graphics.setStrokeStyle(6);
+    cricle1.graphics.arc(110, 100, 100, getRads(-180), getRads(110), 1);
+    // 右侧圆弧
+    var cricle2 = new createjs.Shape();
+    cricle2.graphics.beginStroke("#e4e4e4");
+    cricle2.graphics.setStrokeStyle(6);
+    cricle2.graphics.arc(40, 100, 100, getRads(0), getRads(70));
+
+    // 绘制原点
+    var smCircle = new createjs.Shape();
+    smCircle.graphics.beginFill('red');
+    smCircle.graphics.drawCircle(0, 0, 5);
+    smCircle.x = 74;
+    smCircle.y = 70;
+    var derection = -1;
+    stage.addChild(leftLine);
+    stage.addChild(rightLine);
+    stage.addChild(cricle1);
+    stage.addChild(cricle2);
+    stage.addChild(smCircle);
+    stage.update();
+
+    createjs.Ticker.addEventListener("tick", tick);
+    createjs.Ticker.setFPS(60);
+
+    function tick(e) {
+        smCircle.x += 1 * derection;
+        smCircle.y += 15/32
+        stage.update();
+    }
+</script>
+
+<!-- <script>
+    var canvas = document.getElementById('duxing.org');
+
+    function fullScreenCanvas() {
+        var clientWidth = document.body.clientWidth,
+            clientHeight = document.body.clientHeight;
+        canvas.setAttribute('width', clientWidth);
+        canvas.setAttribute('height', clientHeight);
+    }
+    var stage = new createjs.Stage(canvas);
+    var circle = new createjs.Shape();
+    circle.graphics.beginStroke('#000');
+    circle.graphics.beginFill('#FFF000');
+    circle.graphics.drawCircle(0, 0, 30);
+    circle.x = 0;
+    circle.y = 75;
+    stage.addChild(circle);
+    var derection = 1;
+    createjs.Ticker.setFPS(24);
+    createjs.Ticker.addEventListener("tick", function (e) {
+        circle.x += 1 * derection;
+        circle.y = 50 + Math.sin(circle.x / 2) * 3;
+        stage.update();
+        if (circle.x > canvas.width || circle.x < 0) {
+            derection *= -1;
+        }
+    });
+</script> -->
+
+</html>

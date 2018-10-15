@@ -60,7 +60,14 @@
         height:200px;
     }
 }
-
+@media screen and (min-wdtih:1900px) {
+    .state-maintenance {
+        margin-top:90px;
+    }
+    #gjfb .module-body{
+        margin-top:26px;
+    }
+}
 .day-theme {
     @close-url: '../../../imgs/big-screen/close-day-icon.png';
     @module-title-color: #5b5b5b;
@@ -101,6 +108,8 @@
         box-shadow: 0 0 20px #2e61b3;
         border-radius: 4px;
         margin-bottom: 10px;
+        display: flex;
+        
         .module-header {
             position: relative;
             .module-title {
@@ -120,6 +129,7 @@
             }
         }
         .module-body {
+            
             // min-height:200px;
         }
     }
