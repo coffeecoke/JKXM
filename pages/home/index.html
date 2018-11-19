@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="../../dist/base-css/main.css">
   <!-- plugins -->
   <link rel="stylesheet" href="../../plugins/css3kg/css/style.css">
+  <link rel="stylesheet" href="../../plugins/Tdrag/jquery.dad.css">
   <!-- components style -->
   <link rel="stylesheet" href="../../components/bridge-chart/styles/bridge-chart.css">
   <link rel="stylesheet" href="../../components/main/main.css">
@@ -534,7 +535,7 @@
               <span class="module-close"></span>
             </div>
             <div class="module-body">
-              <div class="chart" id="bar1" style="width:100%;height:250px;"></div>
+              <div class="chart" id="bar1" style="width:100%;height:150px;"></div>
             </div>
           </div>
           <!-- 状态维修比例 -->
@@ -674,8 +675,10 @@
   <!-- plugins -->
   <script src="../../plugins/rollslider/rollSlide.js"></script>
   <!-- <script src="../../plugins/Swiper-3.1.220150914/dist/js/swiper.js"></script> -->
+  
+  <!-- 拖拽 -->
+  <script src="../../plugins/Tdrag/jquery.dad.min.js"></script>
   <!-- 用户js -->
-
   <script src="../big-screen/js/index.js"></script>
 
   <script>
@@ -716,6 +719,7 @@
             
           }else {
             $mark.css('opacity',0)
+            // $mark.hide()
           }
         })
       }
@@ -729,7 +733,24 @@
        var mark = $(this).parents('.module').attr('id');
        $('#user-tabs label').find('[data-mark="'+mark+'"]').click();
       })
+
+      // 拖拽
+      $('.content-wrapper').dad({
+        target:'.module',
+        callback:dragAfter
+      });
+
+      // 排序
+      dragAfter();
+      function dragAfter(){
+        var sortArr = [1,2,4,3,6,5,8,7];
+        
+      }
+      
+
     })
+
+    
   </script>
 </body>
 

@@ -1,3 +1,16 @@
+.big-screen-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 .big-screen-left {
   display: -webkit-box;
   display: -webkit-flex;
@@ -14,6 +27,8 @@
   justify-content: space-between;
   -webkit-transition: left .5s linear;
   transition: left .5s linear;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 .big-screen-left .module {
   -webkit-box-flex: 1;
@@ -40,6 +55,8 @@
   justify-content: space-between;
   -webkit-transition: right .5s linear;
   transition: right .5s linear;
+  margin-top: 10px;
+  margin-right: 10px;
 }
 .big-screen-right .module {
   -webkit-box-flex: 1;
@@ -56,6 +73,9 @@
 }
 .big-screen-center.active {
   top: -100% !important;
+}
+.module {
+  width: 340px;
 }
 .toggle-btn {
   width: 50px;
@@ -87,20 +107,6 @@
     margin-top: 26px;
   }
 }
-.day-theme .big-screen-left {
-  width: 340px;
-  position: absolute;
-  left: 15px;
-  top: 15px;
-  bottom: 15px;
-}
-.day-theme .big-screen-right {
-  width: 340px;
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  bottom: 15px;
-}
 .day-theme .big-screen-center {
   margin: 0 24px;
   height: 100px;
@@ -111,7 +117,6 @@
   top: 15px;
 }
 .day-theme .module {
-  width: 100%;
   padding: 12px;
   background: #fff;
   box-shadow: 0 0 20px #2e61b3;
@@ -528,20 +533,6 @@
   background: url(../../../imgs/big-screen/wblock-icon4.png) center no-repeat;
   background-size: auto 100%;
 }
-.night-theme .big-screen-left {
-  width: 340px;
-  position: absolute;
-  left: 15px;
-  top: 15px;
-  bottom: 15px;
-}
-.night-theme .big-screen-right {
-  width: 340px;
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  bottom: 15px;
-}
 .night-theme .big-screen-center {
   height: 100px;
   position: absolute;
@@ -551,7 +542,6 @@
   top: 15px;
 }
 .night-theme .module {
-  width: 100%;
   padding: 12px;
   background: -webkit-linear-gradient(left, #6c6dd6, #2e61b3);
   background: linear-gradient(left, #6c6dd6, #2e61b3);

@@ -1,4 +1,10 @@
-
+.big-screen-content {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width:100%;
+    height:100%;
+}
 .big-screen-left {
 
     display:flex;
@@ -8,6 +14,8 @@
         flex:1;
     }
     transition: left .5s linear;
+    margin-left:10px;
+    margin-top:10px;
 }
 .big-screen-left.active {
     left:-100% !important;
@@ -21,6 +29,8 @@
     .module {
         flex:1;
     }
+    margin-top:10px;
+    margin-right:10px;
 }
 .big-screen-right.active {
     right:-100% !important;
@@ -30,6 +40,9 @@
 }
 .big-screen-center.active {
     top:-100% !important;
+}
+.module {
+    width:340px;
 }
 .module-close {
     // display:none;
@@ -79,20 +92,22 @@
     @table-header-color: #0863ff;
     @table-body-color:#1269de;
     @chart-month-color:#0062ff;
-    .big-screen-left {
-        width: 340px;
-        position: absolute;
-        left: 15px;
-        top: 15px;
-        bottom:15px;
-    }
-    .big-screen-right {
-        width: 340px;
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        bottom:15px;
-    }
+    // .big-screen-left {
+    //     width: 340px;
+    //     float:left;
+    //     // position: absolute;
+    //     // left: 15px;
+    //     // top: 15px;
+    //     // bottom:15px;
+    // }
+    // .big-screen-right {
+    //     width: 340px;
+    //     float:right;
+    //     // position: absolute;
+    //     // right: 15px;
+    //     // top: 15px;
+    //     // bottom:15px;
+    // }
     .big-screen-center {
         margin: 0 24px;
         height: 100px;
@@ -102,13 +117,11 @@
         top: 15px;
     }
     .module {
-        width: 100%;
         padding: 12px;
         background: @module-bg;
         box-shadow: 0 0 20px #2e61b3;
         border-radius: 4px;
         margin-bottom: 10px;
-        display: flex;
         
         .module-header {
             position: relative;
@@ -579,20 +592,20 @@
     @table-header-color:#a8b5dd;
     @table-body-color:#fff;
     @chart-month-color:#fff;
-    .big-screen-left {
-        width: 340px;
-        position:absolute;
-        left: 15px;
-        top: 15px;
-        bottom:15px;
-    }
-    .big-screen-right {
-        width: 340px;
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        bottom:15px;
-    }
+    // .big-screen-left {
+    //     width: 340px;
+    //     position:absolute;
+    //     left: 15px;
+    //     top: 15px;
+    //     bottom:15px;
+    // }
+    // .big-screen-right {
+    //     width: 340px;
+    //     position: absolute;
+    //     right: 15px;
+    //     top: 15px;
+    //     bottom:15px;
+    // }
     .big-screen-center {
         // margin: 0 24px;
         height: 100px;
@@ -602,7 +615,6 @@
         top: 15px;
     }
     .module {
-        width: 100%;
         padding: 12px;
         background: @module-bg;
         box-shadow: 0 0 20px #2e61b3;
