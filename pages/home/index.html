@@ -62,9 +62,9 @@
 
               </a>
               <div class="dropdown-menu" data-stopPropagation='true'>
-               
+
                 <ul class="dropdown-lists">
-                  <li data-url="../page3/index.html" >桥梁监测</li>
+                  <li data-url="../page3/index.html">桥梁监测</li>
                   <li>坠陀监测</li>
                   <li>钢轨监测</li>
                   <li>设备箱</li>
@@ -79,7 +79,7 @@
 
               </a>
               <div class="dropdown-menu">
-                
+
                 <ul class="dropdown-lists">
                   <li>桥梁监测</li>
                   <li>坠陀监测</li>
@@ -96,7 +96,7 @@
 
               </a>
               <div class="dropdown-menu">
-               
+
                 <ul class="dropdown-lists">
                   <li>桥梁监测</li>
                   <li>坠陀监测</li>
@@ -123,7 +123,7 @@
 
                 <span class="hidden-xs">
                   <i class="user-icon tab-icon"></i>
-                  
+
                   <i class="fa fa-arrow-down" style="position: relative;top:6px;"></i>
                 </span>
               </a>
@@ -144,7 +144,7 @@
                   <div class="user-body__title">
                     配置选项卡
                   </div>
-                  <div class="user-body__lists" id="user-tabs">
+                  <!-- <div class="user-body__lists" id="user-tabs1">
                     <label>
                       <input type="checkbox" style="display:none"  checked data-mark="gjfb">
                       <i class="check-box-icon"></i>
@@ -185,7 +185,7 @@
                       <i class="check-box-icon"></i>
                       <span>工单趋势</span>
                     </label>
-                  </div>
+                  </div> -->
 
                   <div class="toggle toggle--daynight">
                     <input type="checkbox" id="toggle--daynight" class="toggle--checkbox">
@@ -225,11 +225,12 @@
             <li>
               <a href="##" class="dropdown-toggle" data-hover="dropdown">
                 <span>
-                  <i class="user-icon wxjc-icon"></i>维修决策</span>
+                  <i class="user-icon wxjc-icon"></i>维修决策
+                </span>
 
               </a>
               <div class="dropdown-menu">
-                
+
                 <ul class="dropdown-lists">
                   <li>桥梁监测</li>
                   <li>坠陀监测</li>
@@ -243,10 +244,9 @@
               <a href="##" class="dropdown-toggle" data-hover="dropdown">
                 <span>
                   <i class="user-icon pzgl-icon"></i>配置管理</span>
-
               </a>
               <div class="dropdown-menu">
-               
+
                 <ul class="dropdown-lists">
                   <li>桥梁监测</li>
                   <li>坠陀监测</li>
@@ -267,8 +267,8 @@
 
     <!-- 内容包装器,包含页面内容 -->
     <div class="content-wrapper night-theme" style="background-color:transparent">
-      <div class="big-screen-content">
-        <div class="big-screen-left">
+      <div class="big-screen-content" id="drag-container">
+        <div class="big-screen-left" id="big-screen-left">
           <!-- 告警级别分布 -->
           <div class="module" id="gjfb">
             <div class="module-header">
@@ -480,9 +480,9 @@
           </div>
 
         </div>
-        <div class="big-screen-right">
+        <div class="big-screen-right" id="big-screen-right">
           <!-- 月平均故障时长 -->
-          <div class="module" id="gzsc">
+          <div class="module module--right" id="gzsc">
             <div class="module-header">
               <h3 class="module-title">月平均故障时长</h3>
               <span class="module-close"></span>
@@ -516,20 +516,20 @@
                     </div>
                   </li>
                   <li>
-                      <div class="chart" id="pieChartMonth12" style="width:100%;height:110px;">
-  
-                      </div>
-                      <div class="months-container">
-                        <span class="left-month">一月</span>
-                        <span class="right-month">二月</span>
-                      </div>
-                    </li>
+                    <div class="chart" id="pieChartMonth12" style="width:100%;height:110px;">
+
+                    </div>
+                    <div class="months-container">
+                      <span class="left-month">一月</span>
+                      <span class="right-month">二月</span>
+                    </div>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
           <!-- 剩余时间预测 -->
-          <div class="module" id="sjyc">
+          <div class="module module--right" id="sjyc">
             <div class="module-header">
               <h3 class="module-title">剩余时间预测</h3>
               <span class="module-close"></span>
@@ -539,7 +539,7 @@
             </div>
           </div>
           <!-- 状态维修比例 -->
-          <div class="module" id="wxbl">
+          <div class="module module--right" id="wxbl">
             <div class="module-header">
               <h3 class="module-title">状态维修比例</h3>
               <span class="module-close"></span>
@@ -565,7 +565,7 @@
             </div>
           </div>
           <!-- 工单趋势 -->
-          <div class="module" id="gdqs">
+          <div class="module module--right" id="gdqs">
             <div class="module-header">
               <h3 class="module-title">工单趋势</h3>
               <span class="module-close"></span>
@@ -579,6 +579,58 @@
         <div class="toggle-btn">
 
         </div>
+
+        <!-- 选项卡 -->
+        <div class="tab-wrapper">
+          <div class="tab-header">
+            <h3 class="tab-header__title">配置选项卡</h3>
+            <span class="tab-header__close"></span>
+          </div>
+          <div class="tab-body">
+            <div class="label-items" id="user-tabs">
+              <label>
+                <input type="checkbox" style="display:none" checked data-mark="gjfb">
+                <i class="check-box-icon icon1"></i>
+                <span>告警级别分布</span>
+              </label>
+              <label>
+                <input type="checkbox" style="display:none" checked data-mark="sssl">
+                <i class="check-box-icon icon2"></i>
+                <span>各种设施和数量</span>
+              </label>
+              <label>
+                <input type="checkbox" style="display:none" checked data-mark="shpg">
+                <i class="check-box-icon icon3"></i>
+                <span>危险伤害评估</span>
+              </label>
+              <label>
+                <input type="checkbox" style="display:none" checked data-mark="gjsj">
+                <i class="check-box-icon icon4"></i>
+                <span>告警数据</span>
+              </label>
+              <label>
+                <input type="checkbox" style="display:none" checked data-mark="gzsc">
+                <i class="check-box-icon icon5"></i>
+                <span>月平均故障时长</span>
+              </label>
+              <label>
+                <input type="checkbox" style="display:none" checked data-mark="sjyc">
+                <i class="check-box-icon icon6"></i>
+                <span>剩余时间预测</span>
+              </label>
+              <label>
+                <input type="checkbox" style="display:none" checked data-mark="wxbl">
+                <i class="check-box-icon icon7"></i>
+                <span>状态维修比例</span>
+              </label>
+              <label>
+                <input type="checkbox" style="display:none" checked data-mark="gdqs">
+                <i class="check-box-icon icon8"></i>
+                <span>工单趋势</span>
+              </label>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- 地图iframe -->
@@ -587,7 +639,8 @@
       </div>
       <!-- 内容iframe -->
       <div class="content-iframe">
-        <iframe src="content.html" frameborder="0" style="width:100%;height:100%;display:block;" name="contentIframe" id="contentIframe"></iframe>
+        <iframe src="content.html" frameborder="0" style="width:100%;height:100%;display:block;" name="contentIframe"
+          id="contentIframe"></iframe>
       </div>
     </div>
   </div>
@@ -611,14 +664,14 @@
         $('.content-wrapper').height(contentWrapperHeight);
 
       }
-     
+
 
 
       $("body").on('click', '[data-stopPropagation]', function (e) {
         e.stopPropagation();
       });
 
-     
+
 
       $("#toggle--daynight").change(function () {
         if ($(this).prop('checked')) {
@@ -633,20 +686,20 @@
       function set(size) {
 
         $('body')[0].style.zoom = size;
-        
+
         // $('.main-header')[0].style.zoom = size;
         document.body.style.cssText += '; -moz-transform: scale(' + size + ');-moz-transform-origin: 0 0; '; //
       }
-      
 
-      if($(window).width()>1300&&$(window).width()<1400) {
+
+      if ($(window).width() > 1300 && $(window).width() < 1400) {
         set(0.65);
         // $('.module').width(400);
         // $('.chart').height(180);
 
       }
       resizeContentWrapper();
-       
+
     })
   </script>
   <!-- Bootstrap 3.3.7 -->
@@ -675,30 +728,38 @@
   <!-- plugins -->
   <script src="../../plugins/rollslider/rollSlide.js"></script>
   <!-- <script src="../../plugins/Swiper-3.1.220150914/dist/js/swiper.js"></script> -->
-  
+
   <!-- 拖拽 -->
   <script src="../../plugins/Tdrag/jquery.dad.min.js"></script>
+  <script src="../../plugins/Tdrag/Sortable.js"></script>
   <!-- 用户js -->
   <script src="../big-screen/js/index.js"></script>
 
   <script>
-    function addTab(dom,title,linkSrc,isClearOldTab) {
-        document.getElementById('contentIframe').contentWindow['addTab']($(dom),title,linkSrc,isClearOldTab)
-      }
+    function addTab(dom, title, linkSrc, isClearOldTab) {
+      document.getElementById('contentIframe').contentWindow['addTab']($(dom), title, linkSrc, isClearOldTab)
+    }
     $(function () {
       $('.dropdown-lists li').click(function () {
         $(this).addClass('active').siblings().removeClass('active');
         $('.dropdown-toggle').removeClass('active');
         $(this).parents('.dropdown-menu').prev().addClass('active');
         var $dom = $(this)
-        var title =$(this).text();
+        var title = $(this).text();
         var linkSrc = $(this).data('url');
         $('.content-iframe').addClass('active');
-        document.getElementById('contentIframe').contentWindow['addTab']($dom,title,linkSrc,false)
+        document.getElementById('contentIframe').contentWindow['addTab']($dom, title, linkSrc, false)
       })
-
+      // 配置选项卡
+      $('.user-body__title').on('click', function () {
+        $('.tab-wrapper').toggle();
+      })
+      // 关闭选项卡
+      $('.tab-header__close').on('click', function () {
+        $(this).parents('.tab-wrapper').hide()
+      })
       // 悬浮框显示切换
-      $('.toggle-btn').on('click',function () {
+      $('.toggle-btn').on('click', function () {
         $(this).toggleClass('active');
         $('.big-screen-left,.big-screen-right,.big-screen-center').toggleClass('active')
       })
@@ -707,50 +768,115 @@
       function checkStatus(status) {
         $('#user-tabs label input').each(function () {
           var mark = $(this).data('mark');
-          var $mark = $('#'+mark)
+          var $mark = $('#' + mark)
           var wrapContainer = $mark.parent();
-          if($(this).prop('checked')) {
-            $mark.css('opacity',1)
-            if(status==1) {
+          if ($(this).prop('checked')) {
+            $mark.css('opacity', 1)
+            if (status == 1) {
               wrapContainer.append($mark);
-            }else {
+            } else {
               wrapContainer.prepend($mark);
             }
-            
-          }else {
-            $mark.css('opacity',0)
+
+          } else {
+            $mark.css('opacity', 0)
             // $mark.hide()
           }
         })
       }
 
       checkStatus(1);
-      $('#user-tabs').on('change','label input',function () {
+      $('#user-tabs').on('change', 'label input', function () {
         checkStatus(2);
       })
 
-      $('.module-close').on('click',function () {
-       var mark = $(this).parents('.module').attr('id');
-       $('#user-tabs label').find('[data-mark="'+mark+'"]').click();
+      $('.module-close').on('click', function () {
+        var mark = $(this).parents('.module').attr('id');
+        $('#user-tabs label').find('[data-mark="' + mark + '"]').click();
       })
 
       // 拖拽
-      $('.content-wrapper').dad({
-        target:'.module',
-        callback:dragAfter
+      // $('.big-screen-left').dad({
+      //   target:'.module',
+      //   callback:dragAfter
+      // });
+      // $('.big-screen-right').dad({
+      //   target:'.module--right',
+      //   callback:dragAfter
+      // });
+
+      Sortable.create(document.getElementById('big-screen-left'), {
+        draggable: '.module',
+
+        handle: '.module-header',
+
+        animation: 150,
+
+        group: "leftmodules",
+
+
+        store: {
+
+          get: function (sortable) {
+
+            var order = localStorage.getItem(sortable.options.group);
+            console.log(order);
+            return order ? order.split('|') : [];
+
+          },
+
+          set: function (sortable) {
+
+            var order = sortable.toArray();
+            // console.log(sortable)
+            localStorage.setItem(sortable.options.group, order.join('|'));
+
+          }
+
+        },
+
+      });
+
+      Sortable.create(document.getElementById('big-screen-right'), {
+        draggable: '.module',
+
+        handle: '.module-header',
+
+        animation: 150,
+
+        group: "rightmodules",
+
+
+        store: {
+
+          get: function (sortable) {
+
+            var order = localStorage.getItem(sortable.options.group);
+            return order ? order.split('|') : [];
+
+          },
+
+          set: function (sortable) {
+
+            var order = sortable.toArray();
+            // console.log(sortable)
+            localStorage.setItem(sortable.options.group, order.join('|'));
+
+          }
+
+        },
+
       });
 
       // 排序
       dragAfter();
-      function dragAfter(){
-        var sortArr = [1,2,4,3,6,5,8,7];
-        
+
+      function dragAfter() {
+        var sortArr = [1, 2, 4, 3, 6, 5, 8, 7];
       }
-      
+
 
     })
-
-    
   </script>
 </body>
 

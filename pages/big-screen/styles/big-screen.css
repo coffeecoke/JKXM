@@ -1,3 +1,138 @@
+.tab-wrapper {
+  width: 410px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  box-shadow: 0 0 4px rgba(33, 63, 196, 0.4);
+  background-color: #fff;
+  border-radius: 5px;
+  display: none;
+}
+.tab-header {
+  overflow: hidden;
+}
+.tab-header__title {
+  color: #333;
+  font-size: 18px;
+  padding-left: 10px;
+  margin: 0;
+  position: relative;
+  float: left;
+  margin-bottom: 10px;
+}
+.tab-header__title:before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #3d65d0;
+}
+.tab-header__close {
+  float: right;
+  width: 20px;
+  height: 20px;
+  background: url('../../../imgs/big-screen/close-icon.png') center no-repeat;
+}
+.label-items label {
+  width: 33.3%;
+  height: 90px;
+  border: 1px dashed #ccc;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  float: left;
+  margin-bottom: 0;
+  margin-left: -1px;
+  margin-top: -1px;
+}
+.label-items .check-box-icon {
+  width: 40px;
+  height: 50px;
+}
+.label-items label .icon8 {
+  background: url(../../../imgs/big-screen/tab-icon8.png) center no-repeat;
+  background-size: 100% auto;
+}
+.label-items label input:checked + .icon8 {
+  background: url(../../../imgs/big-screen/tab-active-icon8.png) center no-repeat;
+  background-size: 100% auto;
+}
+.label-items label .icon7 {
+  background: url(../../../imgs/big-screen/tab-icon7.png) center no-repeat;
+  background-size: 100% auto;
+}
+.label-items label input:checked + .icon7 {
+  background: url(../../../imgs/big-screen/tab-active-icon7.png) center no-repeat;
+  background-size: 100% auto;
+}
+.label-items label .icon6 {
+  background: url(../../../imgs/big-screen/tab-icon6.png) center no-repeat;
+  background-size: 100% auto;
+}
+.label-items label input:checked + .icon6 {
+  background: url(../../../imgs/big-screen/tab-active-icon6.png) center no-repeat;
+  background-size: 100% auto;
+}
+.label-items label .icon5 {
+  background: url(../../../imgs/big-screen/tab-icon5.png) center no-repeat;
+  background-size: 100% auto;
+}
+.label-items label input:checked + .icon5 {
+  background: url(../../../imgs/big-screen/tab-active-icon5.png) center no-repeat;
+  background-size: 100% auto;
+}
+.label-items label .icon4 {
+  background: url(../../../imgs/big-screen/tab-icon4.png) center no-repeat;
+  background-size: 100% auto;
+}
+.label-items label input:checked + .icon4 {
+  background: url(../../../imgs/big-screen/tab-active-icon4.png) center no-repeat;
+  background-size: 100% auto;
+}
+.label-items label .icon3 {
+  background: url(../../../imgs/big-screen/tab-icon3.png) center no-repeat;
+  background-size: 100% auto;
+}
+.label-items label input:checked + .icon3 {
+  background: url(../../../imgs/big-screen/tab-active-icon3.png) center no-repeat;
+  background-size: 100% auto;
+}
+.label-items label .icon2 {
+  background: url(../../../imgs/big-screen/tab-icon2.png) center no-repeat;
+  background-size: 100% auto;
+}
+.label-items label input:checked + .icon2 {
+  background: url(../../../imgs/big-screen/tab-active-icon2.png) center no-repeat;
+  background-size: 100% auto;
+}
+.label-items label .icon1 {
+  background: url(../../../imgs/big-screen/tab-icon1.png) center no-repeat;
+  background-size: 100% auto;
+}
+.label-items label input:checked + .icon1 {
+  background: url(../../../imgs/big-screen/tab-active-icon1.png) center no-repeat;
+  background-size: 100% auto;
+}
 .big-screen-content {
   display: -webkit-box;
   display: -webkit-flex;
@@ -76,6 +211,38 @@
 }
 .module {
   width: 340px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.module-header {
+  position: absolute !important;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  z-index: 100;
+  -o-user-select: none;
+  /*火狐 firefox*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -ms-user-select: none;
+  /*IE10+*/
+  /*早期的浏览器*/
+  user-select: none;
+}
+.module-body {
+  padding-top: 30px;
 }
 .toggle-btn {
   width: 50px;
@@ -130,6 +297,7 @@
   margin: 0;
   color: #5b5b5b;
   font-size: 16px;
+  float: left;
 }
 .day-theme .module .module-header .module-close {
   position: absolute;
@@ -556,6 +724,7 @@
   margin: 0;
   color: #fff;
   font-size: 16px;
+  float: left;
 }
 .night-theme .module .module-header .module-close {
   position: absolute;

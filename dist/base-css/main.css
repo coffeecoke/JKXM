@@ -1228,6 +1228,7 @@ p {
   color: #3e87eb;
   padding-left: 20px;
   position: relative;
+  cursor: pointer;
 }
 .navbar-nav > .user-menu > .dropdown-menu > .user-body .user-body__title:before {
   content: '';

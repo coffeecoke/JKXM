@@ -1,3 +1,88 @@
+.tab-wrapper {
+    width:410px;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    padding:20px;
+    box-shadow:0 0 4px rgba(33, 63, 196, 0.4);
+    background-color:#fff;
+    border-radius:5px;
+    display: none;
+}
+.tab-header {
+    overflow:hidden;
+}
+.tab-header__title {
+    color:#333;
+    font-size:18px;
+    padding-left:10px;
+    margin:0;
+    position: relative;
+    float:left;
+    margin-bottom:10px;
+}
+.tab-header__title:before {
+    content:'';
+    position: absolute;
+    width:2px;
+    top:0;
+    bottom:0;
+    left:0;
+    background-color:#3d65d0;
+}
+.tab-header__close {
+    float:right;
+    width:20px;
+    height:20px;
+    background:url('../../../imgs/big-screen/close-icon.png') center no-repeat;
+}
+
+.label-items label {
+    width:33.3%;
+    height:90px;
+    border:1px dashed #ccc;
+    margin-left:-1px;
+    margin-top:-1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    float:left;
+    margin-bottom:0;
+    margin-left:-1px;
+    margin-top:-1px;
+}
+
+.label-items .check-box-icon {
+    width:40px;
+    height:50px;
+
+}
+
+
+
+.loop(@n) when (@n > 0) {
+    .icon@{n}{
+        background:~"url(../../../imgs/big-screen/tab-icon@{n}.png)" center no-repeat;
+        background-size:100% auto;
+    }
+    input:checked+.icon@{n}{
+        background:~"url(../../../imgs/big-screen/tab-active-icon@{n}.png)" center no-repeat;
+        background-size:100% auto;
+  }
+  //循环调用自身
+  .loop((@n - 1));
+}
+ 
+
+.label-items label {
+    .loop(8);
+}
+
+
+
 .big-screen-content {
     display: flex;
     justify-content: space-between;
@@ -43,7 +128,29 @@
 }
 .module {
     width:340px;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+.module-header {
+    position:absolute !important;
+    top:10px;
+    left:10px;
+    right:10px;
+    z-index:100;
+    -o-user-select: none;
+    -moz-user-select: none; /*火狐 firefox*/
+    -webkit-user-select: none; /*webkit浏览器*/
+    -ms-user-select: none; /*IE10+*/
+    -khtml-user-select :none; /*早期的浏览器*/
+    user-select: none; 
+}
+
+.module-body {
+    padding-top:30px;
+}
+
 .module-close {
     // display:none;
 }
@@ -129,6 +236,7 @@
                 margin: 0;
                 color: @module-title-color;
                 font-size: 16px;
+                float:left;
             }
             .module-close {
                 position: absolute;
@@ -626,6 +734,7 @@
                 margin: 0;
                 color: @module-title-color;
                 font-size: 16px;
+                float:left;
             }
             .module-close {
                 position: absolute;
