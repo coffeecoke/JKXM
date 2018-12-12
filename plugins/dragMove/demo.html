@@ -1,0 +1,134 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>  
+    <script src="js/jquery.js"></script>  
+    <script src="js/dragMove.js"></script>  
+    <title>demo</title>  
+  
+    <style>  
+        * {  
+            margin: 0;   
+            padding: 0;  
+        }  
+        body, html {  
+            width: 100%;  
+            height: 100%;  
+        }  
+        .div1 {  
+            position: relative;  
+            border: 1px solid #abbde4;  
+            padding: 5px;
+            display: inline-block;
+        }  
+        .div1 div {  
+            position: relative;  
+            display: inline-block;  
+            width: 50px;  
+            height: 80px;  
+            border: 2px solid #c1c1c1;  
+            border-radius: 3px;
+        }  
+        .div1 div img {  
+            width: 100%;  
+        }  
+        .div1 div i {  
+            top: 0;  
+            left: 0;  
+            display: inline-block;  
+            position: absolute;  
+            width: 100%;  
+            height: 100%;  
+            cursor: pointer;  
+        }  
+        .div1 div:hover i {  
+            outline: 1px dashed #ccc;  
+        }  
+    </style>  
+</head>  
+<body>  
+<p>第一组:</p>
+<div class="a div1">  
+    <div class="aa" DR_drag="1" DR_replace="1">  
+        <p>111</p>  
+        <img src="../images/a1.png">  
+        <i class="drag"></i>  
+    </div>  
+    <div class="aa" DR_drag="1" DR_replace="1">  
+        <p>222</p>  
+        <img src="../images/a1.png">  
+        <i class="drag"></i>  
+    </div>  
+    <div class="aa" DR_drag="1" DR_replace="1">  
+        <p>333</p>  
+        <img src="../images/a1.png">  
+        <i class="drag"></i>  
+    </div>  
+</div>  
+<p>第二组:</p>
+<div class="b div1">  
+    <div class="aa" DR_drag="1" DR_replace="1">  
+        <p>444</p>  
+        <img src="../images/a1.png">  
+        <i class="drag"></i>  
+    </div>  
+    <div class="aa" DR_drag="1" DR_replace="1">  
+        <p>555</p>  
+        <img src="../images/a1.png">  
+        <i class="drag"></i>  
+    </div> 
+</div>  
+<p>第三组:</p>
+<div class="c div1">  
+    <div class="aa" DR_drag="2" DR_replace="1">  
+        <p>666</p>  
+        <img src="../images/a1.png">  
+        <i class="drag"></i>  
+    </div> 
+    <div class="aa" DR_drag="2" DR_replace="1">  
+        <p>777</p>  
+        <img src="../images/a1.png">  
+        <i class="drag"></i>  
+    </div>  
+</div>
+<p>第四组:</p>
+<div class="d div1">  
+    <div class="aa" DR_drag="3">  
+        <p>888</p>  
+        <img src="../images/a1.png">  
+        <i class="drag"></i>  
+    </div> 
+    <div class="aa" DR_drag="3">  
+        <p>999</p>  
+        <img src="../images/a1.png">  
+        <i class="drag"></i>  
+    </div>  
+</div>
+<br>
+<input class="aBtn" type="button" value="添加第一组">  
+<input class="bBtn" type="button" value="减少第一组">  
+<script>  
+    ;$(function() {  
+        // 调用插件
+        $('body').dragMove({  
+            limit: true,// 限制在窗口内  
+            callback: function($move, $replace) {
+                console.log('拖动了'+ $('p', $move).text() +'跟'+ $('p', $replace).text() +'进行交换');
+            }  
+        });  
+
+        // 添加第一组
+        $('.aBtn').on('click', function() {
+            var $div = $('<div class="aa" dr_drag="1" dr_replace="1"><p>'+ parseInt(Math.random()*100) +'</p><img src="../images/a1.png"> <i class="drag"></i></div>').addClass('DR_mid');
+            $('.a').append($div);
+        });
+        // 减少第一组
+        $('.bBtn').on('click', function() {
+            $('.a .aa:last').remove();
+        });
+    });  
+</script>  
+</body>  
+</html>

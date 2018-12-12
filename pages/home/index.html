@@ -270,7 +270,7 @@
       <div class="big-screen-content" id="drag-container">
         <div class="big-screen-left" id="big-screen-left">
           <!-- 告警级别分布 -->
-          <div class="module" id="gjfb">
+          <div class="module" id="gjfb" DR_drag="1" DR_replace="1">
             <div class="module-header">
               <h3 class="module-title">告警级别分布</h3>
               <span class="module-close"></span>
@@ -314,7 +314,7 @@
             </div>
           </div>
           <!-- 各种设施和数量 -->
-          <div class="module" id="sssl">
+          <div class="module" id="sssl" DR_drag="1" DR_replace="1">
             <div class="module-header">
               <h3 class="module-title">各种设施和数量</h3>
               <span class="module-close"></span>
@@ -324,7 +324,7 @@
             </div>
           </div>
           <!-- 危险伤害评估 -->
-          <div class="module" id="shpg">
+          <div class="module" id="shpg" DR_drag="1" DR_replace="1">
             <div class="module-header">
               <h3 class="module-title">危险伤害评估</h3>
               <span class="module-close"></span>
@@ -369,7 +369,7 @@
             </div>
           </div>
           <!-- 告警数据 -->
-          <div class="module" id="gjsj">
+          <div class="module" id="gjsj" DR_drag="1" DR_replace="1">
             <div class="module-header">
               <h3 class="module-title">告警数据</h3>
               <span class="module-close"></span>
@@ -482,7 +482,7 @@
         </div>
         <div class="big-screen-right" id="big-screen-right">
           <!-- 月平均故障时长 -->
-          <div class="module module--right" id="gzsc">
+          <div class="module module--right" id="gzsc" DR_drag="1" DR_replace="1">
             <div class="module-header">
               <h3 class="module-title">月平均故障时长</h3>
               <span class="module-close"></span>
@@ -529,7 +529,7 @@
             </div>
           </div>
           <!-- 剩余时间预测 -->
-          <div class="module module--right" id="sjyc">
+          <div class="module module--right" id="sjyc" DR_drag="1" DR_replace="1">
             <div class="module-header">
               <h3 class="module-title">剩余时间预测</h3>
               <span class="module-close"></span>
@@ -539,7 +539,7 @@
             </div>
           </div>
           <!-- 状态维修比例 -->
-          <div class="module module--right" id="wxbl">
+          <div class="module module--right" id="wxbl" DR_drag="1" DR_replace="1">
             <div class="module-header">
               <h3 class="module-title">状态维修比例</h3>
               <span class="module-close"></span>
@@ -565,7 +565,7 @@
             </div>
           </div>
           <!-- 工单趋势 -->
-          <div class="module module--right" id="gdqs">
+          <div class="module module--right" id="gdqs" DR_drag="1" DR_replace="1">
             <div class="module-header">
               <h3 class="module-title">工单趋势</h3>
               <span class="module-close"></span>
@@ -730,8 +730,9 @@
   <!-- <script src="../../plugins/Swiper-3.1.220150914/dist/js/swiper.js"></script> -->
 
   <!-- 拖拽 -->
-  <script src="../../plugins/Tdrag/jquery.dad.min.js"></script>
-  <script src="../../plugins/Tdrag/Sortable.js"></script>
+  <!-- <script src="../../plugins/Tdrag/jquery.dad.min.js"></script> -->
+  <!-- <script src="../../plugins/Tdrag/Sortable.js"></script> -->
+  <script src="../../plugins/dragMove/js/dragMove.js"></script>
   <!-- 用户js -->
   <script src="../big-screen/js/index.js"></script>
 
@@ -795,78 +796,80 @@
         $('#user-tabs label').find('[data-mark="' + mark + '"]').click();
       })
 
-      // 拖拽
-      // $('.big-screen-left').dad({
-      //   target:'.module',
-      //   callback:dragAfter
+      
+
+      // Sortable.create(document.getElementById('big-screen-left'), {
+      //   draggable: '.module',
+
+      //   handle: '.module-header',
+
+      //   animation: 150,
+
+      //   group: "leftmodules",
+
+
+      //   store: {
+
+      //     get: function (sortable) {
+
+      //       var order = localStorage.getItem(sortable.options.group);
+      //       console.log(order);
+      //       return order ? order.split('|') : [];
+
+      //     },
+
+      //     set: function (sortable) {
+
+      //       var order = sortable.toArray();
+      //       // console.log(sortable)
+      //       localStorage.setItem(sortable.options.group, order.join('|'));
+
+      //     }
+
+      //   },
+
       // });
-      // $('.big-screen-right').dad({
-      //   target:'.module--right',
-      //   callback:dragAfter
+
+      // Sortable.create(document.getElementById('big-screen-right'), {
+      //   draggable: '.module',
+
+      //   handle: '.module-header',
+
+      //   animation: 150,
+
+      //   group: "rightmodules",
+
+
+      //   store: {
+
+      //     get: function (sortable) {
+
+      //       var order = localStorage.getItem(sortable.options.group);
+      //       return order ? order.split('|') : [];
+
+      //     },
+
+      //     set: function (sortable) {
+
+      //       var order = sortable.toArray();
+      //       // console.log(sortable)
+      //       localStorage.setItem(sortable.options.group, order.join('|'));
+
+      //     }
+
+      //   },
+
       // });
+      
+        // 调用插件
+        $('body').dragMove({  
+            limit: true,// 限制在窗口内 
+            childClass:'.module-body',
+            callback: function($move, $replace) {
+                console.log('拖动了'+ $('p', $move).text() +'跟'+ $('p', $replace).text() +'进行交换');
+            }  
+        });  
 
-      Sortable.create(document.getElementById('big-screen-left'), {
-        draggable: '.module',
-
-        handle: '.module-header',
-
-        animation: 150,
-
-        group: "leftmodules",
-
-
-        store: {
-
-          get: function (sortable) {
-
-            var order = localStorage.getItem(sortable.options.group);
-            console.log(order);
-            return order ? order.split('|') : [];
-
-          },
-
-          set: function (sortable) {
-
-            var order = sortable.toArray();
-            // console.log(sortable)
-            localStorage.setItem(sortable.options.group, order.join('|'));
-
-          }
-
-        },
-
-      });
-
-      Sortable.create(document.getElementById('big-screen-right'), {
-        draggable: '.module',
-
-        handle: '.module-header',
-
-        animation: 150,
-
-        group: "rightmodules",
-
-
-        store: {
-
-          get: function (sortable) {
-
-            var order = localStorage.getItem(sortable.options.group);
-            return order ? order.split('|') : [];
-
-          },
-
-          set: function (sortable) {
-
-            var order = sortable.toArray();
-            // console.log(sortable)
-            localStorage.setItem(sortable.options.group, order.join('|'));
-
-          }
-
-        },
-
-      });
 
       // 排序
       dragAfter();
