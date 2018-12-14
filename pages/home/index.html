@@ -806,79 +806,7 @@
       })
 
 
-
-      // Sortable.create(document.getElementById('big-screen-left'), {
-      //   draggable: '.module',
-
-      //   handle: '.module-header',
-
-      //   animation: 150,
-
-      //   group: "leftmodules",
-
-
-      //   store: {
-
-      //     get: function (sortable) {
-
-      //       var order = localStorage.getItem(sortable.options.group);
-      //       console.log(order);
-      //       return order ? order.split('|') : [];
-
-      //     },
-
-      //     set: function (sortable) {
-
-      //       var order = sortable.toArray();
-      //       // console.log(sortable)
-      //       localStorage.setItem(sortable.options.group, order.join('|'));
-
-      //     }
-
-      //   },
-
-      // });
-
-      // Sortable.create(document.getElementById('big-screen-right'), {
-      //   draggable: '.module',
-
-      //   handle: '.module-header',
-
-      //   animation: 150,
-
-      //   group: "rightmodules",
-
-
-      //   store: {
-
-      //     get: function (sortable) {
-
-      //       var order = localStorage.getItem(sortable.options.group);
-      //       return order ? order.split('|') : [];
-
-      //     },
-
-      //     set: function (sortable) {
-
-      //       var order = sortable.toArray();
-      //       // console.log(sortable)
-      //       localStorage.setItem(sortable.options.group, order.join('|'));
-
-      //     }
-
-      //   },
-
-      // });
-
-      // 调用插件
-      // var sortObj = [
-      //   {
-      //     isShow:true,
-      //     sortNum:1
-      //   }
-      // ]
-
-
+      //以下为拖拽排序，记住位置，主要逻辑为排序算法+localstorage
       $('body').dragMove({
         limit: true, // 限制在窗口内 
         childClass: '.module-header',
@@ -932,9 +860,6 @@
           var currParentContainerId = sortTable[i].parentContainerId;
           $('#drag-container div.module').eq(currSortNum).attr('sort', i)
           $('#drag-container div.module').eq(currSortNum).attr('currParentContainerId', currParentContainerId)
-
-
-
         }
         // 先排序
         var modules = $('#drag-container div.module')
@@ -953,9 +878,6 @@
           var parentContainer = $('#' + currParentContainerId);
           $(this).appendTo(parentContainer);
         })
-
-
-
       }
 
     })
