@@ -29,7 +29,6 @@
             $('[DR_drag]').addClass('DR_mid'); 
 
             $(document).on('mousedown.DR', This.options.childClass, function(e) { 
-                console.log(1)
                 if($('[DR_move]').length) return false;
                 var $p = $(this).parent();
                 $p.attr('DR_move', true);
@@ -41,7 +40,6 @@
                     mouseY = e.clientY,    
                     oWidth = $p.width(),    
                     oHeight = $p.height();  
-                console.log(posX)
                 $p.css({
                     width: $p.width(),    
                     height: $p.height()  

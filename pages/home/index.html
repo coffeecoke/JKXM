@@ -270,10 +270,11 @@
       <div class="big-screen-content" id="drag-container">
         <div class="big-screen-left" id="big-screen-left">
           <!-- 告警级别分布 -->
-          <div class="module" id="gjfb" DR_drag="1" DR_replace="1">
+          <div class="module" id="gjfb" DR_drag="1" DR_replace="1" data-index="0">
+            <span class="module-close"></span>
             <div class="module-header">
               <h3 class="module-title">告警级别分布</h3>
-              <span class="module-close"></span>
+
             </div>
             <div class="module-body">
               <div class="chart" id="pieChart1" style="width:140px;height:130px;"></div>
@@ -314,20 +315,22 @@
             </div>
           </div>
           <!-- 各种设施和数量 -->
-          <div class="module" id="sssl" DR_drag="1" DR_replace="1">
+          <div class="module" id="sssl" DR_drag="1" DR_replace="1" data-index="1">
+            <span class="module-close"></span>
             <div class="module-header">
               <h3 class="module-title">各种设施和数量</h3>
-              <span class="module-close"></span>
+
             </div>
             <div class="module-body">
               <div class="chart" id="bar3D" style="width:100%;height:150px;"></div>
             </div>
           </div>
           <!-- 危险伤害评估 -->
-          <div class="module" id="shpg" DR_drag="1" DR_replace="1">
+          <div class="module" id="shpg" DR_drag="1" DR_replace="1" data-index="2">
+            <span class="module-close"></span>
             <div class="module-header">
               <h3 class="module-title">危险伤害评估</h3>
-              <span class="module-close"></span>
+
             </div>
             <div class="module-body">
               <div class="progress_bar1 progress-bar-primary">
@@ -369,10 +372,11 @@
             </div>
           </div>
           <!-- 告警数据 -->
-          <div class="module" id="gjsj" DR_drag="1" DR_replace="1">
+          <div class="module" id="gjsj" DR_drag="1" DR_replace="1" data-index="3">
+            <span class="module-close"></span>
             <div class="module-header">
               <h3 class="module-title">告警数据</h3>
-              <span class="module-close"></span>
+
             </div>
             <div class="module-body">
               <div class="table-container">
@@ -482,10 +486,11 @@
         </div>
         <div class="big-screen-right" id="big-screen-right">
           <!-- 月平均故障时长 -->
-          <div class="module module--right" id="gzsc" DR_drag="1" DR_replace="1">
+          <div class="module module--right" id="gzsc" DR_drag="1" DR_replace="1" data-index="4">
+            <span class="module-close"></span>
             <div class="module-header">
               <h3 class="module-title">月平均故障时长</h3>
-              <span class="module-close"></span>
+
             </div>
             <div class="module-body">
               <div class="roll-wrap chart-mouths" id="chart-mouths">
@@ -529,20 +534,22 @@
             </div>
           </div>
           <!-- 剩余时间预测 -->
-          <div class="module module--right" id="sjyc" DR_drag="1" DR_replace="1">
+          <div class="module module--right" id="sjyc" DR_drag="1" DR_replace="1" data-index="5">
+            <span class="module-close"></span>
             <div class="module-header">
               <h3 class="module-title">剩余时间预测</h3>
-              <span class="module-close"></span>
+
             </div>
             <div class="module-body">
               <div class="chart" id="bar1" style="width:100%;height:150px;"></div>
             </div>
           </div>
           <!-- 状态维修比例 -->
-          <div class="module module--right" id="wxbl" DR_drag="1" DR_replace="1">
+          <div class="module module--right" id="wxbl" DR_drag="1" DR_replace="1" data-index="6">
+            <span class="module-close"></span>
             <div class="module-header">
               <h3 class="module-title">状态维修比例</h3>
-              <span class="module-close"></span>
+
             </div>
             <div class="module-body">
               <div class="state-maintenance">
@@ -565,10 +572,11 @@
             </div>
           </div>
           <!-- 工单趋势 -->
-          <div class="module module--right" id="gdqs" DR_drag="1" DR_replace="1">
+          <div class="module module--right" id="gdqs" DR_drag="1" DR_replace="1" data-index="7">
+            <span class="module-close"></span>
             <div class="module-header">
               <h3 class="module-title">工单趋势</h3>
-              <span class="module-close"></span>
+
             </div>
             <div class="module-body">
               <div class="chart" id="linecharts2" style="width:100%;height:150px;"></div>
@@ -632,7 +640,7 @@
           </div>
         </div>
       </div>
-
+      <div class="modules-register" style="display:none"></div>
       <!-- 地图iframe -->
       <div class="map-iframe">
         <iframe src="map.html" frameborder="0" style="width:100%;height:100%;display:block;"></iframe>
@@ -791,12 +799,13 @@
         checkStatus(2);
       })
 
-      $('.module-close').on('click', function () {
+      $('.module-close').on('click', function (e) {
+        e.stopPropagation();
         var mark = $(this).parents('.module').attr('id');
         $('#user-tabs label').find('[data-mark="' + mark + '"]').click();
       })
 
-      
+
 
       // Sortable.create(document.getElementById('big-screen-left'), {
       //   draggable: '.module',
@@ -860,24 +869,94 @@
       //   },
 
       // });
-      
-        // 调用插件
-        $('body').dragMove({  
-            limit: true,// 限制在窗口内 
-            childClass:'.module-body',
-            callback: function($move, $replace) {
-                console.log('拖动了'+ $('p', $move).text() +'跟'+ $('p', $replace).text() +'进行交换');
-            }  
-        });  
+
+      // 调用插件
+      // var sortObj = [
+      //   {
+      //     isShow:true,
+      //     sortNum:1
+      //   }
+      // ]
+
+
+      $('body').dragMove({
+        limit: true, // 限制在窗口内 
+        childClass: '.module-header',
+        callback: function ($move, $replace) {
+          //console.log($move)
+          dragAfter()
+
+          console.log('拖动了' + $('p', $move).text() + '跟' + $('p', $replace).text() + '进行交换');
+        }
+      });
 
 
       // 排序
-      dragAfter();
-
       function dragAfter() {
-        var sortArr = [1, 2, 4, 3, 6, 5, 8, 7];
+        var modules = $('#drag-container div.module');
+        var modulesLength = modules.length;
+        var sortArr = [];
+        var timer = setTimeout(function () {
+          clearTimeout(timer)
+          for (var i = 0; i < modulesLength; i++) {
+            var currentModule = $('#drag-container div.module').eq(i);
+            var sortNum = currentModule.data('index');
+            
+            var parentContainerId = currentModule.parent().attr('id')
+            var currentObj = {};
+            currentObj.sortNum = sortNum;
+            currentObj.parentContainerId = parentContainerId;
+            if (currentModule.css('opacity') == '0') {
+              currentObj.isShow = false;
+            } else {
+              currentObj.isShow = true;
+            }
+
+            sortArr.push(currentObj)
+          }
+          localStorage.setItem('sortTable', JSON.stringify(sortArr));
+        }, 300)
+
+
       }
 
+
+      // 读取缓存
+      var sortTable = JSON.parse(localStorage.getItem('sortTable'));
+      console.log(sortTable)
+      if (sortTable) {
+        var sortTableLen = sortTable.length;
+        for (var i = 0; i < sortTableLen; i++) {
+          var currSortNum = sortTable[i].sortNum;
+          var currIsShow = sortTable[i].isShow;
+          var currParentContainerId = sortTable[i].parentContainerId;
+          $('#drag-container div.module').eq(currSortNum).attr('sort', i)
+          $('#drag-container div.module').eq(currSortNum).attr('currParentContainerId', currParentContainerId)
+
+
+
+        }
+        // 先排序
+        var modules = $('#drag-container div.module')
+        modules.sort(function (a, b) {
+          var sortA = $(a).attr('sort');
+          var sortB = $(b).attr('sort');
+          if (parseInt(sortA) < parseInt(sortB)) {
+            return -1;
+          } else {
+            return 1;
+          }
+        })
+        // 排序之后追加到页面
+        modules.detach().each(function (index, item) {
+          var currParentContainerId = $(this).attr('currParentContainerId')
+          var parentContainer = $('#' + currParentContainerId);
+          $(this).appendTo(parentContainer);
+        })
+
+
+
+      }
 
     })
   </script>
