@@ -452,9 +452,9 @@
             </div>
           </div>
         </div>
-        <div class="big-screen-center">
+        <div class="big-screen-center" id="jczl">
           <div class="wblock-container">
-            <span class="close"></span>
+            <span class="close" id="jczl-close"></span>
             <div class="row">
               <div class="col-sm-3">
                 <div class="wblock blue-wblock">
@@ -596,6 +596,11 @@
           </div>
           <div class="tab-body">
             <div class="label-items" id="user-tabs">
+              <label>
+                  <input type="checkbox" style="display:none" checked data-mark="jczl">
+                  <i class="check-box-icon icon1"></i>
+                  <span>监测总览</span>
+              </label>
               <label>
                 <input type="checkbox" style="display:none" checked data-mark="gjfb">
                 <i class="check-box-icon icon1"></i>
@@ -799,9 +804,9 @@
         checkStatus(2);
       })
 
-      $('.module-close').on('click', function (e) {
+      $('.module-close,#jczl-close').on('click', function (e) {
         e.stopPropagation();
-        var mark = $(this).parents('.module').attr('id');
+        var mark = $(this).parents('.module,.big-screen-center').attr('id');
         $('#user-tabs label').find('[data-mark="' + mark + '"]').click();
       })
 
@@ -829,7 +834,6 @@
           for (var i = 0; i < modulesLength; i++) {
             var currentModule = $('#drag-container div.module').eq(i);
             var sortNum = currentModule.data('index');
-            
             var parentContainerId = currentModule.parent().attr('id')
             var currentObj = {};
             currentObj.sortNum = sortNum;
@@ -851,7 +855,6 @@
 
       // 读取缓存
       var sortTable = JSON.parse(localStorage.getItem('sortTable'));
-      console.log(sortTable)
       if (sortTable) {
         var sortTableLen = sortTable.length;
         for (var i = 0; i < sortTableLen; i++) {
@@ -877,11 +880,11 @@
           var currParentContainerId = $(this).attr('currParentContainerId')
           var parentContainer = $('#' + currParentContainerId);
           $(this).appendTo(parentContainer);
+          
         })
       }
 
     })
   </script>
 </body>
-
 </html>
