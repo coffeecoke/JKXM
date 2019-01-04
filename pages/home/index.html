@@ -597,9 +597,9 @@
           <div class="tab-body">
             <div class="label-items" id="user-tabs">
               <label>
-                  <input type="checkbox" style="display:none" checked data-mark="jczl">
-                  <i class="check-box-icon icon1"></i>
-                  <span>监测总览</span>
+                <input type="checkbox" style="display:none" checked data-mark="jczl">
+                <i class="check-box-icon icon1"></i>
+                <span>监测总览</span>
               </label>
               <label>
                 <input type="checkbox" style="display:none" checked data-mark="gjfb">
@@ -785,24 +785,25 @@
           var $mark = $('#' + mark)
           var wrapContainer = $mark.parent();
           if ($(this).prop('checked')) {
-            $mark.css('opacity',1)
+            $mark.css('opacity', 1)
             // if (status == 1) {
             //   wrapContainer.append($mark);
             // } else {
             //   wrapContainer.prepend($mark);
             // }
           } else {
-            $mark.css('opacity',0)
+            $mark.css('opacity', 0)
             // $mark.hide()
           }
         })
       }
       checkStatus(1);
+      //选型卡切换隐藏
       $('#user-tabs').on('change', 'label input', function () {
         checkStatus(2);
         dragAfter()
       })
-
+      //关闭选项卡
       $('.module-close,#jczl-close').on('click', function (e) {
         e.stopPropagation();
         var mark = $(this).parents('.module,.big-screen-center').attr('id');
@@ -820,7 +821,7 @@
       });
 
 
-      // 排序
+      // 拖拽后存缓存
       function dragAfter() {
         var modules = $('#drag-container div.module');
         var modulesLength = modules.length;
@@ -841,59 +842,69 @@
             }
             sortArr.push(currentObj)
           }
-          localStorage.setItem('sortTable', JSON.stringify(sortArr));
+          localStorage.setItem('sortTable', JSON.stringify(sortArr));//存入本地
+
+          // $.ajax({
+          //   url:'',
+          //   data:sortArr,//把sortArr存入后台中
+          // })
+
         }, 300)
       }
-
-
-      // 读取缓存
+      // 读取缓存(从本地取出)
       var sortTable = JSON.parse(localStorage.getItem('sortTable'));
-      if (sortTable) {
-        var sortTableLen = sortTable.length;
-        for (var i = 0; i < sortTableLen; i++) {
-          var currSortNum = sortTable[i].sortNum;
-          var currIsShow = sortTable[i].isShow;
-          var currParentContainerId = sortTable[i].parentContainerId;
-          $('#drag-container div.module').eq(currSortNum).attr('sort', i)
-          $('#drag-container div.module').eq(currSortNum).attr('isShow',currIsShow)
-          $('#drag-container div.module').eq(currSortNum).attr('currParentContainerId', currParentContainerId)
+      //从后台去读
+      //  $.ajax({
+      //    url:'',
+      //    success:function (sortTable) {
+      //     readData(sortTable)
+      //    }
+      //  })
+      readData(sortTable)
+      function readData(sortTable) {
+        if (sortTable) {
+          var sortTableLen = sortTable.length;
+          for (var i = 0; i < sortTableLen; i++) {
+            var currSortNum = sortTable[i].sortNum;
+            var currIsShow = sortTable[i].isShow;
+            var currParentContainerId = sortTable[i].parentContainerId;
+            $('#drag-container div.module').eq(currSortNum).attr('sort', i)
+            $('#drag-container div.module').eq(currSortNum).attr('isShow', currIsShow)
+            $('#drag-container div.module').eq(currSortNum).attr('currParentContainerId', currParentContainerId)
+          }
+          // 先排序
+          var modules = $('#drag-container div.module')
+          modules.sort(function (a, b) {
+            var sortA = $(a).attr('sort');
+            var sortB = $(b).attr('sort');
+            if (parseInt(sortA) < parseInt(sortB)) {
+              return -1;
+            } else {
+              return 1;
+            }
+          })
+          // 排序之后追加到页面
+          modules.detach().each(function (index, item) {
+            var currParentContainerId = $(this).attr('currParentContainerId')
+            var currIsShow = $(this).attr('isShow');
+            var mark = $(this).attr('id');
+            if (currIsShow == 'true') {
+              $('#user-tabs label').find('input[mark="' + mark + '"]').prop('checked', true)
+            } else if (currIsShow == 'false') {
+              console.log($('#user-tabs label').find('input[mark="' + mark + '"]'));
+              $('#user-tabs label').find('[data-mark="' + mark + '"]').prop('checked', false)
+            }
+            var parentContainer = $('#' + currParentContainerId);
+            $(this).appendTo(parentContainer);
+          })
+          //模块默认显示或者隐藏
+          checkStatus(1);
         }
-        // 先排序
-        var modules = $('#drag-container div.module')
-        modules.sort(function (a, b) {
-          var sortA = $(a).attr('sort');
-          var sortB = $(b).attr('sort');
-
-          if (parseInt(sortA) < parseInt(sortB)) {
-            return -1;
-          } else {
-            return 1;
-          }
-        })
-
-        // 排序之后追加到页面
-        modules.detach().each(function (index, item) {
-          var currParentContainerId = $(this).attr('currParentContainerId')
-          var currIsShow = $(this).attr('isShow');
-          var mark = $(this).attr('id');
-          if(currIsShow=='true') {
-              
-            $('#user-tabs label').find('input[mark="'+mark+'"]').prop('checked',true)
-          }else if(currIsShow=='false') {
-            console.log($('#user-tabs label').find('input[mark="'+mark+'"]'));
-            $('#user-tabs label').find('[data-mark="'+mark+'"]').prop('checked',false)
-          }
-         
-
-          var parentContainer = $('#' + currParentContainerId);
-          $(this).appendTo(parentContainer);
-          
-        })
-
-         checkStatus(1);
       }
+
 
     })
   </script>
 </body>
+
 </html>
